@@ -4,6 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f7f4">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script>window.SITE_VERSION='2026.11.09-2325';</script>
+  <script>
+    /* 每次開啟都向伺服器確認最新版本；版本不同就強制重新載入，避免看到舊快取 */
+    (function(){var cur=window.SITE_VERSION;fetch('version.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){if(!d||!d.version||d.version===cur)return;var k='pf-reload-'+d.version;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}var u=new URL(location.href);u.searchParams.set('v',d.version);location.replace(u.toString())}).catch(function(){})})();
+  </script>
   <meta name="description" content="家用淨水設備、直輸 RO、全戶軟水、前置過濾、濾芯耗材、水管與連接管件產品型錄。">
   <title>清泉選物｜淨水設備與 RO 零件</title>
   <style>
@@ -111,6 +119,7 @@
       .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.filter{flex-shrink:0}
       .consumable b{font-size:12px}.consumable span{font-size:11px}.disclaimer{font-size:11px}
     }
+    .site-version{position:fixed;top:6px;right:8px;z-index:20;font:600 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.02em;color:var(--muted);background:color-mix(in srgb,var(--paper) 85%,transparent);border:1px solid var(--line);border-radius:10px;padding:4px 7px;pointer-events:none;backdrop-filter:blur(4px)}
   </style>
 </head>
 <body>
@@ -174,7 +183,8 @@
   </main>
   <footer class="wrap footer"><a class="brand" href="#top"><span class="mark">滴</span><span>清泉選物<small>PURE FLOW SELECT</small></span></a><span>淨水設備・濾芯耗材・水管與安裝配件</span></footer>
   <div class="overlay" id="overlay" role="presentation"><article class="dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close" id="close-modal" aria-label="關閉">×</button><div class="dialog-image"><img id="modal-image" alt=""></div><div class="dialog-copy"><div class="eyebrow" id="modal-brand"></div><h2 id="modal-title"></h2><p class="sub" id="modal-sub"></p><ul class="detail-points" id="modal-points"></ul><div class="spec-title">產品資料</div><div class="specs" id="modal-specs"></div><div class="source-links" id="modal-links"></div><div class="modal-note">圖片由本機檔案載入，可離線檢視；通用零件採同類型代表照片，實際品項依型號與供貨規格為準。</div></div></article></div>
-  <script src="catalog.js"></script>
+  <div class="site-version" id="site-version" title="網站版本"></div>
+  <script>document.getElementById('site-version').textContent='v'+window.SITE_VERSION;document.write('<script src="catalog.js?v='+encodeURIComponent(window.SITE_VERSION)+'"><\/script>');</script>
   <script>
     (()=>{const picker=document.querySelector('#theme-select'),buttons=[...document.querySelectorAll('[data-layout-choice]')],key='pure-flow-layout',valid=new Set(buttons.map(b=>b.dataset.layoutChoice)),structure={portrait:'editorial',landscape:'water',productshot:'bento',identity:'showroom',comic:'brutalist',fantasy:'bento',architecture:'swiss',lifestyle:'magazine',cyber:'tech',vintage:'compact',photography:'editorial',cinematic:'tech',anime:'magazine',illustration:'magazine',sketch:'swiss',graphicnovel:'brutalist',render3d:'bento',chibi:'showroom',isometric:'swiss',pixel:'compact',oil:'editorial',watercolor:'water',ink:'compact',retro:'compact',cyberpunk:'tech',minimal:'swiss'},themes={portrait:'sand',landscape:'ocean',productshot:'ocean',identity:'spring',comic:'sand',fantasy:'ocean',architecture:'spring',lifestyle:'sand',cyber:'night',vintage:'sand',photography:'sand',cinematic:'night',anime:'sand',illustration:'sand',sketch:'sand',graphicnovel:'sand',render3d:'ocean',chibi:'sand',isometric:'ocean',pixel:'night',oil:'sand',watercolor:'ocean',ink:'sand',retro:'sand',cyberpunk:'night',minimal:'sand'};const search=document.querySelector('#style-search'),filters=[...document.querySelectorAll('[data-style-filter]')];let family='all';function filterStyles(){const q=search.value.trim().toLocaleLowerCase();buttons.forEach(b=>{const matchesFamily=family==='all'||b.dataset.source===family,matchesQuery=!q||(b.dataset.search+' '+b.textContent).toLocaleLowerCase().includes(q);b.hidden=!(matchesFamily&&matchesQuery)})}filters.forEach(f=>f.addEventListener('click',()=>{family=f.dataset.styleFilter;filters.forEach(x=>x.classList.toggle('active',x===f));filterStyles()}));search.addEventListener('input',filterStyles);let saved='portrait';try{saved=localStorage.getItem(key)||'portrait'}catch{}if(!valid.has(saved))saved='portrait';function apply(layout){document.body.dataset.layout=layout;document.body.dataset.theme=themes[layout];document.body.classList.remove(...valid,...new Set(Object.values(structure)));document.body.classList.add(layout,structure[layout]);picker.value=layout;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.layoutChoice===layout)));try{localStorage.setItem(key,layout)}catch{}}picker.addEventListener('change',()=>apply(valid.has(picker.value)?picker.value:'portrait'));buttons.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.layoutChoice)));filterStyles();apply(saved)})();
   </script>
