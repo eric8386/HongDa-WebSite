@@ -78,7 +78,7 @@
     budget: { low: '2 萬以內', mid: '2～6 萬', high: '6 萬以上', unsure: '還不確定' }
   };
   var R = {
-    drinkLite: { t: '廚下生飲淨水器', d: '不需排水、安裝彈性大，預算友善', h: '/products/?cat=drink' },
+    heater: { t: '廚下加熱器', d: '接在淨水設備後，熱水、冰水即開即用', h: '/products/?cat=drink' },
     ro: { t: '直輸 RO 淨水器', d: '過濾精度最高的生飲方案，需電源與排水', h: '/products/?cat=ro' },
     whole: { t: '全戶前置過濾', d: '總進水端攔截泥沙鐵鏽，保護全屋設備', h: '/products/?cat=whole' },
     soft: { t: '全戶軟水機', d: '降低硬度，減少熱水器與衛浴水垢', h: '/products/?cat=softener' },
@@ -88,10 +88,10 @@
   };
   function recommend(a) {
     var out = [];
-    if (a.need === 'drink') out = a.budget === 'low' ? [R.drinkLite, R.ro] : [R.ro, R.drinkLite];
+    if (a.need === 'drink') out = a.budget === 'low' ? [R.ro, R.test] : [R.ro, R.heater];
     else if (a.need === 'scale') out = a.budget === 'low' ? [R.test, R.whole] : [R.soft, R.whole, R.test];
     else if (a.need === 'tank') out = a.home === 'house' ? [R.tank, R.pipe, R.whole] : [R.tank, R.pipe];
-    else out = a.budget === 'low' ? [R.test, R.drinkLite, R.tank]
+    else out = a.budget === 'low' ? [R.test, R.ro, R.tank]
       : a.home === 'house' ? [R.whole, R.soft, R.ro, R.tank] : [R.ro, R.whole, R.tank];
     if (a.budget === 'unsure' && out.indexOf(R.test) < 0) out.push(R.test);
     return out;

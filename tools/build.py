@@ -306,7 +306,7 @@ def build_home():
         ('pipe', '管路', '管壁的鏽垢與生物膜會讓水色混濁、出水變小。', '/services/pipe-cleaning.html', '管路清洗'),
         ('house', '全戶過濾', '總進水端攔截泥沙、鐵鏽與餘氯，保護全屋設備。', '/products/?cat=whole', '全戶淨水'),
         ('shield', '全戶軟水', '降低鈣鎂硬度，減少熱水器與衛浴水垢。', '/products/?cat=softener', '全戶軟水'),
-        ('ro', '廚房生飲', '直輸 RO 或廚下生飲，專門處理喝的水。', '/products/?cat=ro', '直輸 RO／生飲'),
+        ('ro', '廚房飲水', '直輸 RO 處理喝的水，再搭配廚下加熱器，熱水即開即用。', '/products/?cat=ro', '直輸 RO'),
     ]
     nodes = ''.join(f'''<li><button type="button" class="flow-node{" on" if i==0 else ""}" data-flow="{i}" aria-pressed="{"true" if i==0 else "false"}"><span class="fn-ic">{ic(n[0])}</span><b>{e(n[1])}</b></button>
       <template>{ic(n[0], "ic big")}<div><h3>{e(n[1])}</h3><p>{e(n[2])}</p><a href="{n[3]}">看{e(n[4])} {ic("arrow")}</a></div></template></li>''' for i, n in enumerate(path_nodes))
@@ -314,7 +314,7 @@ def build_home():
         ('shield', '水垢清不完', '熱水器、蓮蓬頭、玻璃門一層白垢', '/services/whole-house.html'),
         ('drop', '水有味道', '漂白水味、霉味，喝起來不放心', '/products/?cat=ro'),
         ('tank', '水塔多年沒洗', '偶爾出現黃水或細小沉積物', '/services/tank-cleaning.html'),
-        ('list', '不知道怎麼選', 'RO、生飲、全戶、軟水一堆名詞', '/finder.html'),
+        ('list', '不知道怎麼選', 'RO、加熱器、全戶、軟水一堆名詞', '/finder.html'),
     ]
     pains_html = ''.join(f'<a class="pain" href="{h}">{ic(i)}<div><h3>{e(t)}</h3><p>{e(d)}</p></div>{ic("arrow", "ic go")}</a>' for i, t, d, h in pains)
     why = [
@@ -426,7 +426,7 @@ def build_products():
   <div class="empty" hidden><p>這個分類的產品整理中，歡迎加 LINE 詢問。</p><a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 詢問</span></a></div>
 </div></section>
 {cta_band()}'''
-    page('/products/', '淨水設備型錄：直輸 RO、全戶淨水、全戶軟水、廚下生飲', '台南淨水設備型錄：直輸 RO、廚下生飲、全戶淨水、全戶軟水與濾心耗材，含規格、安裝條件與建議售價。',
+    page('/products/', '淨水設備型錄：直輸 RO、全戶淨水、全戶軟水、廚下加熱器', '台南淨水設備型錄：直輸 RO、廚下加熱器、全戶淨水、全戶軟水與濾心耗材，含規格、安裝條件與建議售價。',
          body, active='/products/', crumbs=[(None, '產品')])
     for p in PRODUCTS:
         build_product(p)
@@ -623,7 +623,7 @@ def build_static():
     body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">關於我們</span><h1>{e(SITE["name"])}</h1><p class="slogan-lg">{e(SITE.get("slogan",""))}・{e(SITE.get("tagline",""))}</p><p>{e(SITE["description"])}</p></div></section>
 <section class="sec sec-tight"><div class="wrap two-col">
   <div class="prose"><h2>我們做什麼</h2>
-    <p>{e(SITE["short"])}專注在居家用水的完整解決方案：從水塔、自來水管路的清洗，到全戶淨水、全戶軟水，再到廚房的直輸 RO 與生飲設備，以及後續的濾心更換與保養。</p>
+    <p>{e(SITE["short"])}專注在居家用水的完整解決方案：從水塔、自來水管路的清洗，到全戶淨水、全戶軟水，再到廚房的直輸 RO 與廚下加熱器，以及後續的濾心更換與保養。</p>
     <p>每個家庭的水質、房型與預算都不一樣。我們的做法是先了解你家的狀況，必要時先做水質檢測，再建議真正需要的設備，避免花冤枉錢。</p>
     <h2>我們的原則</h2>
     <ul><li>產品標示建議售價，服務依現場透明報價</li><li>施工前說明流程與內容</li><li>多品牌比較，依需求挑選</li><li>完工後說明使用與保養方式</li></ul>
@@ -635,7 +635,7 @@ def build_static():
 
     body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">常見問題</span><h1>淨水設備與清洗服務常見問題</h1><p>找不到答案？直接加 LINE 問我們。</p></div></section>
 <section class="sec sec-tight"><div class="wrap narrow">{faq_html(SITE["faqs"])}</div></section>{cta_band()}'''
-    page('/faq.html', '常見問題', '水塔多久洗一次、RO 和生飲差在哪、軟水機要加鹽嗎？淨水設備與清洗服務常見問題。', body,
+    page('/faq.html', '常見問題', '水塔多久洗一次、廚下加熱器怎麼裝、軟水機要加鹽嗎？淨水設備與清洗服務常見問題。', body,
          active='/faq.html', crumbs=[(None, '常見問題')], ld=faq_ld(SITE['faqs']))
 
     rows = []
