@@ -319,7 +319,7 @@ def build_home():
     pains_html = ''.join(f'<a class="pain" href="{h}">{ic(i)}<div><h3>{e(t)}</h3><p>{e(d)}</p></div>{ic("arrow", "ic go")}</a>' for i, t, d, h in pains)
     why = [
         ('tag', '建議售價公開', '產品頁直接標示建議售價或詢價方式，安裝與清洗依現場透明報價。'),
-        ('list', '多品牌比較', '愛科、3M、BRITA、克拉克、克麗歐、宮黛、速沛優，依需求挑選，不綁單一品牌。'),
+        ('list', '多品牌比較', '、'.join(b['name'].split(' ')[0] for b in SITE['brands']) + '，依需求挑選，不綁單一品牌。'),
         ('check', '施工流程公開', '每項服務都列出完整步驟，施工前先說清楚做什麼、要多久。'),
         ('pin', '台南在地服務', '以台南為主要服務範圍，安裝、清洗、換濾心都能就近安排。'),
     ]
@@ -343,7 +343,7 @@ def build_home():
         <a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
         <a class="btn btn-primary btn-lg" href="#finder">3 步驟找出適合方案 {ic("arrow")}</a>
       </div>
-      <ul class="hero-points"><li>{ic("check")}建議售價公開</li><li>{ic("check")}7 大品牌比較</li><li>{ic("check")}台南到府服務</li></ul>
+      <ul class="hero-points"><li>{ic("check")}建議售價公開</li><li>{ic("check")}{len(SITE["brands"])} 大品牌比較</li><li>{ic("check")}台南到府服務</li></ul>
     </div>
     <div class="hero-visual" aria-hidden="true">
       <div class="hv-ring"></div>
