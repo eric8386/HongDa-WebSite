@@ -35,6 +35,9 @@ def a(path):
     """Versioned asset URL (no-cache by URL)."""
     return '/' + path.lstrip('/') + '?v=' + quote(V)
 
+def tel(n):
+    return ''.join(ch for ch in str(n) if ch.isdigit() or ch == '+')
+
 def line_href():
     if C.get('lineUrl'):
         return C['lineUrl']
@@ -60,6 +63,7 @@ ICONS = {
  'test': '<path d="M9 3h6M10 3v6.5L5.2 18a2 2 0 0 0 1.8 3h10a2 2 0 0 0 1.8-3L14 9.5V3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7.5 15h9" stroke="currentColor" stroke-width="1.8"/>',
  'ro': '<rect x="5" y="3" width="10" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 7h2.5a1.5 1.5 0 0 1 1.5 1.5V12" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h4M8 12h4M8 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
  'house': '<path d="M3 11l9-7 9 7M5 9.5V20h14V9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 11.5c1.3 1.6 2.3 2.8 2.3 4a2.3 2.3 0 0 1-4.6 0c0-1.2 1-2.4 2.3-4z" fill="currentColor"/>',
+ 'sun': '<circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
  'care': '<path d="M14.5 4.5a4 4 0 0 0-5.3 5.3L3.5 15.5a2 2 0 0 0 2.8 2.8l5.7-5.7a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.4-.4-.4-2.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
  'menu': '<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
  'shield': '<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
@@ -73,9 +77,11 @@ def ic(name, cls='ic'):
     fill = 'currentColor' if filled else 'none'
     return f'<svg class="{cls}" viewBox="0 0 24 24" fill="{fill}" aria-hidden="true">{ICONS[name]}</svg>'
 
-LOGO = ('<svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="var(--brand)"/>'
-        '<path d="M20 8.5c4.6 5.5 8 9.6 8 13.6a8 8 0 0 1-16 0c0-4 3.4-8.1 8-13.6z" fill="#fff"/>'
-        '<path d="M16.2 22.6a4 4 0 0 0 3.8 3.4" fill="none" stroke="var(--brand)" stroke-width="1.8" stroke-linecap="round"/></svg>')
+LOGO = ('<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="hdg" x1="0" y1="0" x2="0" y2="1">'
+        '<stop offset="0" stop-color="#2a9df4"/><stop offset="1" stop-color="#0a3f94"/></linearGradient></defs>'
+        '<path d="M32 2.5C32 2.5 8 29.5 8 43.5a24 19.5 0 0 0 48 0C56 29.5 32 2.5 32 2.5z" fill="url(#hdg)"/>'
+        '<path d="M21 22h7v31h-7zM36 22h7v31h-7z" fill="#fff"/>'
+        '<path d="M14 42c6-6 12-6 18-1s12 5 18-1" fill="none" stroke="#9fdcff" stroke-width="4.5" stroke-linecap="round"/></svg>')
 
 # ---------- layout ----------
 NAV = [
@@ -96,6 +102,7 @@ def header(active):
     <a class="logo" href="/" aria-label="{e(SITE["short"])} 首頁">{LOGO}<span><b>{e(SITE["short"])}</b><small>{e(SITE["en"])}</small></span></a>
     <nav class="main-nav" id="main-nav" aria-label="主選單">{links}<a class="nav-finder" href="/finder.html">3 步驟找方案</a></nav>
     <div class="header-actions">
+      {f'<a class="header-tel" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>{e(C["mobile"])}</span></a>' if C.get('mobile') else ''}
       <a class="btn btn-line btn-sm" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 諮詢</span></a>
       <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="開啟選單">{ic("menu")}</button>
     </div>
@@ -106,7 +113,9 @@ def footer():
     cats = ''.join(f'<li><a href="/products/?cat={c["key"]}">{e(c["name"])}</a></li>' for c in SITE['categories'])
     svcs = ''.join(f'<li><a href="/services/{s["slug"]}.html">{e(s["name"])}</a></li>' for s in SERVICES)
     rows = []
-    if C.get('phone'): rows.append(f'<li>{ic("phone")}<a href="tel:{e(C["phone"])}">{e(C["phone"])}</a></li>')
+    if C.get('mobile'): rows.append(f'<li>{ic("phone")}<span>手機：<a href="tel:{tel(C["mobile"])}">{e(C["mobile"])}</a>{"（" + e(C["person"]) + "）" if C.get("person") else ""}</span></li>')
+    if C.get('phone'): rows.append(f'<li>{ic("phone")}<span>電話：<a href="tel:{tel(C["phone"])}">{e(C["phone"])}</a></span></li>')
+    if C.get('fax'): rows.append(f'<li>{ic("list")}傳真：{e(C["fax"])}</li>')
     if C.get('lineId'): rows.append(f'<li>{ic("line")}LINE：{e(C["lineId"])}</li>')
     if C.get('address'): rows.append(f'<li>{ic("pin")}{e(C["address"])}</li>')
     if C.get('hours'): rows.append(f'<li>{ic("list")}{e(C["hours"])}</li>')
@@ -116,7 +125,7 @@ def footer():
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <a class="logo logo-light" href="/">{LOGO}<span><b>{e(SITE["name"])}</b><small>{e(SITE["en"])}</small></span></a>
-      <p>{e(SITE["description"])}</p>
+      <p class="slogan">{e(SITE.get("slogan",""))}</p><p>{e(SITE["description"])}</p>
       <a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
     </div>
     <div><h3>產品分類</h3><ul>{cats}</ul></div>
@@ -128,7 +137,7 @@ def footer():
 <nav class="mobile-bar" aria-label="快速聯絡">
   <a class="mb-line" href="{e(line_href())}" data-line>{ic("line")}LINE 諮詢</a>
   <a href="/finder.html">{ic("list")}找方案</a>
-  {f'<a href="tel:{e(C["phone"])}">{ic("phone")}撥打電話</a>' if C.get('phone') else f'<a href="/services/">{ic("care")}服務項目</a>'}
+  {f'<a href="tel:{tel(C.get("mobile") or C["phone"])}">{ic("phone")}撥打電話</a>' if (C.get('mobile') or C.get('phone')) else f'<a href="/services/">{ic("care")}服務項目</a>'}
 </nav>'''
 
 def jsonld(obj):
@@ -138,8 +147,11 @@ def business_ld():
     o = {"@context": "https://schema.org", "@type": "LocalBusiness", "name": SITE['name'],
          "url": DOMAIN + '/', "description": SITE['description'],
          "areaServed": [{"@type": "City", "name": x} for x in SITE['areas']]}
-    if C.get('phone'): o['telephone'] = C['phone']
-    if C.get('address'): o['address'] = C['address']
+    if C.get('mobile') or C.get('phone'): o['telephone'] = C.get('mobile') or C['phone']
+    if C.get('fax'): o['faxNumber'] = C['fax']
+    if C.get('address'):
+        o['address'] = {"@type": "PostalAddress", "streetAddress": C['address'], "addressLocality": "台南市", "addressCountry": "TW"}
+    if SITE.get('slogan'): o['slogan'] = SITE['slogan']
     return o
 
 def crumbs_html(items):
@@ -178,7 +190,7 @@ def page(path, title, desc, body, active='', crumbs=None, ld=None, og_image=None
   <meta property="og:description" content="{e(desc)}">
   <meta property="og:url" content="{e(canonical)}">
   {f'<meta property="og:image" content="{e(ogimg)}">' if ogimg else ''}
-  <meta name="theme-color" content="#0b5f7a">
+  <meta name="theme-color" content="#0a4fb4">
   <link rel="icon" href="{a("assets/img/favicon.svg")}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -325,7 +337,7 @@ def build_home():
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">台南在地淨水工程</span>
+      <span class="eyebrow">{e(SITE.get("tagline") or "台南在地淨水工程")}</span>
       <h1>從水塔到水龍頭，<br><span class="hl">全家用水一次顧好</span></h1>
       <p class="lead">淨水設備安裝、水塔清洗、自來水管路清洗、水質檢測與定期保養。先了解你家的水，再推薦真正需要的方案。</p>
       <div class="hero-cta">
@@ -589,7 +601,7 @@ def build_knowledge():
 
 def build_static():
     brands = ''.join(f'<li>{e(b["name"])}</li>' for b in SITE['brands'])
-    body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">關於我們</span><h1>{e(SITE["name"])}</h1><p>{e(SITE["description"])}</p></div></section>
+    body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">關於我們</span><h1>{e(SITE["name"])}</h1><p class="slogan-lg">{e(SITE.get("slogan",""))}・{e(SITE.get("tagline",""))}</p><p>{e(SITE["description"])}</p></div></section>
 <section class="sec sec-tight"><div class="wrap two-col">
   <div class="prose"><h2>我們做什麼</h2>
     <p>{e(SITE["short"])}專注在居家用水的完整解決方案：從水塔、自來水管路的清洗，到全戶淨水、全戶軟水，再到廚房的直輸 RO 與生飲設備，以及後續的濾心更換與保養。</p>
@@ -609,16 +621,18 @@ def build_static():
 
     rows = []
     if C.get('lineId') or C.get('lineUrl'): rows.append(f'<li>{ic("line")}<div><b>LINE</b><a href="{e(line_href())}" data-line>{e(C.get("lineId") or "加入 LINE 好友")}</a></div></li>')
-    if C.get('phone'): rows.append(f'<li>{ic("phone")}<div><b>電話</b><a href="tel:{e(C["phone"])}">{e(C["phone"])}</a></div></li>')
-    if C.get('address'): rows.append(f'<li>{ic("pin")}<div><b>地址</b><span>{e(C["address"])}</span></div></li>')
+    if C.get('mobile'): rows.append(f'<li>{ic("phone")}<div><b>手機{"（" + e(C["person"]) + "）" if C.get("person") else ""}</b><a href="tel:{tel(C["mobile"])}">{e(C["mobile"])}</a></div></li>')
+    if C.get('phone'): rows.append(f'<li>{ic("phone")}<div><b>電話</b><a href="tel:{tel(C["phone"])}">{e(C["phone"])}</a></div></li>')
+    if C.get('fax'): rows.append(f'<li>{ic("list")}<div><b>傳真</b><span>{e(C["fax"])}</span></div></li>')
+    if C.get('address'): rows.append(f'<li>{ic("pin")}<div><b>地址</b><a href="https://www.google.com/maps/search/?api=1&amp;query={quote(C["address"])}" target="_blank" rel="noopener">{e(C["address"])}</a></div></li>')
     if C.get('hours'): rows.append(f'<li>{ic("list")}<div><b>營業時間</b><span>{e(C["hours"])}</span></div></li>')
     rows.append(f'<li>{ic("pin")}<div><b>服務地區</b><span>{e(SITE["areaNote"])}</span></div></li>')
-    pending = '' if (C.get('lineId') or C.get('lineUrl') or C.get('phone')) else '<p class="notice">LINE 官方帳號與聯絡電話即將公布，敬請稍候。</p>'
+    pending = '' if (C.get('lineId') or C.get('lineUrl')) else '<p class="notice">LINE 加好友連結準備中，現在請直接來電，或傳簡訊照片到手機。</p>'
     tips = ''.join(f'<li>{ic("check")}{e(t)}</li>' for t in ['您的區域（例如：台南市東區）與房型', '想詢問的設備或服務', '現場照片：櫥下空間、水塔、總進水管或機身型號標籤'])
     body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">聯絡我們</span><h1>加 LINE，最快拿到建議與估價</h1><p>傳照片給我們，比電話描述更快更準確。</p></div></section>
 <section class="sec sec-tight"><div class="wrap two-col">
   <div class="contact-box">{pending}<ul class="contact-rows">{"".join(rows)}</ul>
-    <a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a></div>
+    {f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>' if (C.get('lineId') or C.get('lineUrl')) else f'<a class="btn btn-primary btn-lg" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>撥打 {e(C["mobile"])}</span></a>'}</div>
   <div class="hl-box"><h2 class="h-sm">詢問時請提供</h2><ul class="hl-list">{tips}</ul></div>
 </div></section>'''
     page('/contact.html', '聯絡我們', f'聯絡{SITE["name"]}：加 LINE 傳照片即可取得淨水設備與清洗服務的初步建議與估價。', body, crumbs=[(None, '聯絡我們')])
