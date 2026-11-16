@@ -1,9 +1,9 @@
 #!/bin/sh
-# 產生新版本號並寫入 index.html 與 version.json（每次更新 commit 前執行）
+# 產生新版本號、寫入 version.json，並重新產生全站頁面（每次更新 commit 前執行）
 set -e
 cd "$(git rev-parse --show-toplevel)"
 V="$(TZ=Asia/Taipei date +%Y.%m.%d-%H%M)"
-sed -i '' "s/window.SITE_VERSION='[^']*'/window.SITE_VERSION='$V'/" index.html
 printf '{"version":"%s"}\n' "$V" > version.json
-git add index.html version.json
+python3 tools/build.py
+git add -A
 echo "網站版本：$V"
