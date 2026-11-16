@@ -32,15 +32,15 @@
     "1.5 L/min"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 21000,
+  "priceNote": "BRITA 官方商城原價",
   "filters": [
    "brita-gr600-4-in-1",
    "brita-gr600-ro"
   ],
   "fits": [],
-  "source": "https://www.brita.tw/mypure/mypure-GR600",
-  "sourceText": "BRITA 台灣產品頁"
+  "source": "https://store.brita.tw/products/mypure-gr600",
+  "sourceText": "BRITA 官方商城"
  },
  {
   "id": "brita-mypure-gr-1000",
@@ -75,11 +75,11 @@
     "依原廠規格"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 22250,
+  "priceNote": "BRITA 官方商城原價",
   "filters": [],
   "fits": [],
-  "source": "https://store.brita.tw/products/mypure-gr1000",
+  "source": "https://store.brita.tw/products/mypure-gr1000-dark-grey",
   "sourceText": "BRITA 官方商城"
  },
  {
@@ -115,8 +115,8 @@
     "EVERPOLL"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 14800,
+  "priceNote": "愛科官網售價",
   "filters": [
    "everpoll-r-pp",
    "everpoll-r-ro",
@@ -159,8 +159,8 @@
     "EVERPOLL"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 20800,
+  "priceNote": "愛科官網售價",
   "filters": [],
   "fits": [],
   "source": "https://www.everpoll.com.tw/product_detail?id=479",
@@ -199,8 +199,8 @@
     "EVERPOLL"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 23800,
+  "priceNote": "愛科官網售價",
   "filters": [],
   "fits": [],
   "source": "https://www.everpoll.com.tw/product_detail?id=480",
@@ -239,16 +239,16 @@
     "F1／F2／F3-TR1"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 26800,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [
    "3m-f1-tr1",
    "3m-f2-tr1",
    "3m-f3-tr1"
   ],
   "fits": [],
-  "source": "https://www.3m.com.tw/3M/zh_TW/p/d/v100987360/",
-  "sourceText": "3M 台灣產品規格"
+  "source": "https://shop.3m.com.tw/SalePage/Index/6485369",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "clack-cws18-2e10r",
@@ -1456,12 +1456,12 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 73900,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [],
   "fits": [],
-  "source": "https://www.3m.com.tw/3M/zh_TW/p/d/v000213106/",
-  "sourceText": "3M 台灣產品頁"
+  "source": "https://shop.3m.com.tw/SalePage/Index/10138415",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "3m-sft-150",
@@ -1496,12 +1496,12 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 84900,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [],
   "fits": [],
-  "source": "https://www.3m.com.tw/3M/zh_TW/water-quality-tw/applications/residential-water-filtration/whole-house-purifier/",
-  "sourceText": "3M 全戶產品型錄"
+  "source": "https://shop.3m.com.tw/SalePage/Index/10138535",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "3m-sft-200",
@@ -1536,12 +1536,12 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 93900,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [],
   "fits": [],
-  "source": "https://www.3m.com.tw/3M/zh_TW/p/d/v000213107/",
-  "sourceText": "3M 台灣產品頁"
+  "source": "https://shop.3m.com.tw/SalePage/Index/11013225",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "supurior-sr-1035",
@@ -1620,12 +1620,12 @@
     "一年"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 84500,
+  "priceNote": "速沛優官網售價",
   "filters": [],
   "fits": [],
-  "source": "https://www.7700.com.tw/product_page?id=1472",
-  "sourceText": "藍海淨水 SR-1035 產品頁"
+  "source": "https://www.supurior.com.tw/products/e2a8e2df-7f1a-494f-ad5c-686b08d9bcf7",
+  "sourceText": "速沛優 SUPURIOR 官網"
  },
  {
   "id": "everpoll-jh-r2000",
@@ -1932,12 +1932,12 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 19900,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [],
   "fits": [],
-  "source": "https://www.3m.com.tw/3M/zh_TW/water-quality-tw/applications/residential-water-filtration/whole-house-purifier/",
-  "sourceText": "3M 全戶產品型錄"
+  "source": "https://shop.3m.com.tw/SalePage/Index/10138728",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "3m-ss801",
@@ -1972,14 +1972,14 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 26800,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [
    "3m-ap817"
   ],
   "fits": [],
-  "source": "https://www.3m.com.tw/3M/zh_TW/p/c/filtration-separation/water/whole-house/",
-  "sourceText": "3M 全戶產品型錄"
+  "source": "https://shop.3m.com.tw/SalePage/Index/4646997",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "3m-ss802",
@@ -2014,14 +2014,14 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 33800,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [
    "3m-ap817-2"
   ],
   "fits": [],
-  "source": "https://www.3m.com.tw/3M/zh_TW/p/c/filtration-separation/water/whole-house/",
-  "sourceText": "3M 全戶產品型錄"
+  "source": "https://shop.3m.com.tw/SalePage/Index/4647098",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "aquaclio-elf35-cn10g",
@@ -2056,8 +2056,8 @@
     "AQUACLiO+ CARE"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 77000,
+  "priceNote": "克麗歐官網標示價格",
   "filters": [],
   "fits": [],
   "source": "https://www.aquaclio.com/tw/product-d.php?Key=26",
@@ -2096,8 +2096,8 @@
     "AQUACLiO+ CARE"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 77000,
+  "priceNote": "克麗歐官網標示價格",
   "filters": [],
   "fits": [],
   "source": "https://www.aquaclio.com/tw/product-d.php?Key=27",
@@ -2136,8 +2136,8 @@
     "EVERPOLL"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 1280,
+  "priceNote": "愛科官網售價",
   "filters": [],
   "fits": [
    "everpoll-ro-600g"
@@ -2178,8 +2178,8 @@
     "EVERPOLL"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 3880,
+  "priceNote": "愛科官網售價",
   "filters": [],
   "fits": [
    "everpoll-ro-600g"
@@ -2220,8 +2220,8 @@
     "EVERPOLL"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 1200,
+  "priceNote": "愛科官網售價",
   "filters": [],
   "fits": [
    "everpoll-ro-600g"
@@ -2262,14 +2262,14 @@
     "BRITA"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 2750,
+  "priceNote": "BRITA 官方商城原價",
   "filters": [],
   "fits": [
    "brita-mypure-gr-600"
   ],
-  "source": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12892939",
-  "sourceText": "BRITA 官方 momo 旗艦館"
+  "source": "https://store.brita.tw/products/mypure-gr-4in1",
+  "sourceText": "BRITA 官方商城"
  },
  {
   "id": "brita-gr600-ro",
@@ -2304,14 +2304,14 @@
     "RO 替換濾芯"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 5600,
+  "priceNote": "BRITA 官方商城原價",
   "filters": [],
   "fits": [
    "brita-mypure-gr-600"
   ],
-  "source": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12732693",
-  "sourceText": "BRITA 官方 momo 旗艦館"
+  "source": "https://store.brita.tw/products/mypure-gr-ro-600g",
+  "sourceText": "BRITA 官方商城"
  },
  {
   "id": "3m-f1-tr1",
@@ -2430,14 +2430,14 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 7190,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [],
   "fits": [
    "3m-tr1"
   ],
-  "source": "https://www.3m.com.tw/3M/zh_TW/p/d/v100987360/",
-  "sourceText": "3M 台灣產品規格"
+  "source": "https://shop.3m.com.tw/SalePage/Index/6489466",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "3m-ap817",
@@ -2472,14 +2472,14 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 2990,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [],
   "fits": [
    "3m-ss801"
   ],
-  "source": "https://www.3m.com.tw/3M/zh_TW/p/c/filtration-separation/water/whole-house/",
-  "sourceText": "3M 全戶型錄"
+  "source": "https://shop.3m.com.tw/SalePage/Index/4646586",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "3m-ap817-2",
@@ -2514,14 +2514,14 @@
     "3M"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 5480,
+  "priceNote": "3M 官方旗艦店建議售價",
   "filters": [],
   "fits": [
    "3m-ss802"
   ],
-  "source": "https://www.3m.com.tw/3M/zh_TW/p/c/filtration-separation/water/whole-house/",
-  "sourceText": "3M 全戶型錄"
+  "source": "https://shop.3m.com.tw/SalePage/Index/4646704",
+  "sourceText": "3M 官方旗艦店（原廠授權）"
  },
  {
   "id": "gundai-gd600",
