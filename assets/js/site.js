@@ -73,7 +73,7 @@
 
   /* 3-step finder quiz */
   var LABEL = {
-    home: { apt: '公寓／大樓', house: '透天／獨棟', community: '社區管委會' },
+    home: { apt: '公寓／大樓', house: '透天／獨棟' },
     need: { drink: '想直接生飲', scale: '水垢、洗澡用水', tank: '水塔、水管髒污', all: '全屋一次規劃' },
     budget: { low: '2 萬以內', mid: '2～6 萬', high: '6 萬以上', unsure: '還不確定' }
   };
@@ -87,7 +87,6 @@
     test: { t: '先做水質檢測', d: '量測硬度等指標，再決定需要哪種設備', h: '/services/water-test.html' }
   };
   function recommend(a) {
-    if (a.home === 'community') return [R.tank, R.pipe, R.test];
     var out = [];
     if (a.need === 'drink') out = a.budget === 'low' ? [R.drinkLite, R.ro] : [R.ro, R.drinkLite];
     else if (a.need === 'scale') out = a.budget === 'low' ? [R.test, R.whole] : [R.soft, R.whole, R.test];

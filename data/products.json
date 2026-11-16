@@ -255,15 +255,16 @@
   "brand": "CLACK",
   "brandName": "CLACK 克拉克",
   "model": "CWS18-2E10R",
-  "name": "CLACK CWS18 智能軟水系統",
+  "name": "克拉克 CLACK CWS18 智能軟水系統",
   "cat": "softener",
-  "label": "全戶軟水",
-  "image": "assets/catalog/official/447c317b.jpg",
-  "summary": "全戶型自動軟水系統，搭配 CLACK 控制閥與樹脂罐。",
+  "label": "3 人以下",
+  "image": "assets/catalog/official/clack-cws18.jpg",
+  "summary": "一體式滑蓋智能軟水機，降低水中鈣鎂硬度，適用 3 人以下家庭。",
   "points": [
-   "全戶型智能軟水系統。",
-   "用水量控制再生程序；設備配置依原廠與經銷型號為準。",
-   "適用量體需依水質與家庭用水量選型。"
+   "克拉克控制閥搭配 LCD 液晶螢幕，微電腦依用水量自動啟動反洗再生",
+   "可查看當前及歷史用水數據；NHWR 再生技術，反洗再生較省水省鹽",
+   "優先供水設計，反洗再生期間仍可供水",
+   "食品級離子交換樹脂，FRP 玻璃纖維桶"
   ],
   "specs": [
    [
@@ -271,39 +272,68 @@
     "CWS18-2E10R"
    ],
    [
-    "分類",
-    "全戶型軟水"
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
    ],
    [
-    "控制",
-    "CLACK 控制閥"
+    "電源",
+    "AC 110V / 220V"
    ],
    [
-    "品牌",
-    "CLACK"
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "1.8 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深52×寬35×高70 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "3 人以下（原廠參考值）"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 63000,
+  "priceNote": "克拉克官網標示價格",
   "filters": [],
   "fits": [],
   "source": "https://www.clack.com.tw/product_detail.php?Key=51",
-  "sourceText": "CLACK 台灣產品頁"
+  "sourceText": "台灣克拉克官網（東電研）"
  },
  {
   "id": "clack-cws35-2e10r",
   "brand": "CLACK",
   "brandName": "CLACK 克拉克",
   "model": "CWS35-2E10R",
-  "name": "CLACK CWS35 智能軟水系統",
+  "name": "克拉克 CLACK CWS35 智能軟水系統",
   "cat": "softener",
-  "label": "全戶軟水",
-  "image": "assets/catalog/official/0cb2aa42.jpg",
-  "summary": "滑蓋式全戶軟水系統，提供用水數據與優先供水設計。",
+  "label": "5 人以下",
+  "image": "assets/catalog/official/clack-cws35.jpg",
+  "summary": "一體式滑蓋智能軟水機加大容量版，降低水中鈣鎂硬度，適用 5 人以下家庭。",
   "points": [
-   "原廠列有 LCD 控制閥及用水紀錄功能。",
-   "食品級離子交換樹脂軟化生活用水。",
-   "適用人數與處理能力應依現場水質評估。"
+   "克拉克控制閥搭配 LCD 液晶螢幕，微電腦依用水量自動啟動反洗再生",
+   "可查看當前及歷史用水數據；NHWR 再生技術，反洗再生較省水省鹽",
+   "優先供水設計，反洗再生期間仍可供水",
+   "食品級離子交換樹脂，FRP 玻璃纖維桶"
   ],
   "specs": [
    [
@@ -311,39 +341,167 @@
     "CWS35-2E10R"
    ],
    [
-    "分類",
-    "全戶型軟水"
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
    ],
    [
-    "再生",
-    "自動控制"
+    "電源",
+    "AC 110V / 220V"
    ],
    [
-    "品牌",
-    "CLACK"
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "3.0 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深52×寬35×高113 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "5 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 73500,
+  "priceNote": "克拉克官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.clack.com.tw/product_detail.php?Key=23",
+  "sourceText": "台灣克拉克官網（東電研）"
+ },
+ {
+  "id": "clack-jws250",
+  "brand": "CLACK",
+  "brandName": "CLACK 克拉克",
+  "model": "JWS250（AWS35-CD10R）",
+  "name": "克拉克 CLACK JWS250 智慧藍光軟水設備",
+  "cat": "softener",
+  "label": "藍光軟水",
+  "image": "assets/catalog/official/clack-jws250.jpg",
+  "summary": "克拉克藍光控制閥搭配滑蓋式機身的全戶軟水設備，依用水量自動反洗再生，適用 5 人以下家庭；規格與 CWS35 相同。",
+  "points": [
+   "克拉克藍光控制閥，LCD 液晶螢幕顯示，設定簡單",
+   "記錄用水量自動啟動反洗再生，可查看目前與歷史用水數據",
+   "優先供水設計，反洗再生時仍可供水；電腦與機械雙重限位保護",
+   "FRP 玻璃纖維桶、內置貯鹽槽（可用鹽錠或粗鹽），內建原廠旁通閥"
+  ],
+  "specs": [
+   [
+    "型號",
+    "JWS250／AWS35-CD10R"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "控制閥",
+    "克拉克藍光控制閥（LCD）"
+   ],
+   [
+    "再生方式",
+    "依用水量自動反洗再生"
+   ],
+   [
+    "鹽桶",
+    "內置貯鹽槽"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "3.0 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深52×寬35×高113 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "5 人以下（原廠參考值）"
    ]
   ],
   "price": null,
   "priceNote": "",
   "filters": [],
   "fits": [],
+  "gallery": [
+   {
+    "src": "assets/catalog/detail/clack-jws250/01.jpg",
+    "alt": "克拉克全戶型軟水器構造：控制閥、滑蓋、FRP 樹脂桶、食品級樹脂與再生鹽"
+   },
+   {
+    "src": "assets/catalog/detail/clack-jws250/02.jpg",
+    "alt": "克拉克智慧藍光軟水系統：記錄用水量、自動反洗再生、可依水質設定"
+   },
+   {
+    "src": "assets/catalog/detail/clack-jws250/03.jpg",
+    "alt": "機體工藝：滑蓋設計、HDPE 機身、FRP 玻璃纖維桶、內建旁通閥"
+   },
+   {
+    "src": "assets/catalog/detail/clack-jws250/04.jpg",
+    "alt": "JWS250／AWS35-CD10R 規格表"
+   }
+  ],
   "source": "https://www.clack.com.tw/product_detail.php?Key=23",
-  "sourceText": "CLACK 台灣產品頁"
+  "sourceText": "規格同台灣克拉克官網 CWS35 頁面（另參考艾泉淨水產品頁）"
  },
  {
   "id": "aquaclio-ems18-cn10r",
   "brand": "AQUACLiO",
   "brandName": "AQUACLiO 克麗歐",
   "model": "EMS18-CN10R",
-  "name": "AQUACLiO+ CARE EMS18 智慧軟水機",
+  "name": "克麗歐 AQUACLiO 智慧高效軟水系統 EMS18",
   "cat": "softener",
-  "label": "智慧高效軟水",
-  "image": "assets/catalog/official/2e198b8e.jpg",
-  "summary": "微電腦控制軟水系統，搭配多彩控制閥與 HSP 軟化技術。",
+  "label": "克拉克高效",
+  "image": "assets/catalog/official/aquaclio-ems18-cn10r.jpg",
+  "summary": "與克拉克合作的旋蓋式智慧高效軟水系統，適用 3 人以下家庭。",
   "points": [
-   "原廠說明處理水中鈣鎂離子與水垢。",
-   "產品提供用水量紀錄及自動再生功能。",
-   "實際處理量依水質及用水量核定。"
+   "HSP 高效軟化＋NHWR 再生技術，原廠標示可降低約 40% 單位耗水及耗鹽",
+   "克拉克多彩控制閥，以背光顏色顯示待機、運作、異常等狀態",
+   "微電腦依用水量啟動反洗再生，可查看歷史用水數據",
+   "優先供水設計，反洗再生時仍可供水"
   ],
   "specs": [
    [
@@ -351,39 +509,72 @@
     "EMS18-CN10R"
    ],
    [
-    "類型",
-    "全戶軟水"
+    "控制閥",
+    "克拉克多彩控制閥"
    ],
    [
-    "控制",
-    "CLACK 多彩控制閥"
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
    ],
    [
-    "品牌",
-    "AQUACLiO+ CARE"
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "1.8 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高74 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "3 人以下（原廠參考值）"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 81000,
+  "priceNote": "克麗歐官網標示價格",
   "filters": [],
   "fits": [],
   "source": "https://www.aquaclio.com/tw/product-d.php?Key=23",
-  "sourceText": "AQUACLiO 原廠產品頁"
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
  },
  {
   "id": "aquaclio-ems35-cn10r",
   "brand": "AQUACLiO",
   "brandName": "AQUACLiO 克麗歐",
   "model": "EMS35-CN10R",
-  "name": "AQUACLiO+ CARE EMS35 智慧軟水機",
+  "name": "克麗歐 AQUACLiO 智慧高效軟水系統 EMS35",
   "cat": "softener",
-  "label": "智慧高效軟水",
-  "image": "assets/catalog/official/b69d4b05.jpg",
-  "summary": "全戶智慧軟水系統，具微電腦控制與再生管理。",
+  "label": "克拉克高效",
+  "image": "assets/catalog/official/aquaclio-ems35-cn10r.jpg",
+  "summary": "與克拉克合作的旋蓋式智慧高效軟水系統，適用 5 人以下家庭。",
   "points": [
-   "原廠列出 HSP 與 NHWR 軟水再生技術。",
-   "可查看目前與歷史用水數據。",
-   "規劃前請依水質、家庭人數和用水量評估。"
+   "HSP 高效軟化＋NHWR 再生技術，原廠標示可降低約 40% 單位耗水及耗鹽",
+   "克拉克多彩控制閥，以背光顏色顯示待機、運作、異常等狀態",
+   "微電腦依用水量啟動反洗再生，可查看歷史用水數據",
+   "優先供水設計，反洗再生時仍可供水"
   ],
   "specs": [
    [
@@ -391,24 +582,846 @@
     "EMS35-CN10R"
    ],
    [
-    "類型",
-    "全戶軟水"
+    "控制閥",
+    "克拉克多彩控制閥"
    ],
    [
-    "控制",
-    "微電腦控制"
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
    ],
    [
-    "品牌",
-    "AQUACLiO+ CARE"
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "3.0 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高120 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "5 人以下（原廠參考值）"
    ]
   ],
-  "price": null,
-  "priceNote": "",
+  "price": 97000,
+  "priceNote": "克麗歐官網標示價格",
   "filters": [],
   "fits": [],
   "source": "https://www.aquaclio.com/tw/product-d.php?Key=22",
-  "sourceText": "AQUACLiO 原廠產品頁"
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-vws-350r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "VWS-350R",
+  "name": "克麗歐 AQUACLiO 旗艦型軟水系統 VWS-350R",
+  "cat": "softener",
+  "label": "旗艦型",
+  "image": "assets/catalog/official/aquaclio-vws-350r.jpg",
+  "summary": "不鏽鋼外殼旗艦型軟水系統，具缺鹽警示與過濾罐自動消毒，適用 6 人以下家庭。",
+  "points": [
+   "WET 節能反洗＋CCR 逆流再生，依用水動態調整耗水及耗鹽",
+   "乾式鹽箱，再生前自動補水；缺鹽警示提醒加鹽",
+   "過濾罐自動消毒、全罐充填技術",
+   "SUS 不鏽鋼外殼；具渡假模式與優先供水（另有 WiFi 監控型）"
+  ],
+  "specs": [
+   [
+    "型號",
+    "VWS-350R"
+   ],
+   [
+    "再生技術",
+    "WET 節能反洗＋CCR 逆流再生"
+   ],
+   [
+    "鹽桶",
+    "乾式鹽箱"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "3.0 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高110 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "6 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 154000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=6",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-vws-180r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "VWS-180R",
+  "name": "克麗歐 AQUACLiO 旗艦型軟水系統 VWS-180R",
+  "cat": "softener",
+  "label": "旗艦型",
+  "image": "assets/catalog/official/aquaclio-vws-180r.jpg",
+  "summary": "不鏽鋼外殼旗艦型軟水系統，具缺鹽警示與過濾罐自動消毒，適用 3 人以下家庭。",
+  "points": [
+   "WET 節能反洗＋CCR 逆流再生，依用水動態調整耗水及耗鹽",
+   "乾式鹽箱，再生前自動補水；缺鹽警示提醒加鹽",
+   "過濾罐自動消毒、全罐充填技術",
+   "SUS 不鏽鋼外殼；具渡假模式與優先供水（另有 WiFi 監控型）"
+  ],
+  "specs": [
+   [
+    "型號",
+    "VWS-180R"
+   ],
+   [
+    "再生技術",
+    "WET 節能反洗＋CCR 逆流再生"
+   ],
+   [
+    "鹽桶",
+    "乾式鹽箱"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "1.8 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高65 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "3 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 128000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=7",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-eva-350r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "EVA-350R",
+  "name": "克麗歐 AQUACLiO 尊爵型軟水系統 EVA-350R",
+  "cat": "softener",
+  "label": "尊爵型",
+  "image": "assets/catalog/official/aquaclio-eva-350r.jpg",
+  "summary": "旋蓋式尊爵型軟水系統，搭配 IM 2.0 智慧控制閥，適用 5 人以下家庭。",
+  "points": [
+   "WET 節能反洗＋CCR 逆流再生，依用水動態調整耗水及耗鹽",
+   "乾式鹽箱設計，反洗再生前自動補水",
+   "IM 2.0 智慧控制閥，可查看當前用水數據",
+   "渡假模式與優先供水設計"
+  ],
+  "specs": [
+   [
+    "型號",
+    "EVA-350R"
+   ],
+   [
+    "控制閥",
+    "IM 2.0 智慧控制閥"
+   ],
+   [
+    "再生技術",
+    "WET 節能反洗＋CCR 逆流再生"
+   ],
+   [
+    "鹽桶",
+    "乾式鹽箱"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "3.0 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高120 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "5 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 104000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=4",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-eva-180r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "EVA-180R",
+  "name": "克麗歐 AQUACLiO 尊爵型軟水系統 EVA-180R",
+  "cat": "softener",
+  "label": "尊爵型",
+  "image": "assets/catalog/official/aquaclio-eva-180r.jpg",
+  "summary": "旋蓋式尊爵型軟水系統，搭配 IM 2.0 智慧控制閥，適用 3 人以下家庭。",
+  "points": [
+   "WET 節能反洗＋CCR 逆流再生，依用水動態調整耗水及耗鹽",
+   "乾式鹽箱設計，反洗再生前自動補水",
+   "IM 2.0 智慧控制閥，可查看當前用水數據",
+   "渡假模式與優先供水設計"
+  ],
+  "specs": [
+   [
+    "型號",
+    "EVA-180R"
+   ],
+   [
+    "控制閥",
+    "IM 2.0 智慧控制閥"
+   ],
+   [
+    "再生技術",
+    "WET 節能反洗＋CCR 逆流再生"
+   ],
+   [
+    "鹽桶",
+    "乾式鹽箱"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "1.8 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高74 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "3 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 87000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=5",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-dcs-350r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "DCS-350R",
+  "name": "克麗歐 AQUACLiO 晶鑽型軟水系統 DCS-350R",
+  "cat": "softener",
+  "label": "晶鑽型",
+  "image": "assets/catalog/official/aquaclio-dcs-350r.jpg",
+  "summary": "旋蓋式晶鑽型軟水系統，具 DCC 深度清洗技術，適用 5 人以下家庭。",
+  "points": [
+   "DCC 深度清洗技術，原廠標示平時最多節省 40% 耗水耗鹽",
+   "乾式鹽箱設計，反洗再生前自動補水",
+   "WR 2.0 智慧控制閥，可查看當前用水數據",
+   "渡假模式與優先供水設計"
+  ],
+  "specs": [
+   [
+    "型號",
+    "DCS-350R"
+   ],
+   [
+    "控制閥",
+    "WR 2.0 智慧控制閥"
+   ],
+   [
+    "再生技術",
+    "DCC 深度清洗"
+   ],
+   [
+    "鹽桶",
+    "乾式鹽箱"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "3.0 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高120 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "5 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 104000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=51",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-dcs-180r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "DCS-180R",
+  "name": "克麗歐 AQUACLiO 晶鑽型軟水系統 DCS-180R",
+  "cat": "softener",
+  "label": "晶鑽型",
+  "image": "assets/catalog/official/aquaclio-dcs-180r.jpg",
+  "summary": "旋蓋式晶鑽型軟水系統，具 DCC 深度清洗技術，適用 3 人以下家庭。",
+  "points": [
+   "DCC 深度清洗技術，原廠標示平時最多節省 40% 耗水耗鹽",
+   "乾式鹽箱設計，反洗再生前自動補水",
+   "WR 2.0 智慧控制閥，可查看當前用水數據",
+   "渡假模式與優先供水設計"
+  ],
+  "specs": [
+   [
+    "型號",
+    "DCS-180R"
+   ],
+   [
+    "控制閥",
+    "WR 2.0 智慧控制閥"
+   ],
+   [
+    "再生技術",
+    "DCC 深度清洗"
+   ],
+   [
+    "鹽桶",
+    "乾式鹽箱"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "1.8 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高74 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "3 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 87000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=65",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-dcs-370r1",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "DCS-370R1",
+  "name": "克麗歐 AQUACLiO 晶鑽型複合軟水系統 DCS-370R1",
+  "cat": "softener",
+  "label": "複合軟水",
+  "image": "assets/catalog/official/aquaclio-dcs-370r1.jpg",
+  "summary": "Crystal-Right 晶體濾料複合軟水系統，可軟化水質、降低鐵錳並調整酸性水 pH 值。",
+  "points": [
+   "Crystal-Right CR100 晶體濾料：軟化、降低鐵錳、調整酸性水 pH 值",
+   "DCC 深度清洗技術，過濾罐自動消毒",
+   "乾式鹽箱；WR 2.5 智慧控制閥可查看用水數據",
+   "原廠註明不適用離島及台北、新北部分地區自來水"
+  ],
+  "specs": [
+   [
+    "型號",
+    "DCS-370R1"
+   ],
+   [
+    "控制閥",
+    "WR 2.5 智慧控制閥"
+   ],
+   [
+    "再生技術",
+    "DCC 深度清洗"
+   ],
+   [
+    "鹽桶",
+    "乾式鹽箱"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、降低鐵錳、調整酸性水 pH 值"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "2.5 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "深50×寬30×高120 cm"
+   ],
+   [
+    "濾料",
+    "Crystal-Right CR100"
+   ],
+   [
+    "適用人數",
+    "4 人以下（原廠參考值）"
+   ],
+   [
+    "適用水質",
+    "硬度大於 51 PPM／TDS 大於 80 PPM／pH 6.3～11"
+   ]
+  ],
+  "price": 128000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=55",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-nes-200r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "NES-200R",
+  "name": "克麗歐 AQUACLiO 無電型軟水系統 NES-200R",
+  "cat": "softener",
+  "label": "免插電",
+  "image": "assets/catalog/official/aquaclio-nes-200r.jpg",
+  "summary": "全水力驅動、免插電的雙罐式軟水系統，停電也不影響運作。",
+  "points": [
+   "全水力驅動，免插電、無電路板，停電不影響運作",
+   "雙罐式設計一備一用，軟水不間斷",
+   "CCR 逆流再生；原廠標示每次再生約 15 分鐘、耗鹽 0.3 kg、耗水 18 L",
+   "內建硬度調整功能"
+  ],
+  "specs": [
+   [
+    "型號",
+    "NES-200R"
+   ],
+   [
+    "再生技術",
+    "CCR 逆流再生"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "免電源"
+   ],
+   [
+    "適用水源",
+    "自來水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "2.6 T/H"
+   ],
+   [
+    "管徑",
+    "6 分"
+   ],
+   [
+    "外觀尺寸",
+    "深59×寬52.2×高46.8 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "4 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 128000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=8",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-spx-330r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "SPX-330R",
+  "name": "克麗歐 AQUACLiO 分離型軟水系統 SPX-330R",
+  "cat": "softener",
+  "label": "分離型",
+  "image": "assets/catalog/official/aquaclio-spx-330r.jpg",
+  "summary": "樹脂罐與鹽桶分離的軟水系統，CCR 逆流再生搭配乾式鹽箱。",
+  "points": [
+   "CCR 逆流再生，鹽水由下而上進行再生",
+   "乾式鹽箱設計，反洗再生前自動補水",
+   "智慧控制閥 LCD 顯示，可依水質與用水習慣設定",
+   "優先供水設計"
+  ],
+  "specs": [
+   [
+    "型號",
+    "SPX-330R"
+   ],
+   [
+    "控制閥",
+    "智慧控制閥（LCD）"
+   ],
+   [
+    "再生技術",
+    "CCR 逆流再生"
+   ],
+   [
+    "鹽桶",
+    "乾式鹽箱 深29×寬29×高91 cm"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "3.0 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "樹脂罐 Ø27×高110 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "5 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 73500,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=61",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+ },
+ {
+  "id": "aquaclio-spt-520r",
+  "brand": "AQUACLiO",
+  "brandName": "AQUACLiO 克麗歐",
+  "model": "SPT-520R",
+  "name": "克麗歐 AQUACLiO 雙罐式軟水系統 SPT-520R",
+  "cat": "softener",
+  "label": "雙罐式",
+  "image": "assets/catalog/official/aquaclio-spt-520r.jpg",
+  "summary": "雙罐一備一用，軟水全天不間斷，適用 8 人以下大家庭。",
+  "points": [
+   "雙罐式設計一備一用，軟水全天不間斷",
+   "食品級離子交換樹脂",
+   "智慧控制閥 LCD 顯示，可依水質與用水習慣設定",
+   "優先供水設計"
+  ],
+  "specs": [
+   [
+    "型號",
+    "SPT-520R"
+   ],
+   [
+    "控制閥",
+    "智慧控制閥（LCD）"
+   ],
+   [
+    "主要用途",
+    "過濾水中石灰質、鈣鎂離子"
+   ],
+   [
+    "電源",
+    "AC 110V / 220V"
+   ],
+   [
+    "適用水源",
+    "自來水／地下水"
+   ],
+   [
+    "適用水溫",
+    "4～40°C"
+   ],
+   [
+    "適用水壓",
+    "30～50 PSI"
+   ],
+   [
+    "最大流量",
+    "4.8 m³/h"
+   ],
+   [
+    "管徑",
+    "1 英吋"
+   ],
+   [
+    "外觀尺寸",
+    "過濾器 Ø27×高158 cm ×2／鹽桶 深29×寬29×高91 cm"
+   ],
+   [
+    "濾料",
+    "食品級樹脂"
+   ],
+   [
+    "適用人數",
+    "8 人以下（原廠參考值）"
+   ]
+  ],
+  "price": 168000,
+  "priceNote": "克麗歐官網標示價格",
+  "filters": [],
+  "fits": [],
+  "source": "https://www.aquaclio.com/tw/product-d.php?Key=72",
+  "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
  },
  {
   "id": "3m-sft-100",
@@ -1098,7 +2111,7 @@
   "name": "EVERPOLL R-PP 全效複合濾芯",
   "cat": "filter",
   "label": "RO-600 耗材",
-  "image": "assets/catalog/official/3bbfcf93.png",
+  "image": "assets/catalog/official/ep-r-pp.jpg",
   "summary": "RO-600 系列前置複合濾芯，請依機型核對相容性。",
   "points": [
    "RO-600 產品資料列為第一道濾芯。",
@@ -1129,8 +2142,8 @@
   "fits": [
    "everpoll-ro-600g"
   ],
-  "source": "https://www.everpoll.com.tw/products?category=86",
-  "sourceText": "EVERPOLL 原廠耗材型錄"
+  "source": "https://www.everpoll.com.tw/product_detail?id=288",
+  "sourceText": "愛科官網濾芯產品頁"
  },
  {
   "id": "everpoll-r-ro",
@@ -1140,7 +2153,7 @@
   "name": "EVERPOLL R-RO 逆滲透膜濾芯",
   "cat": "filter",
   "label": "RO-600 耗材",
-  "image": "assets/catalog/official/3bbfcf93.png",
+  "image": "assets/catalog/official/ep-r-ro.jpg",
   "summary": "RO-600 系列 RO 膜濾芯；型號與設備版本需對照。",
   "points": [
    "RO-600 產品資料列為第二道 RO 膜濾芯。",
@@ -1171,8 +2184,8 @@
   "fits": [
    "everpoll-ro-600g"
   ],
-  "source": "https://www.everpoll.com.tw/products?category=86",
-  "sourceText": "EVERPOLL 原廠耗材型錄"
+  "source": "https://www.everpoll.com.tw/product_detail?id=291",
+  "sourceText": "愛科官網濾芯產品頁"
  },
  {
   "id": "everpoll-r-ac",
@@ -1182,7 +2195,7 @@
   "name": "EVERPOLL R-AC 高效活性碳濾芯",
   "cat": "filter",
   "label": "RO-600 耗材",
-  "image": "assets/catalog/official/3bbfcf93.png",
+  "image": "assets/catalog/official/ep-r-ac.jpg",
   "summary": "RO-600 系列末端活性碳濾芯，用於後段水質調整。",
   "points": [
    "RO-600 產品資料列為第三道後置濾芯。",
@@ -1213,19 +2226,19 @@
   "fits": [
    "everpoll-ro-600g"
   ],
-  "source": "https://www.everpoll.com.tw/products?category=86",
-  "sourceText": "EVERPOLL 原廠耗材型錄"
+  "source": "https://www.everpoll.com.tw/product_detail?id=290",
+  "sourceText": "愛科官網濾芯產品頁"
  },
  {
   "id": "brita-gr600-4-in-1",
   "brand": "BRITA",
   "brandName": "BRITA 碧然德",
   "model": "GR600 4-in-1",
-  "name": "BRITA GR600 4 合 1 複合濾芯",
+  "name": "BRITA mypure GR PCF4in1 四重過濾濾芯",
   "cat": "filter",
   "label": "GR600 專用",
-  "image": "assets/catalog/official/d1642861.jpg",
-  "summary": "mypure GR600 前置複合濾芯，含多段過濾材料。",
+  "image": "assets/catalog/official/brita-gr600-4in1.jpg",
+  "summary": "mypure GR600／GR1000 適用的 4 合 1 複合濾芯（PCF4in1）。",
   "points": [
    "BRITA GR600 原廠說明列有 4 合 1 複合濾芯。",
    "建議依濾芯指示燈與原廠保養週期更換。",
@@ -1233,20 +2246,20 @@
   ],
   "specs": [
    [
+    "型號",
+    "PCF4in1"
+   ],
+   [
     "適用機型",
-    "mypure GR 600"
+    "mypure GR600／GR1000"
    ],
    [
     "形式",
-    "複合濾芯"
+    "4 合 1 複合濾芯"
    ],
    [
     "品牌",
     "BRITA"
-   ],
-   [
-    "零件類別",
-    "RO 替換濾芯"
    ]
   ],
   "price": null,
@@ -1255,18 +2268,18 @@
   "fits": [
    "brita-mypure-gr-600"
   ],
-  "source": "https://store.brita.tw/products/mypure-gr600",
-  "sourceText": "BRITA 官方產品資料"
+  "source": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12892939",
+  "sourceText": "BRITA 官方 momo 旗艦館"
  },
  {
   "id": "brita-gr600-ro",
   "brand": "BRITA",
   "brandName": "BRITA 碧然德",
   "model": "GR600 RO",
-  "name": "BRITA GR600 RO 逆滲透膜濾芯",
+  "name": "BRITA mypure GR RO 膜濾芯 600G",
   "cat": "filter",
   "label": "GR600 專用",
-  "image": "",
+  "image": "assets/catalog/official/brita-gr600-ro.jpg",
   "summary": "mypure GR600 專用 RO 膜濾芯，型號需按原廠相容表核對。",
   "points": [
    "依 BRITA GR600 原廠產品文件採雙濾芯系統。",
@@ -1297,8 +2310,8 @@
   "fits": [
    "brita-mypure-gr-600"
   ],
-  "source": "https://www.brita.tw/mypure/mypure-GR600",
-  "sourceText": "BRITA 台灣產品頁"
+  "source": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12732693",
+  "sourceText": "BRITA 官方 momo 旗艦館"
  },
  {
   "id": "3m-f1-tr1",
@@ -2059,5 +3072,177 @@
   ],
   "source": "https://www.everpoll.com.tw/product_detail?id=118",
   "sourceText": "愛科官網 EVB-298-E 產品頁"
+ },
+ {
+  "id": "everpoll-ep-168-plus",
+  "brand": "EVERPOLL",
+  "brandName": "EVERPOLL 愛科濾淨",
+  "model": "EP-168 PLUS",
+  "name": "愛科 EP-168 PLUS 廚下型調溫無壓飲水機",
+  "cat": "drink",
+  "label": "調溫無壓",
+  "image": "assets/catalog/official/ep-168-plus.jpg",
+  "summary": "櫥下無壓式加熱主機搭配旋鈕調溫龍頭，出水 30～100°C 多段調溫；需搭配淨水器使用。",
+  "points": [
+   "龍頭數位旋鈕多段調溫（30～100°C），泡奶、沖茶、料理都適用",
+   "主機藏在櫥櫃內只露出龍頭，PTC 陶瓷加熱外覆 304 不鏽鋼，約 20 分鐘加熱完成",
+   "出水口 UV 滅菌、兒童安全鎖、短路保護、自動斷電與過溫保護"
+  ],
+  "specs": [
+   [
+    "型號",
+    "EP-168 PLUS"
+   ],
+   [
+    "出水溫度",
+    "多段 30～100°C"
+   ],
+   [
+    "熱水容量",
+    "4.5L"
+   ],
+   [
+    "加熱方式",
+    "PTC 陶瓷加熱，304 不鏽鋼外覆"
+   ],
+   [
+    "加熱完成時間",
+    "20 分鐘"
+   ],
+   [
+    "UV 滅菌",
+    "有"
+   ],
+   [
+    "進水口徑",
+    "1/4\"（2 分管）"
+   ],
+   [
+    "電源",
+    "110V / 60Hz"
+   ],
+   [
+    "消耗功率",
+    "制熱 1000W"
+   ],
+   [
+    "工作壓力",
+    "1～3 kg/cm²（水壓過高需加裝減壓閥）"
+   ],
+   [
+    "主機尺寸",
+    "高410×寬192×深305 mm"
+   ],
+   [
+    "龍頭開孔",
+    "30 mm"
+   ],
+   [
+    "能源效率",
+    "第 2 級"
+   ],
+   [
+    "淨重",
+    "7.8 kg"
+   ]
+  ],
+  "price": 32000,
+  "priceNote": "愛科官網售價",
+  "filters": [],
+  "fits": [],
+  "filterInfo": [
+   {
+    "model": "主機不含濾芯，需搭配淨水器（例如 DCP-3000HA、HQF-4000 或 RO 機）",
+    "interval": "依搭配的淨水器而定"
+   }
+  ],
+  "source": "https://www.everpoll.com.tw/product_detail?id=511",
+  "sourceText": "愛科官網 EP-168 PLUS 產品頁"
+ },
+ {
+  "id": "everpoll-evb-398",
+  "brand": "EVERPOLL",
+  "brandName": "EVERPOLL 愛科濾淨",
+  "model": "EVB-398",
+  "name": "愛科 EVB-398 智能廚下型三溫 UV 觸控飲水機",
+  "cat": "drink",
+  "label": "冰冷熱三溫",
+  "image": "assets/catalog/official/ep-evb-398.jpg",
+  "summary": "廚下型冰／冷／熱三溫飲水機，觸控龍頭出水，熱水 3L、冰水 2.5L；需搭配淨水器使用。",
+  "points": [
+   "冰水、常溫、熱水三溫出水，熱水 65°C／100°C 兩段",
+   "觸控龍頭，8／12／24 小時節電設定與出水口 UV 滅菌",
+   "兒童安全鎖、短路保護、自動斷電、過溫保護，漏水亮紅燈警示"
+  ],
+  "specs": [
+   [
+    "型號",
+    "EVB-398"
+   ],
+   [
+    "出水溫度",
+    "熱水 65°C／100°C，另有冰水與常溫"
+   ],
+   [
+    "容量",
+    "熱水 3L／冰水 2.5L"
+   ],
+   [
+    "節電功能",
+    "8H／12H／24H"
+   ],
+   [
+    "加熱方式",
+    "PTC 陶瓷加熱，304 不鏽鋼外覆"
+   ],
+   [
+    "UV 滅菌",
+    "有"
+   ],
+   [
+    "進水口徑",
+    "1/4\"（2 分管）"
+   ],
+   [
+    "電源",
+    "110V / 60Hz"
+   ],
+   [
+    "消耗功率",
+    "制熱 750W／制冷 130W"
+   ],
+   [
+    "工作壓力",
+    "1～3 kg/cm²（水壓過高需加裝減壓閥）"
+   ],
+   [
+    "主機尺寸",
+    "長408×寬280×高401 mm"
+   ],
+   [
+    "龍頭開孔",
+    "30 mm"
+   ],
+   [
+    "能源效率",
+    "第 4 級"
+   ],
+   [
+    "淨重",
+    "18.5 kg"
+   ]
+  ],
+  "price": 42000,
+  "priceNote": "愛科官網售價",
+  "filters": [],
+  "fits": [],
+  "filterInfo": [
+   {
+    "model": "主機不含濾芯，需搭配淨水器（例如 DCP-3000HA、HQF-4000 或 RO 機）",
+    "interval": "依搭配的淨水器而定"
+   }
+  ],
+  "source": "https://www.everpoll.com.tw/product_detail?id=256",
+  "sourceText": "愛科官網 EVB-398 產品頁"
  }
 ]

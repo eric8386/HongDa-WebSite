@@ -6,6 +6,7 @@
   --wrap:1200px;--font:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -284,6 +285,12 @@ button{font:inherit;cursor:pointer}
 .pd-points{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px}
 .pd-points li{display:flex;gap:10px;color:var(--ink-2)}
 .pd-points .ic{color:var(--brand-2);margin-top:3px}
+.pd-gallery{background:var(--soft);padding:56px 0 48px;margin-bottom:28px}
+.pd-gallery .sec-head{margin-inline:auto;text-align:center;margin-bottom:28px}
+.pd-gallery .sec-head h2{font-size:clamp(20px,2.4vw,28px)}
+.gallery-stack{max-width:860px;margin:0 auto;display:flex;flex-direction:column;background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.gallery-stack img{width:100%;height:auto;display:block}
+.pd-more{margin-top:18px}
 .pd-body{display:grid;gap:20px;padding-bottom:64px}
 .pd-sec{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px}
 .pd-sec h2{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900;margin-bottom:16px}

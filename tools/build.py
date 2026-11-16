@@ -276,7 +276,6 @@ QUIZ = '''<div class="quiz" data-quiz>
       <div class="q-opts">
         <label><input type="radio" name="home" value="apt"><span><b>公寓／大樓</b><small>單戶、共用水塔</small></span></label>
         <label><input type="radio" name="home" value="house"><span><b>透天／獨棟</b><small>自家水塔、多樓層</small></span></label>
-        <label><input type="radio" name="home" value="community"><span><b>社區管委會</b><small>蓄水池、公共水塔</small></span></label>
       </div></fieldset>
     <fieldset class="q-step" data-step="2"><legend>2. 您最在意哪一件事？</legend>
       <div class="q-opts">
@@ -432,7 +431,25 @@ def build_products():
     for p in PRODUCTS:
         build_product(p)
 
+def gallery_html(p):
+    g = [x for x in (p.get('gallery') or []) if os.path.exists(os.path.join(ROOT, x['src']))]
+    if not g:
+        d = os.path.join(ROOT, 'assets', 'catalog', 'detail', p['id'])
+        if os.path.isdir(d):
+            files = sorted(f for f in os.listdir(d) if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp')))
+            g = [{'src': f'assets/catalog/detail/{p["id"]}/{f}', 'alt': f'{p["name"]} 產品介紹圖 {i+1}'} for i, f in enumerate(files)]
+    p['_gallery'] = g
+    if not g:
+        return ''
+    imgs = ''.join(f'<img src="{a(x["src"])}" alt="{e(x.get("alt") or p["name"])}" loading="lazy" decoding="async">' for x in g)
+    return f'''<section class="pd-gallery" id="intro"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">產品介紹</span><h2>{e(p["name"])}</h2></div>
+  <div class="gallery-stack">{imgs}</div>
+  <p class="note center">產品介紹圖片來源：{e(BRANDS[p["brand"]]["name"])} 原廠資料。</p>
+</div></section>'''
+
 def build_product(p):
+    gal = gallery_html(p)
     c = CATS[p['cat']]
     b = BRANDS[p['brand']]
     specs = ''.join(f'<tr><th>{e(k)}</th><td>{e(v)}</td></tr>' for k, v in p['specs'])
@@ -471,8 +488,10 @@ def build_product(p):
     <div class="pd-cta"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 詢價／預約安裝</span></a>
     {f'<a class="btn btn-ghost btn-lg" href="/services/{svc["slug"]}.html">看安裝服務流程</a>' if svc else ''}</div>
     <ul class="pd-points">{points}</ul>
+    {'<a class="link pd-more" href="#intro">看完整產品介紹 ' + ic("arrow") + '</a>' if p.get('_gallery') else ''}
   </div>
 </section>
+{gal}
 <div class="wrap pd-body">
   <section class="pd-sec"><h2>{ic("list")}產品規格</h2><div class="table-wrap"><table class="tbl spec"><tbody>{specs}</tbody></table></div>{src}</section>
   <section class="pd-sec"><h2>{ic("house")}安裝前要確認</h2><ul class="install">{install}</ul><p class="note">以上為{e(c["short"])}的一般安裝條件，實際以現場評估為準。</p></section>
