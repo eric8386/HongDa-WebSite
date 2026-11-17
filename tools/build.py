@@ -380,8 +380,8 @@ def build_home():
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow">{e(SITE.get("tagline") or "台南在地淨水工程")}</span>
-      <h1>從水塔到水龍頭，<br><span class="hl">全家用水一次顧好</span></h1>
-      <p class="lead">淨水設備安裝、水塔清洗、自來水管路清洗、水質檢測與定期保養。先了解你家的水，再推薦真正需要的方案。</p>
+      <h1>台南淨水・水塔清洗<br><span class="hl">全家用水一次顧好</span></h1>
+      <p class="lead">台南在地淨水工程：直輸 RO、全戶淨水與軟水安裝，水塔清洗、自來水管路清洗、水質檢測與定期保養。先了解你家的水，再推薦真正需要的方案。</p>
       <div class="hero-cta">
         <a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
         <a class="btn btn-primary btn-lg" href="#finder">3 步驟找出適合方案 {ic("arrow")}</a>
