@@ -2356,6 +2356,416 @@
     "sourceText": "AQUACLiO 原廠產品頁"
   },
   {
+    "id": "aquaclio-bcp-1f",
+    "brand": "AQUACLiO",
+    "brandName": "AQUACLiO 克麗歐",
+    "model": "BCP-1F",
+    "name": "克麗歐 AQUACLiO BCP-1F 全戶雜質過濾器",
+    "cat": "whole",
+    "label": "除雜質",
+    "image": "assets/catalog/official/aquaclio-bcp-1f.jpg",
+    "summary": "全戶前置雜質過濾器，超大百葉式濾心攔截泥沙與顆粒雜質，免電源、體積小。",
+    "points": [
+      "有效過濾水中泥沙、顆粒雜質等汙染物，降低水塔清洗頻率",
+      "超大百葉式濾心，過濾面積大不易阻塞",
+      "外殼抗紫外線材質，內部雙防水圈設計",
+      "排氣設計，濾心更換更輕鬆"
+    ],
+    "specs": [
+      [
+        "型號",
+        "BCP-1F"
+      ],
+      [
+        "主要用途",
+        "除雜質"
+      ],
+      [
+        "電源",
+        "免電源"
+      ],
+      [
+        "適用水源",
+        "自來水／地下水"
+      ],
+      [
+        "適用水溫",
+        "4～40°C"
+      ],
+      [
+        "適用水壓",
+        "30～50 psi"
+      ],
+      [
+        "最大流量",
+        "1.5 m³/h"
+      ],
+      [
+        "管徑",
+        "1 英吋"
+      ],
+      [
+        "尺寸",
+        "D20×W18×H71 cm"
+      ],
+      [
+        "濾料",
+        "百葉式濾心"
+      ],
+      [
+        "總處理量",
+        "300 噸"
+      ]
+    ],
+    "price": 9000,
+    "priceNote": "克麗歐官網建議售價",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=13",
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）",
+    "filterInfo": [
+      {
+        "model": "百葉式濾心",
+        "interval": "總處理量約 300 噸"
+      }
+    ]
+  },
+  {
+    "id": "aquaclio-bcp-1g",
+    "brand": "AQUACLiO",
+    "brandName": "AQUACLiO 克麗歐",
+    "model": "BCP-1G",
+    "name": "克麗歐 AQUACLiO BCP-1G 全戶除氯過濾器",
+    "cat": "whole",
+    "label": "全戶除氯",
+    "image": "assets/catalog/official/aquaclio-bcp-1g.jpg",
+    "summary": "全戶除氯過濾器，NSF 認證椰殼活性碳去除餘氯與異味，免電源、體積小。",
+    "points": [
+      "有效過濾水中餘氯，減少氯對皮膚、頭髮與呼吸道的刺激",
+      "NSF 認證椰殼活性碳，去除氯、異臭味能力強",
+      "外殼抗紫外線材質，內部雙防水圈設計",
+      "排氣設計，濾心更換更輕鬆"
+    ],
+    "specs": [
+      [
+        "型號",
+        "BCP-1G"
+      ],
+      [
+        "主要用途",
+        "除氯"
+      ],
+      [
+        "電源",
+        "免電源"
+      ],
+      [
+        "適用水源",
+        "自來水／地下水"
+      ],
+      [
+        "適用水溫",
+        "4～40°C"
+      ],
+      [
+        "適用水壓",
+        "30～50 psi"
+      ],
+      [
+        "最大流量",
+        "1.5 m³/h"
+      ],
+      [
+        "管徑",
+        "1 英吋"
+      ],
+      [
+        "尺寸",
+        "D20×W18×H71 cm"
+      ],
+      [
+        "濾料",
+        "椰殼活性碳濾心"
+      ],
+      [
+        "總處理量",
+        "300 噸"
+      ]
+    ],
+    "price": 11000,
+    "priceNote": "克麗歐官網建議售價",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=14",
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）",
+    "filterInfo": [
+      {
+        "model": "椰殼活性碳濾心",
+        "interval": "總處理量約 300 噸"
+      }
+    ]
+  },
+  {
+    "id": "aquaclio-pfk04-xu06m",
+    "brand": "AQUACLiO",
+    "brandName": "AQUACLiO 克麗歐",
+    "model": "PFK04-XU06M",
+    "name": "克麗歐 AQUACLiO PFK04-XU06M 前置反沖過濾器（手動）",
+    "cat": "whole",
+    "label": "手動反沖",
+    "image": "assets/catalog/official/aquaclio-pfk04-xu06m.jpg",
+    "summary": "歐洲進口手動反沖前置過濾器，90 微米不鏽鋼濾網攔截泥沙，反沖＋刮洗免換濾心。",
+    "points": [
+      "SUS 不鏽鋼精密濾網，高效攔截泥沙、顆粒雜質",
+      "反沖＋刮洗功能，延長濾網使用壽命",
+      "抗菌黃銅本體、透明外殼，內建壓力錶與反沖洗記錄器",
+      "免電源，360 度萬向進出水口；符合歐洲 UNE 149101 標準"
+    ],
+    "specs": [
+      [
+        "型號",
+        "PFK04-XU06M"
+      ],
+      [
+        "主要用途",
+        "過濾水中泥沙雜質"
+      ],
+      [
+        "電源",
+        "免電源"
+      ],
+      [
+        "適用水源",
+        "自來水"
+      ],
+      [
+        "適用水溫",
+        "4～30°C"
+      ],
+      [
+        "適用水壓",
+        "30～50 psi"
+      ],
+      [
+        "最大流量",
+        "4.0 m³/h"
+      ],
+      [
+        "管徑",
+        "1 英吋／6 分轉接"
+      ],
+      [
+        "尺寸",
+        "D17×W15×H35 cm"
+      ],
+      [
+        "過濾精度",
+        "90 微米"
+      ]
+    ],
+    "price": 13700,
+    "priceNote": "克麗歐官網建議售價",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=16",
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）"
+  },
+  {
+    "id": "aquaclio-pfk04-mu06m",
+    "brand": "AQUACLiO",
+    "brandName": "AQUACLiO 克麗歐",
+    "model": "PFK04-MU06M",
+    "name": "克麗歐 AQUACLiO PFK04-MU06M 前置反沖過濾器（手動／調壓）",
+    "cat": "whole",
+    "label": "手動調壓",
+    "image": "assets/catalog/official/aquaclio-pfk04-mu06m.jpg",
+    "summary": "手動反沖前置過濾器加上內建調壓閥，90 微米不鏽鋼濾網，同時穩定全屋水壓。",
+    "points": [
+      "SUS 不鏽鋼精密濾網，高效攔截泥沙、顆粒雜質",
+      "反沖＋刮洗功能，延長濾網使用壽命",
+      "內建壓力調整與壓力錶，保護後端設備",
+      "抗菌黃銅本體、透明外殼，免電源；符合歐洲 UNE 149101 標準"
+    ],
+    "specs": [
+      [
+        "型號",
+        "PFK04-MU06M"
+      ],
+      [
+        "主要用途",
+        "過濾水中泥沙雜質"
+      ],
+      [
+        "電源",
+        "免電源"
+      ],
+      [
+        "適用水源",
+        "自來水"
+      ],
+      [
+        "適用水溫",
+        "4～30°C"
+      ],
+      [
+        "適用水壓",
+        "30～50 psi"
+      ],
+      [
+        "最大流量",
+        "4.0 m³/h"
+      ],
+      [
+        "管徑",
+        "1 英吋／6 分轉接"
+      ],
+      [
+        "尺寸",
+        "D17×W15×H35 cm"
+      ],
+      [
+        "過濾精度",
+        "90 微米"
+      ]
+    ],
+    "price": 23700,
+    "priceNote": "克麗歐官網建議售價",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=17",
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）"
+  },
+  {
+    "id": "aquaclio-pfk04-mu10a",
+    "brand": "AQUACLiO",
+    "brandName": "AQUACLiO 克麗歐",
+    "model": "PFK04-MU10A",
+    "name": "克麗歐 AQUACLiO PFK04-MU10A 自動前置反沖過濾器（自動／調壓）",
+    "cat": "whole",
+    "label": "自動反沖",
+    "image": "assets/catalog/official/aquaclio-pfk04-mu10a.jpg",
+    "summary": "微電腦自動反沖前置過濾器，可設定反沖週期，內建調壓，大流量 8 m³/h。",
+    "points": [
+      "微電腦控制器可設定反沖洗週期與時間，免手動保養",
+      "90 微米 SUS 不鏽鋼精密濾網攔截泥沙雜質",
+      "內建壓力調整與監控，保護後端設備",
+      "抗菌黃銅本體、透明外殼；符合歐洲 UNE 149101 標準"
+    ],
+    "specs": [
+      [
+        "型號",
+        "PFK04-MU10A"
+      ],
+      [
+        "主要用途",
+        "過濾水中泥沙雜質"
+      ],
+      [
+        "電源",
+        "AC 110V／220V"
+      ],
+      [
+        "適用水源",
+        "自來水"
+      ],
+      [
+        "適用水溫",
+        "4～30°C"
+      ],
+      [
+        "適用水壓",
+        "30～50 psi"
+      ],
+      [
+        "最大流量",
+        "8.0 m³/h"
+      ],
+      [
+        "管徑",
+        "1.25 英吋／1 英吋轉接"
+      ],
+      [
+        "尺寸",
+        "D21×W18×H42 cm"
+      ],
+      [
+        "過濾精度",
+        "90 微米"
+      ]
+    ],
+    "price": 33700,
+    "priceNote": "克麗歐官網建議售價",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=18",
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）"
+  },
+  {
+    "id": "aquaclio-pfe-300d",
+    "brand": "AQUACLiO",
+    "brandName": "AQUACLiO 克麗歐",
+    "model": "PFE-300D",
+    "name": "克麗歐 AQUACLiO PFE-300D 碟片型前置反沖過濾器（手動）",
+    "cat": "whole",
+    "label": "碟片反沖",
+    "image": "assets/catalog/official/aquaclio-pfe-300d.jpg",
+    "summary": "過濾碟片（SK-Discs）加不鏽鋼濾網的手動反沖前置過濾器，體積精巧，可水平或垂直安裝。",
+    "points": [
+      "過濾碟片＋不鏽鋼濾網雙重攔截泥沙、顆粒雜質",
+      "反沖洗功能，延長使用壽命",
+      "抗菌黃銅接頭，內建壓力錶與反沖洗記錄器",
+      "免電源，可水平或垂直安裝"
+    ],
+    "specs": [
+      [
+        "型號",
+        "PFE-300D"
+      ],
+      [
+        "主要用途",
+        "過濾水中泥沙雜質"
+      ],
+      [
+        "電源",
+        "免電源"
+      ],
+      [
+        "適用水源",
+        "自來水"
+      ],
+      [
+        "適用水溫",
+        "4～40°C"
+      ],
+      [
+        "適用水壓",
+        "30～50 psi"
+      ],
+      [
+        "最大流量",
+        "4.0 m³/h"
+      ],
+      [
+        "管徑",
+        "1 英吋"
+      ],
+      [
+        "尺寸",
+        "D8.1×W12.6×H27 cm"
+      ],
+      [
+        "過濾精度",
+        "90 微米"
+      ]
+    ],
+    "price": 12800,
+    "priceNote": "克麗歐官網建議售價",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=62",
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）"
+  },
+  {
     "id": "everpoll-r-pp",
     "brand": "EVERPOLL",
     "brandName": "EVERPOLL 愛科濾淨",
