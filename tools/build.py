@@ -297,6 +297,21 @@ QUIZ = '''<div class="quiz" data-quiz>
 </div>'''
 
 # ---------- pages ----------
+HERO_TILES = [('ro', 'brita-mypure-gr-1000', 'big'), ('softener', 'clack-cws35-2e10r', ''), ('drink', 'everpoll-evb-398', '')]
+
+def hero_tiles():
+    out = ''
+    for cat, pid, cls in HERO_TILES:
+        p = PBY.get(pid) or next((x for x in PRODUCTS if x['cat'] == cat), None)
+        if not p:
+            continue
+        c = CATS[cat]
+        n = sum(1 for x in PRODUCTS if x['cat'] == cat)
+        out += f'''<a class="ht {cls}" href="/products/?cat={cat}">
+        <span class="ht-img">{img_html(p["image"], c["name"], lazy=False)}</span>
+        <span class="ht-txt"><b>{e(c["short"])}</b><small>{n} 款 {ic("arrow")}</small></span></a>'''
+    return out
+
 def build_home():
     feat = [PBY[i] for i in SITE['featured'] if i in PBY]
     cats = ''.join(f'''<a class="cat-card" href="/products/?cat={c["key"]}"><span class="cat-ic">{ic({"ro":"ro","drink":"drop","whole":"house","softener":"shield","filter":"filter"}[c["key"]])}</span>
@@ -345,13 +360,13 @@ def build_home():
       </div>
       <ul class="hero-points"><li>{ic("check")}建議售價公開</li><li>{ic("check")}{len(SITE["brands"])} 大品牌比較</li><li>{ic("check")}台南到府服務</li></ul>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hv-ring"></div>
-      <div class="hv-card hv-main">{img_html(hero_p["image"], hero_p["name"], lazy=False)}<span>{e(hero_p["name"])}</span></div>
-      <div class="hv-card hv-side">{img_html(hero_p2["image"], hero_p2["name"], lazy=False)}<span>{e(hero_p2["name"])}</span></div>
-      <div class="hv-chip c1">{ic("tank")}水塔清洗</div>
-      <div class="hv-chip c2">{ic("pipe")}管路清洗</div>
-      <div class="hv-chip c3">{ic("test")}水質檢測</div>
+    <div class="hero-tiles">
+      {hero_tiles()}
+      <div class="ht-svc"><span class="ht-svc-title">清洗與檢測服務</span>
+        <a href="/services/tank-cleaning.html">{ic("tank")}水塔清洗</a>
+        <a href="/services/pipe-cleaning.html">{ic("pipe")}管路清洗</a>
+        <a href="/services/water-test.html">{ic("test")}水質檢測</a>
+      </div>
     </div>
   </div>
 </section>

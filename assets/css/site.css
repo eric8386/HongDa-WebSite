@@ -96,18 +96,22 @@ button{font:inherit;cursor:pointer}
 .hero-points{display:flex;flex-wrap:wrap;gap:8px 20px;list-style:none;padding:0;margin:26px 0 0;color:var(--ink-2);font-size:14px;font-weight:500}
 .hero-points li{display:flex;align-items:center;gap:6px}
 .hero-points .ic{width:18px;height:18px;color:var(--brand-2)}
-.hero-visual{position:relative;height:460px}
-.hv-ring{position:absolute;inset:20px 10px 10px 40px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fff 0,#e3eefb 55%,#cbdff7 100%);box-shadow:inset 0 0 0 1px #d3e2f5}
-.hv-card{position:absolute;background:#fff;border-radius:22px;box-shadow:var(--shadow);padding:14px;display:flex;flex-direction:column;gap:8px}
-.hv-card img{object-fit:contain;width:100%;height:100%}
-.hv-card span{font-size:12px;font-weight:700;color:var(--ink-2);text-align:center}
-.hv-main{left:16%;top:30px;width:58%;height:330px}
-.hv-main img{height:280px}
-.hv-side{right:0;bottom:6px;width:38%;height:220px}
-.hv-side img{height:170px}
-.hv-chip{position:absolute;display:flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:10px 16px;font-size:14px;font-weight:700;box-shadow:var(--shadow-sm);color:var(--brand)}
-.hv-chip .ic{width:20px;height:20px}
-.hv-chip.c1{left:0;top:70px}.hv-chip.c2{left:2%;bottom:70px}.hv-chip.c3{right:4%;top:14px}
+.hero-tiles{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:auto auto auto;gap:14px}
+.ht{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
+.ht:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.ht.big{grid-row:span 2}
+.ht-img{flex:1;display:grid;place-items:center;padding:14px;min-height:150px}
+.ht-img img{width:100%;height:100%;max-height:300px;object-fit:contain}
+.ht:not(.big) .ht-img img{max-height:130px}
+.ht-txt{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 16px;border-top:1px solid var(--border);background:var(--soft)}
+.ht-txt b{font-size:16px}
+.ht-txt small{display:inline-flex;align-items:center;gap:4px;color:var(--brand);font-weight:700;font-size:13px;white-space:nowrap}
+.ht-txt .ic{width:14px;height:14px}
+.ht-svc{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:linear-gradient(120deg,var(--brand),var(--brand-2));border-radius:20px;padding:14px 16px;color:#fff}
+.ht-svc-title{font-weight:700;font-size:14px;margin-right:auto}
+.ht-svc a{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:7px 12px;font-size:14px;font-weight:700}
+.ht-svc a:hover{background:rgba(255,255,255,.28)}
+.ht-svc .ic{width:16px;height:16px}
 
 /* pains */
 .pains{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -397,9 +401,6 @@ button{font:inherit;cursor:pointer}
   .main-nav a{padding:14px 8px;font-size:16px;border-bottom:1px solid var(--soft-2);border-radius:0}
   .header-actions{margin-left:auto}
   .hero-grid{grid-template-columns:1fr;padding:48px 0 100px;gap:24px}
-  .hero-visual{height:360px;max-width:520px;width:100%;margin:0 auto}
-  .hv-main{height:270px}.hv-main img{height:220px}
-  .hv-side{height:180px}.hv-side img{height:130px}
   .finder-wrap,.two-col,.pd,.svc-hero-grid{grid-template-columns:1fr}
   .pd{gap:28px}
   .pd-media{position:relative;top:0;max-width:520px;width:100%;margin:0 auto}
@@ -424,11 +425,15 @@ button{font:inherit;cursor:pointer}
   .hero-grid{padding:36px 0 90px}
   .lead{font-size:16px}
   .hero-cta .btn{width:100%}
-  .hero-visual{height:300px}
-  .hv-main{left:8%;width:62%;height:230px;top:20px}.hv-main img{height:180px}
-  .hv-side{width:40%;height:150px}.hv-side img{height:100px}
-  .hv-chip{font-size:12px;padding:8px 12px}
-  .hv-chip.c3{top:0}
+  .hero-tiles{gap:10px}
+  .ht-img{min-height:110px;padding:10px}
+  .ht.big .ht-img img{max-height:200px}
+  .ht:not(.big) .ht-img img{max-height:90px}
+  .ht-txt{padding:10px 12px}
+  .ht-txt b{font-size:14px}
+  .ht-svc{padding:12px}
+  .ht-svc-title{width:100%;margin:0 0 2px}
+  .ht-svc a{font-size:13px;padding:6px 10px}
   .pains,.cats,.s-grid,.whys,.art-grid,.process{grid-template-columns:1fr}
   .cats{grid-template-columns:1fr 1fr;gap:12px}
   .cat-card{padding:18px 16px}
