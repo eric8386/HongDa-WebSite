@@ -64,6 +64,7 @@ ICONS = {
  'ro': '<rect x="5" y="3" width="10" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15 7h2.5a1.5 1.5 0 0 1 1.5 1.5V12" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h4M8 12h4M8 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
  'house': '<path d="M3 11l9-7 9 7M5 9.5V20h14V9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 11.5c1.3 1.6 2.3 2.8 2.3 4a2.3 2.3 0 0 1-4.6 0c0-1.2 1-2.4 2.3-4z" fill="currentColor"/>',
  'sun': '<circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+ 'heat': '<path d="M12 21c-3.6 0-6.5-2.6-6.5-6.2 0-3.4 2.7-5.4 3.9-8.3.3 1.8 1.4 3 2.6 3.6-.2-2.6.9-5 3-6.6.1 3.2 3.5 5.6 3.5 10.6C18.5 18.2 15.6 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 18a2.4 2.4 0 0 1-2.4-2.4c0-1.6 1.4-2.4 2.4-4 1 1.6 2.4 2.4 2.4 4A2.4 2.4 0 0 1 12 18z" fill="currentColor"/>',
  'care': '<path d="M14.5 4.5a4 4 0 0 0-5.3 5.3L3.5 15.5a2 2 0 0 0 2.8 2.8l5.7-5.7a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.4-.4-.4-2.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
  'menu': '<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
  'shield': '<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
@@ -314,7 +315,7 @@ def hero_tiles():
 
 def build_home():
     feat = [PBY[i] for i in SITE['featured'] if i in PBY]
-    cats = ''.join(f'''<a class="cat-card" href="/products/?cat={c["key"]}"><span class="cat-ic">{ic({"ro":"ro","drink":"drop","whole":"house","softener":"shield","filter":"filter"}[c["key"]])}</span>
+    cats = ''.join(f'''<a class="cat-card" href="/products/?cat={c["key"]}"><span class="cat-ic">{ic({"ro":"ro","combo":"drop","drink":"heat","whole":"house","softener":"shield","filter":"filter"}[c["key"]])}</span>
       <h3>{e(c["name"])}</h3><p>{e(c["desc"])}</p><span class="count">{sum(1 for p in PRODUCTS if p["cat"]==c["key"])} 款</span></a>''' for c in SITE['categories'])
     path_nodes = [
         ('tank', '水塔', '全家用水的第一站。至少每半年清洗一次，避免沉積物流進管路。', '/services/tank-cleaning.html', '水塔清洗'),
@@ -441,7 +442,7 @@ def build_products():
   <div class="empty" hidden><p>這個分類的產品整理中，歡迎加 LINE 詢問。</p><a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 詢問</span></a></div>
 </div></section>
 {cta_band()}'''
-    page('/products/', '淨水設備型錄：直輸 RO、全戶淨水、全戶軟水、廚下加熱器', '台南淨水設備型錄：直輸 RO、廚下加熱器、全戶淨水、全戶軟水與濾心耗材，含規格、安裝條件與建議售價。',
+    page('/products/', '淨水設備型錄：直輸 RO、淨熱一體機、全戶淨水、全戶軟水、廚下加熱器', '台南淨水設備型錄：直輸 RO、淨熱一體機、廚下加熱器、全戶淨水、全戶軟水與濾心耗材，含規格、安裝條件與建議售價。',
          body, active='/products/', crumbs=[(None, '產品')])
     for p in PRODUCTS:
         build_product(p)
