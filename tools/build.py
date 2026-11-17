@@ -250,10 +250,10 @@ def service_card(s):
   <span class="s-ic">{ic(s["icon"])}</span>
   <h3>{e(s["name"])}</h3>
   <p>{e(s["lead"])}</p>
-  <span class="s-more">了解流程與估價 {ic("arrow")}</span>
+  <span class="s-more">了解流程與預約勘查 {ic("arrow")}</span>
 </a>'''
 
-def cta_band(title='不確定該選哪一種？先加 LINE 問問看', text='拍下櫥下空間、水塔或總進水管的照片傳給我們，先給初步建議與估價。'):
+def cta_band(title='不確定該選哪一種？先加 LINE 問問看', text='加 LINE 預約現場實地勘查，師傅到府確認管路、空間與水質後，再給你合適的方案與報價。'):
     return f'''<section class="cta-band"><div class="wrap cta-inner">
   <div><h2>{e(title)}</h2><p>{e(text)}</p></div>
   <div class="cta-actions"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
@@ -340,8 +340,8 @@ def build_home():
         ('pin', '台南在地服務', '以台南為主要服務範圍，安裝、清洗、換濾心都能就近安排。'),
     ]
     why_html = ''.join(f'<div class="why">{ic(i)}<h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, t, d in why)
-    process = [('LINE 傳照片', '櫥下、水塔或總進水管拍照傳給我們'), ('初步建議與估價', '依照片與需求建議方案'),
-               ('約時間到府', '現場確認後施工或安裝'), ('完工說明', '說明使用與保養方式'), ('到期提醒', 'LINE 提醒濾心更換與水塔清洗')]
+    process = [('LINE 預約勘查', '告訴我們區域與需求，約好到府時間'), ('現場實地勘查', '到府確認管路、空間、電源與水質'),
+               ('方案與報價', '依現場狀況建議方案，報價後再施工'), ('完工說明', '說明使用與保養方式'), ('到期提醒', 'LINE 提醒濾心更換與水塔清洗')]
     proc_html = ''.join(f'<li><span class="no">{i+1:02d}</span><h3>{e(t)}</h3><p>{e(d)}</p></li>' for i, (t, d) in enumerate(process))
     hero_p = PBY.get('brita-mypure-gr-600') or PRODUCTS[0]
     hero_p2 = PBY.get('everpoll-jh-r3000') or PRODUCTS[1]
@@ -500,7 +500,7 @@ def build_product(p):
     <h1>{e(p["name"])}</h1>
     <p class="pd-model">型號 {e(p["model"])}</p>
     <p class="pd-sum">{e(p["summary"])}</p>
-    <div class="pd-price">{price_html(p, big=True)}<p>安裝費用依現場管路與施工條件而定，傳照片即可先估價。</p></div>
+    <div class="pd-price">{price_html(p, big=True)}<p>安裝費用依現場管路與施工條件而定，可加 LINE 預約現場實地勘查後報價。</p></div>
     <div class="pd-cta"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 詢價／預約安裝</span></a>
     {f'<a class="btn btn-ghost btn-lg" href="/services/{svc["slug"]}.html">看安裝服務流程</a>' if svc else ''}</div>
     <ul class="pd-points">{points}</ul>
@@ -514,7 +514,7 @@ def build_product(p):
   {rel_block}
 </div>
 {f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head"><h2>同類型產品比較</h2></div><div class="p-grid">' + "".join(product_card(x) for x in same) + '</div></div></section>' if same else ''}
-{cta_band('想知道這台適不適合你家？', '傳一張櫥下或安裝位置的照片給我們，幫你確認空間、電源與管路條件。')}'''
+{cta_band('想知道這台適不適合你家？', '加 LINE 預約現場實地勘查，到府幫你確認空間、電源與管路條件。')}'''
     ld = {"@context": "https://schema.org", "@type": "Product", "name": p['name'], "sku": p['model'], "mpn": p['model'],
           "brand": {"@type": "Brand", "name": b['name']}, "description": p['summary'], "category": c['name']}
     if p['image']: ld['image'] = DOMAIN + '/' + p['image']
@@ -540,7 +540,7 @@ def build_service(s):
     pains = ''.join(f'<li>{ic("drop")}{e(x)}</li>' for x in s['pains'])
     hl = ''.join(f'<li>{ic("check")}{e(x)}</li>' for x in s['highlights'])
     steps = ''.join(f'<li><span class="no">{i+1:02d}</span><div><h3>{e(st["t"])}</h3><p>{e(st["d"])}</p></div></li>' for i, st in enumerate(s['steps']))
-    rows = ''.join(f'<tr><th>{e(r["type"])}</th><td>{("NT$" + format(r["price"], ",") + " 起") if r.get("price") else "請洽 LINE 估價"}</td><td>{e(r["note"])}</td></tr>' for r in s['pricing'])
+    rows = ''.join(f'<tr><th>{e(r["type"])}</th><td>{("NT$" + format(r["price"], ",") + " 起") if r.get("price") else "現場勘查後報價"}</td><td>{e(r["note"])}</td></tr>' for r in s['pricing'])
     faqs = [SITE['faqs'][i] for i in s.get('faqKeys', [])]
     rel = ''
     if s.get('category'):
@@ -550,10 +550,10 @@ def build_service(s):
         if ps:
             rel = f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head row"><h2>相關產品</h2><a class="link" href="/products/?cat={s["category"]}">看更多 {ic("arrow")}</a></div><div class="p-grid">' + ''.join(product_card(p) for p in ps) + '</div></div></section>'
     src = f'<p class="note">參考資料：<a href="{e(s["source"])}" target="_blank" rel="noopener">{e(s["sourceText"])}</a></p>' if s.get('source') else ''
-    line_txt = f'您好，我想詢問「{s["name"]}」的估價。'
+    line_txt = f'您好，我想預約「{s["name"]}」的現場實地勘查。'
     body = f'''<section class="svc-hero"><div class="wrap svc-hero-grid">
   <div><span class="eyebrow">{e("、".join(SITE["areas"]))}服務</span><h1>{e(s["title"])}</h1><p class="lead">{e(s["lead"])}</p>
-    <div class="hero-cta"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 傳照片估價</span></a><a class="btn btn-ghost btn-lg" href="#steps">看施工流程</a></div></div>
+    <div class="hero-cta"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 預約現場實地勘查</span></a><a class="btn btn-ghost btn-lg" href="#steps">看施工流程</a></div></div>
   <div class="svc-badge">{ic(s["icon"], "ic huge")}</div>
 </div></section>
 <section class="sec"><div class="wrap two-col">
@@ -565,12 +565,12 @@ def build_service(s):
   <ol class="steps">{steps}</ol>
 </div></section>
 <section class="sec"><div class="wrap narrow">
-  <div class="sec-head"><span class="eyebrow">收費方式</span><h2>依房型與現場狀況報價</h2><p>傳照片到 LINE 即可先取得初步估價，到府確認後再施工。</p></div>
+  <div class="sec-head"><span class="eyebrow">收費方式</span><h2>依房型與現場狀況報價</h2><p>加 LINE 預約現場實地勘查，依現場狀況報價，確認後再施工。</p></div>
   <div class="table-wrap"><table class="tbl price-tbl"><thead><tr><th>類型</th><th>費用</th><th>計價依據</th></tr></thead><tbody>{rows}</tbody></table></div>
 </div></section>
 {rel}
 {f'<section class="sec"><div class="wrap narrow"><div class="sec-head"><h2>常見問題</h2></div>{faq_html(faqs)}</div></section>' if faqs else ''}
-{cta_band(f'預約{s["name"]}，先傳照片估價', '告訴我們地址區域、房型與現場照片，我們會回覆初步估價與可安排的時間。')}'''
+{cta_band(f'預約{s["name"]}現場實地勘查', '告訴我們地址區域、房型與需求，我們會安排時間到府勘查並報價。')}'''
     ld = {"@context": "https://schema.org", "@type": "Service", "name": s['title'], "serviceType": s['name'], "description": s['lead'],
           "provider": {"@type": "LocalBusiness", "name": SITE['name'], "url": DOMAIN + '/'},
           "areaServed": [{"@type": "City", "name": x} for x in SITE['areas']]}
@@ -626,7 +626,7 @@ def build_knowledge():
         body = f'''<article class="article wrap narrow">
   <header><span class="eyebrow">水質知識</span><h1>{e(x["title"])}</h1><p class="date">{e(x["date"])}・{e(SITE["short"])}</p></header>
   <div class="prose">{"".join(parts)}{src}</div>
-  <aside class="art-cta"><h2>想直接問我們？</h2><p>傳照片或描述你家的狀況，我們給你具體建議。</p><a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 諮詢</span></a></aside>
+  <aside class="art-cta"><h2>想直接問我們？</h2><p>加 LINE 預約現場實地勘查，到府看過再給你具體建議。</p><a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 諮詢</span></a></aside>
   <nav class="more-arts"><h2>延伸閱讀</h2><ul>{others}</ul></nav>
 </article>'''
         ld = {"@context": "https://schema.org", "@type": "Article", "headline": x['title'], "description": x['desc'], "datePublished": x['date'],
@@ -662,15 +662,15 @@ def build_static():
     if C.get('address'): rows.append(f'<li>{ic("pin")}<div><b>地址</b><a href="https://www.google.com/maps/search/?api=1&amp;query={quote(C["address"])}" target="_blank" rel="noopener">{e(C["address"])}</a></div></li>')
     if C.get('hours'): rows.append(f'<li>{ic("list")}<div><b>營業時間</b><span>{e(C["hours"])}</span></div></li>')
     rows.append(f'<li>{ic("pin")}<div><b>服務地區</b><span>{e(SITE["areaNote"])}</span></div></li>')
-    pending = '' if (C.get('lineId') or C.get('lineUrl')) else '<p class="notice">LINE 加好友連結準備中，現在請直接來電，或傳簡訊照片到手機。</p>'
-    tips = ''.join(f'<li>{ic("check")}{e(t)}</li>' for t in ['您的區域（例如：台南市東區）與房型', '想詢問的設備或服務', '現場照片：櫥下空間、水塔、總進水管或機身型號標籤'])
-    body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">聯絡我們</span><h1>加 LINE，最快拿到建議與估價</h1><p>傳照片給我們，比電話描述更快更準確。</p></div></section>
+    pending = '' if (C.get('lineId') or C.get('lineUrl')) else '<p class="notice">LINE 加好友連結準備中，現在請直接來電預約現場實地勘查。</p>'
+    tips = ''.join(f'<li>{ic("check")}{e(t)}</li>' for t in ['您的區域（例如：台南市東區）與房型', '想詢問的設備或服務', '方便到府勘查的日期與時段'])
+    body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">聯絡我們</span><h1>加 LINE，預約現場實地勘查</h1><p>師傅到府看過管路與環境，建議與報價最準確。</p></div></section>
 <section class="sec sec-tight"><div class="wrap two-col">
   <div class="contact-box">{pending}<ul class="contact-rows">{"".join(rows)}</ul>
     {f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>' if (C.get('lineId') or C.get('lineUrl')) else f'<a class="btn btn-primary btn-lg" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>撥打 {e(C["mobile"])}</span></a>'}</div>
   <div class="hl-box"><h2 class="h-sm">詢問時請提供</h2><ul class="hl-list">{tips}</ul></div>
 </div></section>'''
-    page('/contact.html', '聯絡我們', f'聯絡{SITE["name"]}：加 LINE 傳照片即可取得淨水設備與清洗服務的初步建議與估價。', body, crumbs=[(None, '聯絡我們')])
+    page('/contact.html', '聯絡我們', f'聯絡{SITE["name"]}：加 LINE 預約淨水設備與清洗服務的現場實地勘查。', body, crumbs=[(None, '聯絡我們')])
 
     body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">互動選購</span><h1>3 步驟找出適合你家的淨水方案</h1><p>回答三個問題，立即看到建議組合，結果可以直接傳到 LINE。</p></div></section>
 <section class="sec sec-tight"><div class="wrap narrow">{QUIZ}</div></section>'''
