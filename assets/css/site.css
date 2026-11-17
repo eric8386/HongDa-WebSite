@@ -523,3 +523,9 @@ button{font:inherit;cursor:pointer}
 .cat-arts a{color:var(--ink)}.cat-arts a:hover{color:var(--brand)}
 @media (max-width:960px){.cat-layout{grid-template-columns:1fr}.cat-side{position:static}}
 .cat-side .install{grid-template-columns:1fr}
+.sub-jump{margin-top:16px}
+.sub-sec{margin-bottom:36px;scroll-margin-top:96px}
+.sub-head{margin-bottom:16px;padding-left:14px;border-left:4px solid var(--brand-2)}
+.sub-head h2{font-size:22px;display:flex;align-items:baseline;gap:10px}.sub-head h2 small{font-size:14px;color:var(--ink-2);font-weight:500}
+.sub-head p{color:var(--ink-2);margin-top:4px;font-size:15px}
+.fm-sub{grid-column:1/-1;font-size:18px;margin:8px 0 -4px;padding-left:12px;border-left:4px solid var(--brand-2)}

@@ -24,6 +24,11 @@ except Exception:
 PBY = {p['id']: p for p in PRODUCTS}
 CATS = {c['key']: c for c in SITE['categories']}
 def cat_url(k): return f'/products/{CATS[k]["slug"]}/'
+def sub_of(p):
+    return next((x for x in CATS[p['cat']].get('subs', []) if x['key'] == p.get('sub')), None)
+def cat_label(p):
+    sb = sub_of(p)
+    return f'{CATS[p["cat"]]["short"]}・{sb["name"]}' if sb else CATS[p['cat']]['short']
 BRANDS = {b['key']: b for b in SITE['brands']}
 C = SITE['contact']
 DOMAIN = SITE['domain'].rstrip('/')
@@ -262,7 +267,7 @@ def product_card(p):
     c = CATS[p['cat']]
     return f'''<article class="p-card" data-cat="{p["cat"]}" data-brand="{p["brand"]}">
   <a href="/products/{p["id"]}.html" class="p-link">
-    <div class="p-photo">{img_html(p["image"], p["name"] + " 產品照片")}<span class="chip">{e(c["short"])}</span></div>
+    <div class="p-photo">{img_html(p["image"], p["name"] + " 產品照片")}<span class="chip">{e(cat_label(p))}</span></div>
     <div class="p-body">
       <div class="p-meta"><span>{e(BRANDS[p["brand"]]["name"])}</span><span>{e(p["model"])}</span></div>
       <h3>{e(p["name"])}</h3>
@@ -528,7 +533,7 @@ def build_product(p):
     body = f'''<section class="pd wrap">
   <div class="pd-media">{img_html(p["image"], p["name"] + " 產品照片", "pd-img", lazy=False)}</div>
   <div class="pd-info">
-    <div class="pd-tags"><a class="chip" href="{cat_url(c["key"])}">{e(c["short"])}</a><a class="chip chip-soft" href="/brands/{b["slug"]}.html">{e(b["name"])}</a>{f'<span class="chip chip-soft">{e(p["label"])}</span>' if p.get("label") else ""}</div>
+    <div class="pd-tags"><a class="chip" href="{cat_url(c["key"])}">{e(c["short"])}</a>{f'<a class="chip" href="{cat_url(c["key"])}#sub-{sub_of(p)["key"]}">{e(sub_of(p)["name"])}</a>' if sub_of(p) else ""}<a class="chip chip-soft" href="/brands/{b["slug"]}.html">{e(b["name"])}</a>{f'<span class="chip chip-soft">{e(p["label"])}</span>' if p.get("label") else ""}</div>
     <h1>{e(p["name"])}</h1>
     <p class="pd-model">型號 {e(p["model"])}</p>
     <p class="pd-sum">{e(p["summary"])}</p>
@@ -570,6 +575,17 @@ def build_category(c):
     chips = '<button type="button" class="fchip on" data-f="brand" data-v="">全部品牌</button>' + ''.join(
         f'<button type="button" class="fchip" data-f="brand" data-v="{b["key"]}">{e(b["name"])}</button>' for b in brands)
     install = ''.join(f'<li>{e(x)}</li>' for x in c['install'])
+    if c.get('subs'):
+        grid = ''
+        for sb in c['subs']:
+            g = [p for p in items if p.get('sub') == sb['key']]
+            if g:
+                grid += (f'<section class="sub-sec" id="sub-{sb["key"]}"><div class="sub-head"><h2>{e(sb["name"])}<small>{len(g)} 款</small></h2><p>{e(sb["desc"])}</p></div>'
+                         f'<div class="p-grid">{"".join(product_card(p) for p in g)}</div></section>')
+        sub_jump = '<div class="frow sub-jump">' + ''.join(f'<a class="fchip" href="#sub-{sb["key"]}">{e(sb["name"])}</a>' for sb in c['subs']) + '</div>'
+    else:
+        grid = f'<div class="p-grid">{"".join(product_card(p) for p in items)}</div>'
+        sub_jump = ''
     arts = [x for x in ARTICLES if f'/products/?cat={c["key"]}' in x.get('related', [])]
     if c['key'] == 'filter':
         arts = [x for x in ARTICLES if '/filters/' in x.get('related', [])]
@@ -590,11 +606,11 @@ def build_category(c):
             f'<p>{e(c["desc"])}</p>'
             f'<ul class="cat-facts"><li><b>{len(items)}</b><span>款機型</span></li><li><b>{len(brands)}</b><span>個品牌</span></li><li><b>{rng}</b><span>建議售價區間</span></li></ul>'
             f'<div class="hero-cta"><a class="btn btn-line" href="{e(line_href())}" data-line data-line-text="{e(ask)}">{ic("line")}<span>LINE 預約現場實地勘查</span></a>{fl_link}</div>'
-            f'</div></section>'
+            f'{sub_jump}</div></section>'
             f'<section class="sec sec-tight"><div class="wrap cat-layout"><div data-catalog>'
             f'<div class="filters"><div class="frow" role="group" aria-label="依品牌篩選">{chips}</div></div>'
             f'<p class="result-count" aria-live="polite"></p>'
-            f'<div class="p-grid">{"".join(product_card(p) for p in items)}</div>'
+            f'{grid}'
             f'<div class="empty" hidden><p>這個品牌的產品整理中，歡迎加 LINE 詢問。</p></div></div>'
             f'{side}</div></section>'
             f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head"><h2>其他分類</h2></div><div class="brand-links">{others}</div></div></section>'
@@ -691,7 +707,13 @@ def build_filters():
     secs, jumps = '', ''
     for ck in FILTER_CATS:
         c = CATS[ck]
-        blocks = ''.join(machine_block(m) for m in PRODUCTS if m['cat'] == ck)
+        if c.get('subs'):
+            blocks = ''
+            for sb in c['subs']:
+                bb = ''.join(machine_block(m) for m in PRODUCTS if m['cat'] == ck and m.get('sub') == sb['key'])
+                if bb: blocks += f'<h3 class="fm-sub">{e(sb["name"])}</h3>{bb}'
+        else:
+            blocks = ''.join(machine_block(m) for m in PRODUCTS if m['cat'] == ck)
         if not blocks: continue
         jumps += f'<a class="fchip" href="#f-{ck}">{e(c["short"])}</a>'
         secs += (f'<section class="sec sec-tight fm-sec" id="f-{ck}"><div class="wrap"><div class="sec-head"><h2>{e(c["name"])}濾心</h2></div>'

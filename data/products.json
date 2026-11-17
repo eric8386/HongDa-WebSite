@@ -1941,7 +1941,8 @@
         "model": "40 μm 不鏽鋼濾網（渦流式反洗，免換濾芯）",
         "interval": "依原廠指示定期反洗"
       }
-    ]
+    ],
+    "sub": "pre"
   },
   {
     "id": "3m-ss801",
@@ -1983,7 +1984,8 @@
     ],
     "fits": [],
     "source": "https://shop.3m.com.tw/SalePage/Index/4646997",
-    "sourceText": "3M 官方旗艦店（原廠授權）"
+    "sourceText": "3M 官方旗艦店（原廠授權）",
+    "sub": "full"
   },
   {
     "id": "3m-ss802",
@@ -2025,7 +2027,8 @@
     ],
     "fits": [],
     "source": "https://shop.3m.com.tw/SalePage/Index/4647098",
-    "sourceText": "3M 官方旗艦店（原廠授權）"
+    "sourceText": "3M 官方旗艦店（原廠授權）",
+    "sub": "full"
   },
   {
     "id": "aquaclio-elf35-cn10g",
@@ -2065,7 +2068,8 @@
     "filters": [],
     "fits": [],
     "source": "https://www.aquaclio.com/tw/product-d.php?Key=26",
-    "sourceText": "AQUACLiO 原廠產品頁"
+    "sourceText": "AQUACLiO 原廠產品頁",
+    "sub": "full"
   },
   {
     "id": "aquaclio-elf35-cn10f",
@@ -2105,7 +2109,8 @@
     "filters": [],
     "fits": [],
     "source": "https://www.aquaclio.com/tw/product-d.php?Key=27",
-    "sourceText": "AQUACLiO 原廠產品頁"
+    "sourceText": "AQUACLiO 原廠產品頁",
+    "sub": "full"
   },
   {
     "id": "aquaclio-bcp-1f",
@@ -2180,7 +2185,8 @@
         "model": "百葉式濾心",
         "interval": "總處理量約 300 噸"
       }
-    ]
+    ],
+    "sub": "pre"
   },
   {
     "id": "aquaclio-bcp-1g",
@@ -2255,7 +2261,8 @@
         "model": "椰殼活性碳濾心",
         "interval": "總處理量約 300 噸"
       }
-    ]
+    ],
+    "sub": "pre"
   },
   {
     "id": "aquaclio-pfk04-xu06m",
@@ -2326,7 +2333,8 @@
         "model": "90 μm 不鏽鋼濾網（反沖＋刮洗，免換濾芯）",
         "interval": "依原廠指示定期反沖洗"
       }
-    ]
+    ],
+    "sub": "pre"
   },
   {
     "id": "aquaclio-pfk04-mu06m",
@@ -2397,7 +2405,8 @@
         "model": "90 μm 不鏽鋼濾網（反沖＋刮洗，免換濾芯）",
         "interval": "依原廠指示定期反沖洗"
       }
-    ]
+    ],
+    "sub": "pre"
   },
   {
     "id": "aquaclio-pfk04-mu10a",
@@ -2468,7 +2477,392 @@
         "model": "90 μm 不鏽鋼濾網（反沖＋刮洗，免換濾芯）",
         "interval": "依原廠指示定期反沖洗"
       }
-    ]
+    ],
+    "sub": "pre"
+  },
+  {
+    "id": "supurior-cpf-3-m",
+    "brand": "SUPURIOR",
+    "brandName": "SUPURIOR 速沛優",
+    "model": "CPF-3-M",
+    "name": "速沛優 SUPURIOR 前置反洗過濾器 CPF-3-M",
+    "cat": "whole",
+    "sub": "pre",
+    "label": "前置反洗",
+    "image": "assets/catalog/official/supurior-cpf-3-m.jpg",
+    "summary": "裝在水塔後的全戶第一道過濾，用 316 不鏽鋼濾網攔下自來水中的雜質、鐵銹和懸浮物，旋轉底部就能反洗排污，不用換濾心。",
+    "points": [
+      "316 不鏽鋼濾網（濾網孔徑 >40μm），可重複使用，不用換濾心",
+      "虹吸反沖洗加雙面橡膠刮條，順時針、逆時針旋轉底部就能清潔濾網並從排污口排出雜質，不用拆洗",
+      "內建壓力錶可直接看水壓；360° 旋轉法蘭可配合各種管路方向安裝；頂部記憶轉盤提醒下次沖洗時間",
+      "透明防爆瓶身，過濾和排污情形看得到"
+    ],
+    "specs": [
+      [
+        "型號",
+        "CPF-3-M"
+      ],
+      [
+        "濾網材質",
+        "316 不鏽鋼濾網"
+      ],
+      [
+        "濾網孔徑",
+        ">40 μm"
+      ],
+      [
+        "額定流量",
+        "3 m³/h"
+      ],
+      [
+        "進出水口",
+        "3/4\" 或 1\""
+      ],
+      [
+        "工作壓力",
+        "14~73 psi（瓶身標示 1~10 bar）"
+      ],
+      [
+        "適用水溫",
+        "5~40°C"
+      ],
+      [
+        "適用水源",
+        "自來水"
+      ],
+      [
+        "尺寸",
+        "約 135 × 151 × 297 mm（高 297 mm）"
+      ],
+      [
+        "清洗方式",
+        "旋轉底部旋鈕：快速沖洗排污／虹吸反洗加刮條清潔"
+      ],
+      [
+        "安裝方式",
+        "全戶前置，裝在水塔後；360° 旋轉法蘭"
+      ],
+      [
+        "外殼",
+        "透明防爆瓶身，內建壓力錶"
+      ]
+    ],
+    "price": 8800,
+    "priceNote": "速沛優官網售價",
+    "filters": [],
+    "fits": [],
+    "filterInfo": [
+      {
+        "model": "316 不鏽鋼濾網（免換濾心）",
+        "interval": "依水質約每兩週旋轉反洗一次"
+      }
+    ],
+    "source": "https://www.supurior.com.tw/products/db32c2b7-697b-4905-b833-6918460f1305",
+    "sourceText": "速沛優 SUPURIOR 官網"
+  },
+  {
+    "id": "everpoll-fh-200",
+    "brand": "EVERPOLL",
+    "brandName": "EVERPOLL 愛科濾淨",
+    "model": "FH-200",
+    "name": "EVERPOLL 傳家寶全戶濾淨 200噸 FH-200",
+    "cat": "whole",
+    "sub": "full",
+    "label": "全戶200噸",
+    "image": "assets/catalog/official/everpoll-fh-200.jpg",
+    "summary": "SUS304不鏽鋼外殼的傳家寶全戶濾淨，裝在水塔／加壓馬達後的總進水端，1微米雙效複合濾芯一次處理全屋用水，額定濾水量200噸，適合2–4人家庭。",
+    "points": [
+      "額定濾水量200噸（依水質狀況而定），官方標示適用人口2–4人",
+      "2合1雙效複合式濾芯：精密濾材阻隔鐵鏽、泥沙等固態雜質，高精密燒結活性碳去除餘氯、重金屬、異味",
+      "過濾精度1微米；官方SGS數據：濁度改善87%、餘氯去除98%、重金屬過濾99%",
+      "不需插電，可水平或垂直安裝；建議工作壓力2–5 kg/cm²，水壓不足2kg需加裝加壓馬達"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-200"
+      ],
+      [
+        "過濾方式/濾材",
+        "2合1雙效複合式濾芯（折疊精密濾材＋高精密燒結活性碳），專用濾芯FH-020"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "200噸（依水質狀況而定）"
+      ],
+      [
+        "適用人口",
+        "2–4人"
+      ],
+      [
+        "進水壓力",
+        "最佳工作壓力2–5 kg/cm²（不足2kg請加裝加壓馬達；過高請加減壓閥）"
+      ],
+      [
+        "適用水溫",
+        "5–38°C"
+      ],
+      [
+        "尺寸",
+        "高35.5cm × 直徑17cm"
+      ],
+      [
+        "材質",
+        "SUS304不鏽鋼"
+      ],
+      [
+        "電源",
+        "免插電"
+      ],
+      [
+        "安裝方式",
+        "進水總管，水平／垂直兩種安裝"
+      ],
+      [
+        "產地",
+        "中國（濾芯台灣製造）"
+      ]
+    ],
+    "price": 26800,
+    "priceNote": "愛科官網售價",
+    "filters": [
+      "everpoll-fh-020"
+    ],
+    "fits": [],
+    "source": "https://www.everpoll.com.tw/product_detail?id=431",
+    "sourceText": "愛科官網"
+  },
+  {
+    "id": "everpoll-fh-230",
+    "brand": "EVERPOLL",
+    "brandName": "EVERPOLL 愛科濾淨",
+    "model": "FH-230",
+    "name": "EVERPOLL 傳家寶全戶濾淨 230噸 FH-230",
+    "cat": "whole",
+    "sub": "full",
+    "label": "全戶230噸",
+    "image": "assets/catalog/official/everpoll-fh-230.jpg",
+    "summary": "SUS304不鏽鋼傳家寶全戶濾淨，裝於總進水端過濾全屋用水，1微米雙效複合濾芯，額定濾水量230噸，適合2–4人家庭。",
+    "points": [
+      "額定濾水量230噸（依水質狀況而定），官方標示適用人口2–4人",
+      "2合1雙效複合式濾芯：精密濾材阻隔鐵鏽、泥沙等固態雜質，高精密燒結活性碳去除餘氯、重金屬、異味",
+      "過濾精度1微米；官方SGS數據：濁度改善87%、餘氯去除98%、重金屬過濾99%",
+      "不需插電，可水平或垂直安裝於陽台、頂樓、天花板內等位置"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-230"
+      ],
+      [
+        "過濾方式/濾材",
+        "2合1雙效複合式濾芯（折疊精密濾材＋高精密燒結活性碳），專用濾芯FH-023"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "230噸（依水質狀況而定）"
+      ],
+      [
+        "適用人口",
+        "2–4人"
+      ],
+      [
+        "進水壓力",
+        "最佳工作壓力2–5 kg/cm²（不足2kg請加裝加壓馬達；過高請加減壓閥）"
+      ],
+      [
+        "適用水溫",
+        "5–38°C"
+      ],
+      [
+        "尺寸",
+        "高33.5cm × 直徑16cm"
+      ],
+      [
+        "材質",
+        "SUS304不鏽鋼"
+      ],
+      [
+        "電源",
+        "免插電"
+      ],
+      [
+        "安裝方式",
+        "進水總管，水平／垂直兩種安裝"
+      ],
+      [
+        "產地",
+        "中國（濾芯台灣製造）"
+      ]
+    ],
+    "price": 27500,
+    "priceNote": "愛科官網售價",
+    "filters": [
+      "everpoll-fh-023"
+    ],
+    "fits": [],
+    "source": "https://www.everpoll.com.tw/product_detail?id=322",
+    "sourceText": "愛科官網"
+  },
+  {
+    "id": "everpoll-fh-301",
+    "brand": "EVERPOLL",
+    "brandName": "EVERPOLL 愛科濾淨",
+    "model": "FH-301",
+    "name": "EVERPOLL 傳家寶全戶濾淨 300噸 FH-301",
+    "cat": "whole",
+    "sub": "full",
+    "label": "全戶300噸",
+    "image": "assets/catalog/official/everpoll-fh-301.jpg",
+    "summary": "傳家寶系列主力款，SUS304不鏽鋼外殼裝於總進水端，1微米雙效複合濾芯額定濾水量300噸，適合4–6人家庭。",
+    "points": [
+      "額定濾水量300噸（依水質狀況而定），官方標示適用人口4–6人，約9–12個月更換濾芯",
+      "2合1雙效複合式濾芯：精密濾材阻隔鐵鏽、泥沙、大腸桿菌等固態雜質，高精密燒結活性碳去除餘氯、重金屬、異味",
+      "過濾精度1微米；官方SGS數據：濁度改善87%、餘氯去除98%、重金屬過濾99%、鉛淨化99%",
+      "不需插電，可水平或垂直安裝；最佳工作壓力2–5 kg/cm²"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-301"
+      ],
+      [
+        "過濾方式/濾材",
+        "2合1雙效複合式濾芯（折疊精密濾材＋高精密燒結活性碳），專用濾芯FH-030"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "300噸（依水質狀況而定）"
+      ],
+      [
+        "適用人口",
+        "4–6人"
+      ],
+      [
+        "進水壓力",
+        "最佳工作壓力2–5 kg/cm²（不足2kg請加裝加壓馬達；過高請加減壓閥）"
+      ],
+      [
+        "適用水溫",
+        "5–38°C"
+      ],
+      [
+        "尺寸",
+        "高38cm × 直徑18cm"
+      ],
+      [
+        "材質",
+        "SUS304不鏽鋼"
+      ],
+      [
+        "電源",
+        "免插電"
+      ],
+      [
+        "安裝方式",
+        "進水總管，水平／垂直兩種安裝"
+      ],
+      [
+        "產地",
+        "中國（濾芯台灣製造）"
+      ]
+    ],
+    "price": 32000,
+    "priceNote": "愛科官網售價",
+    "filters": [
+      "everpoll-fh-030"
+    ],
+    "fits": [],
+    "source": "https://www.everpoll.com.tw/product_detail?id=48",
+    "sourceText": "愛科官網"
+  },
+  {
+    "id": "everpoll-fh-500n",
+    "brand": "EVERPOLL",
+    "brandName": "EVERPOLL 愛科濾淨",
+    "model": "FH-500N",
+    "name": "EVERPOLL 全戶濾淨系統 500噸 FH-500N",
+    "cat": "whole",
+    "sub": "full",
+    "label": "全戶500噸",
+    "image": "assets/catalog/official/everpoll-fh-500n.jpg",
+    "summary": "針對獨棟、透天、別墅設計的大處理量全戶濾淨系統，SUS304不鏽鋼內桶搭配PV金屬沙紋烤漆外殼與數位觸控面板，單支濾芯額定500噸。",
+    "points": [
+      "單支濾芯額定濾水量500噸（依使用狀況而定），官方定位獨棟／透天／別墅",
+      "數位觸控面板：待機顯示累積使用噸數，可設定濾芯更換週期（原廠368天，最高553天）",
+      "三層雙效複合濾芯：導壓濾網、1微米精密濾棉、高精密壓縮活性碳，去除鐵鏽泥沙、餘氯、重金屬、農藥",
+      "SUS304不鏽鋼內桶＋防水PV金屬沙紋烤漆外殼；免排水、出水大、壓損小"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-500N"
+      ],
+      [
+        "過濾方式/濾材",
+        "三層雙效複合式濾芯（導壓濾網＋精密濾棉＋高精密壓縮活性碳），專用濾芯FH-050N"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "500噸（依水質狀況而定）"
+      ],
+      [
+        "適用場所",
+        "獨棟、透天、別墅"
+      ],
+      [
+        "進水壓力",
+        "最佳工作壓力2–5 kg/cm²（不足2kg請加裝加壓馬達；過高請加減壓閥）"
+      ],
+      [
+        "適用水溫",
+        "5–38°C以下"
+      ],
+      [
+        "尺寸",
+        "長22cm × 寬20.5cm × 高83cm"
+      ],
+      [
+        "材質",
+        "SUS304不鏽鋼內桶／ABS外殼（PV金屬沙紋烤漆）"
+      ],
+      [
+        "控制面板",
+        "數位觸控面板（濾芯週期設定、累積噸數顯示）"
+      ],
+      [
+        "安裝方式",
+        "進水總管，水平／垂直兩種安裝"
+      ],
+      [
+        "產地",
+        "中國（濾芯台灣製造）"
+      ]
+    ],
+    "price": 48000,
+    "priceNote": "愛科官網售價",
+    "filters": [
+      "everpoll-fh-050n"
+    ],
+    "fits": [],
+    "source": "https://www.everpoll.com.tw/product_detail?id=708",
+    "sourceText": "愛科官網"
   },
   {
     "id": "gundai-gd600",
@@ -3192,6 +3586,260 @@
       "everpoll-ro-900g-pro"
     ],
     "source": "https://www.everpoll.com.tw/product_detail?id=482",
+    "sourceText": "愛科官網濾芯產品頁"
+  },
+  {
+    "id": "everpoll-fh-020",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "FH-020",
+    "name": "EVERPOLL 傳家寶全戶濾淨FH-200專用濾芯 FH-020",
+    "cat": "filter",
+    "label": "FH-020濾芯",
+    "image": "assets/catalog/official/everpoll-fh-020.jpg",
+    "summary": "FH-200專用的全戶濾淨雙效濾芯，台灣製造，1微米過濾、額定濾水量200噸。",
+    "points": [
+      "精密濾材＋高精密燒結活性碳2合1雙效，去除泥沙、鐵鏽、餘氯、重金屬、異味",
+      "過濾精度1微米，額定濾水量200噸（依水質狀況而定）",
+      "台灣製造（MIT）"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-020"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "200噸（依水質狀況而定）"
+      ],
+      [
+        "尺寸",
+        "高25.8cm × 直徑11.5cm"
+      ]
+    ],
+    "price": 4900,
+    "priceNote": "愛科官網售價",
+    "interval": "官網標示9–12個月或達200噸（依使用狀況及水質而定）",
+    "filters": [],
+    "fits": [
+      "everpoll-fh-200"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=432",
+    "sourceText": "愛科官網濾芯產品頁"
+  },
+  {
+    "id": "everpoll-fh-023",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "FH-023",
+    "name": "EVERPOLL 傳家寶全戶濾淨FH-230專用濾芯 FH-023",
+    "cat": "filter",
+    "label": "FH-023濾芯",
+    "image": "assets/catalog/official/everpoll-fh-023.jpg",
+    "summary": "FH-230專用的全戶濾淨雙效濾芯，台灣製造，1微米過濾、額定濾水量230噸。",
+    "points": [
+      "精密濾材＋高精密燒結活性碳2合1雙效，去除泥沙、鐵鏽、餘氯、重金屬、異味",
+      "過濾精度1微米，額定濾水量230噸（依水質狀況而定）",
+      "台灣製造（MIT）"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-023"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "230噸（依水質狀況而定）"
+      ],
+      [
+        "尺寸",
+        "高25.8cm × 直徑11.5cm"
+      ]
+    ],
+    "price": 5000,
+    "priceNote": "愛科官網售價",
+    "interval": "官網標示9–12個月或達230噸（依使用狀況及水質而定）",
+    "filters": [],
+    "fits": [
+      "everpoll-fh-230"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=325",
+    "sourceText": "愛科官網濾芯產品頁"
+  },
+  {
+    "id": "everpoll-fh-030",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "FH-030",
+    "name": "EVERPOLL 傳家寶全戶濾淨FH-301專用濾芯 FH-030",
+    "cat": "filter",
+    "label": "FH-030濾芯",
+    "image": "assets/catalog/official/everpoll-fh-030.jpg",
+    "summary": "FH-301專用的全戶濾淨雙效濾芯，台灣製造，1微米過濾、額定濾水量300噸。",
+    "points": [
+      "精密濾材＋高精密燒結活性碳2合1雙效，去除泥沙、鐵鏽、餘氯、重金屬、異味",
+      "過濾精度1微米，額定濾水量300噸（依水質狀況而定）",
+      "台灣製造（MIT）"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-030"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "300噸（依水質狀況而定）"
+      ],
+      [
+        "尺寸",
+        "高30.5cm × 直徑14cm"
+      ]
+    ],
+    "price": 6300,
+    "priceNote": "愛科官網售價",
+    "interval": "官網標示9–12個月或達300噸（依使用狀況及水質而定）",
+    "filters": [],
+    "fits": [
+      "everpoll-fh-301"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=64",
+    "sourceText": "愛科官網濾芯產品頁"
+  },
+  {
+    "id": "everpoll-fh-050n",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "FH-050N",
+    "name": "EVERPOLL 全戶濾淨系統FH-500N專用濾芯 FH-050N",
+    "cat": "filter",
+    "label": "FH-050N濾芯",
+    "image": "assets/catalog/official/everpoll-fh-050n.jpg",
+    "summary": "FH-500N專用的大容量全戶濾淨雙效濾芯，台灣製造，1微米過濾、額定濾水量500噸。",
+    "points": [
+      "導壓濾網＋精密濾棉＋高精密壓縮活性碳，去除鐵鏽、泥沙、餘氯、重金屬、農藥、異味",
+      "過濾精度1微米，額定濾水量500噸（依水質狀況而定）",
+      "台灣製造（MIT）"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-050N"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "500噸（依水質狀況而定）"
+      ],
+      [
+        "尺寸",
+        "高53.6cm × 直徑15cm"
+      ]
+    ],
+    "price": 7500,
+    "priceNote": "愛科官網售價",
+    "interval": "官網標示9–12個月或達500噸；主機面板原廠設定368天提醒（依使用狀況及水質而定）",
+    "filters": [],
+    "fits": [
+      "everpoll-fh-500n"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=709",
+    "sourceText": "愛科官網濾芯產品頁"
+  },
+  {
+    "id": "everpoll-fh-015",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "FH-015",
+    "name": "EVERPOLL 傳家寶全戶濾淨FH-151專用濾芯 FH-015",
+    "cat": "filter",
+    "label": "FH-015濾芯",
+    "image": "assets/catalog/official/everpoll-fh-015.jpg",
+    "summary": "舊款傳家寶FH-150／FH-151專用的全戶濾淨雙效濾芯，台灣製造，1微米過濾、額定濾水量150噸。",
+    "points": [
+      "2合1雙效複合濾材，去除泥沙、鐵鏽、餘氯、重金屬、異味",
+      "過濾精度1微米，額定濾水量150噸（依水質狀況而定）",
+      "台灣製造（MIT）"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-015"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "150噸（依水質狀況而定）"
+      ],
+      [
+        "尺寸",
+        "高25.8cm × 直徑11.5cm"
+      ]
+    ],
+    "price": 5000,
+    "priceNote": "愛科官網售價",
+    "interval": "依使用狀況及水質而定（官網未標月數）",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.everpoll.com.tw/product_detail?id=63",
+    "sourceText": "愛科官網濾芯產品頁"
+  },
+  {
+    "id": "everpoll-fh-050",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "FH-050",
+    "name": "EVERPOLL 傳家寶全戶濾淨FH-500專用濾芯 FH-050",
+    "cat": "filter",
+    "label": "FH-050濾芯",
+    "image": "assets/catalog/official/everpoll-fh-050.jpg",
+    "summary": "舊款傳家寶FH-500專用的全戶濾淨雙效濾芯，台灣製造，1微米過濾、額定濾水量500噸。",
+    "points": [
+      "2合1雙效複合濾材，去除泥沙、鐵鏽、餘氯、重金屬、異味",
+      "過濾精度1微米，額定濾水量500噸（依水質狀況而定）",
+      "台灣製造（MIT）"
+    ],
+    "specs": [
+      [
+        "型號",
+        "FH-050"
+      ],
+      [
+        "過濾精度",
+        "1微米"
+      ],
+      [
+        "濾水量",
+        "500噸（依水質狀況而定）"
+      ],
+      [
+        "尺寸",
+        "高53.6cm × 直徑15cm"
+      ]
+    ],
+    "price": 7500,
+    "priceNote": "愛科官網售價",
+    "interval": "依使用狀況及水質而定（官網未標月數）",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.everpoll.com.tw/product_detail?id=65",
     "sourceText": "愛科官網濾芯產品頁"
   },
   {
