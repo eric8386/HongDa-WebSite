@@ -78,10 +78,10 @@
     budget: { low: '2 萬以內', mid: '2～6 萬', high: '6 萬以上', unsure: '還不確定' }
   };
   var R = {
-    heater: { t: '廚下加熱器', d: '接在淨水設備後，熱水、冰水即開即用', h: '/products/?cat=drink' },
-    ro: { t: '直輸 RO 淨水器', d: '過濾精度最高的生飲方案，需電源與排水', h: '/products/?cat=ro' },
-    whole: { t: '全戶前置過濾', d: '總進水端攔截泥沙鐵鏽，保護全屋設備', h: '/products/?cat=whole' },
-    soft: { t: '全戶軟水機', d: '降低硬度，減少熱水器與衛浴水垢', h: '/products/?cat=softener' },
+    heater: { t: '廚下加熱器', d: '接在淨水設備後，熱水、冰水即開即用', h: '/products/under-sink-heater/' },
+    ro: { t: '直輸 RO 淨水器', d: '過濾精度最高的生飲方案，需電源與排水', h: '/products/ro/' },
+    whole: { t: '全戶前置過濾', d: '總進水端攔截泥沙鐵鏽，保護全屋設備', h: '/products/whole-house/' },
+    soft: { t: '全戶軟水機', d: '降低硬度，減少熱水器與衛浴水垢', h: '/products/water-softener/' },
     tank: { t: '水塔清洗', d: '建議至少每半年清洗一次', h: '/services/tank-cleaning.html' },
     pipe: { t: '自來水管路清洗', d: '清除管內鏽垢與沉積物', h: '/services/pipe-cleaning.html' },
     test: { t: '先做水質檢測', d: '量測硬度等指標，再決定需要哪種設備', h: '/services/water-test.html' }

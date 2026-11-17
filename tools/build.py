@@ -23,6 +23,7 @@ except Exception:
 
 PBY = {p['id']: p for p in PRODUCTS}
 CATS = {c['key']: c for c in SITE['categories']}
+def cat_url(k): return f'/products/{CATS[k]["slug"]}/'
 BRANDS = {b['key']: b for b in SITE['brands']}
 C = SITE['contact']
 DOMAIN = SITE['domain'].rstrip('/')
@@ -112,7 +113,7 @@ def header(active):
 </header>'''
 
 def footer():
-    cats = ''.join(f'<li><a href="/products/?cat={c["key"]}">{e(c["name"])}</a></li>' for c in SITE['categories'])
+    cats = ''.join(f'<li><a href="{cat_url(c["key"])}">{e(c["name"])}</a></li>' for c in SITE['categories'])
     svcs = ''.join(f'<li><a href="/services/{s["slug"]}.html">{e(s["name"])}</a></li>' for s in SERVICES)
     rows = []
     if C.get('mobile'): rows.append(f'<li>{ic("phone")}<span>手機：<a href="tel:{tel(C["mobile"])}">{e(C["mobile"])}</a>{"（" + e(C["person"]) + "）" if C.get("person") else ""}</span></li>')
@@ -334,27 +335,27 @@ def hero_tiles():
             continue
         c = CATS[cat]
         n = sum(1 for x in PRODUCTS if x['cat'] == cat)
-        out += f'''<a class="ht {cls}" href="/products/?cat={cat}">
+        out += f'''<a class="ht {cls}" href="{cat_url(cat)}">
         <span class="ht-img">{img_html(p["image"], c["name"], lazy=False)}</span>
         <span class="ht-txt"><b>{e(c["short"])}</b><small>{n} 款 {ic("arrow")}</small></span></a>'''
     return out
 
 def build_home():
     feat = [PBY[i] for i in SITE['featured'] if i in PBY]
-    cats = ''.join(f'''<a class="cat-card" href="/products/?cat={c["key"]}"><span class="cat-ic">{ic({"ro":"ro","combo":"drop","drink":"heat","whole":"house","softener":"shield","filter":"filter"}[c["key"]])}</span>
+    cats = ''.join(f'''<a class="cat-card" href="{cat_url(c["key"])}"><span class="cat-ic">{ic({"ro":"ro","combo":"drop","drink":"heat","whole":"house","softener":"shield","filter":"filter"}[c["key"]])}</span>
       <h3>{e(c["name"])}</h3><p>{e(c["desc"])}</p><span class="count">{sum(1 for p in PRODUCTS if p["cat"]==c["key"])} 款</span></a>''' for c in SITE['categories'])
     path_nodes = [
         ('tank', '水塔', '全家用水的第一站。至少每半年清洗一次，避免沉積物流進管路。', '/services/tank-cleaning.html', '水塔清洗'),
         ('pipe', '管路', '管壁的鏽垢與生物膜會讓水色混濁、出水變小。', '/services/pipe-cleaning.html', '管路清洗'),
-        ('house', '全戶過濾', '總進水端攔截泥沙、鐵鏽與餘氯，保護全屋設備。', '/products/?cat=whole', '全戶淨水'),
-        ('shield', '全戶軟水', '降低鈣鎂硬度，減少熱水器與衛浴水垢。', '/products/?cat=softener', '全戶軟水'),
-        ('ro', '廚房飲水', '直輸 RO 處理喝的水，再搭配廚下加熱器，熱水即開即用。', '/products/?cat=ro', '直輸 RO'),
+        ('house', '全戶過濾', '總進水端攔截泥沙、鐵鏽與餘氯，保護全屋設備。', cat_url('whole'), '全戶淨水'),
+        ('shield', '全戶軟水', '降低鈣鎂硬度，減少熱水器與衛浴水垢。', cat_url('softener'), '全戶軟水'),
+        ('ro', '廚房飲水', '直輸 RO 處理喝的水，再搭配廚下加熱器，熱水即開即用。', cat_url('ro'), '直輸 RO'),
     ]
     nodes = ''.join(f'''<li><button type="button" class="flow-node{" on" if i==0 else ""}" data-flow="{i}" aria-pressed="{"true" if i==0 else "false"}"><span class="fn-ic">{ic(n[0])}</span><b>{e(n[1])}</b></button>
       <template>{ic(n[0], "ic big")}<div><h3>{e(n[1])}</h3><p>{e(n[2])}</p><a href="{n[3]}">看{e(n[4])} {ic("arrow")}</a></div></template></li>''' for i, n in enumerate(path_nodes))
     pains = [
         ('shield', '水垢清不完', '熱水器、蓮蓬頭、玻璃門一層白垢', '/services/whole-house.html'),
-        ('drop', '水有味道', '漂白水味、霉味，喝起來不放心', '/products/?cat=ro'),
+        ('drop', '水有味道', '漂白水味、霉味，喝起來不放心', cat_url('ro')),
         ('tank', '水塔多年沒洗', '偶爾出現黃水或細小沉積物', '/services/tank-cleaning.html'),
         ('list', '不知道怎麼選', 'RO、加熱器、全戶、軟水一堆名詞', '/finder.html'),
     ]
@@ -460,6 +461,7 @@ def build_products():
     body = f'''<section class="page-hero"><div class="wrap">
   <span class="eyebrow">品牌商品</span><h1>淨水設備與濾心耗材</h1>
   <p>依用途或品牌篩選。產品頁有完整規格、安裝條件與對應濾心，詢價請加 LINE。</p>
+  <div class="brand-links"><span>分類介紹：</span>{"".join(f'<a href="{cat_url(c["key"])}">{e(c["name"])}</a>' for c in SITE["categories"])}</div>
   <div class="brand-links">{brand_links()}</div>
 </div></section>
 <section class="sec sec-tight"><div class="wrap" data-catalog>
@@ -471,6 +473,8 @@ def build_products():
 {cta_band()}'''
     page('/products/', '淨水設備型錄：直輸 RO、淨熱一體機、全戶淨水、全戶軟水、廚下加熱器', '台南淨水設備型錄：直輸 RO、淨熱一體機、廚下加熱器、全戶淨水、全戶軟水與濾心耗材，含規格、安裝條件與建議售價。',
          body, active='/products/', crumbs=[(None, '品牌商品')])
+    for c in SITE['categories']:
+        build_category(c)
     for p in PRODUCTS:
         build_product(p)
 
@@ -524,7 +528,7 @@ def build_product(p):
     body = f'''<section class="pd wrap">
   <div class="pd-media">{img_html(p["image"], p["name"] + " 產品照片", "pd-img", lazy=False)}</div>
   <div class="pd-info">
-    <div class="pd-tags"><a class="chip" href="/products/?cat={c["key"]}">{e(c["short"])}</a><a class="chip chip-soft" href="/brands/{b["slug"]}.html">{e(b["name"])}</a>{f'<span class="chip chip-soft">{e(p["label"])}</span>' if p.get("label") else ""}</div>
+    <div class="pd-tags"><a class="chip" href="{cat_url(c["key"])}">{e(c["short"])}</a><a class="chip chip-soft" href="/brands/{b["slug"]}.html">{e(b["name"])}</a>{f'<span class="chip chip-soft">{e(p["label"])}</span>' if p.get("label") else ""}</div>
     <h1>{e(p["name"])}</h1>
     <p class="pd-model">型號 {e(p["model"])}</p>
     <p class="pd-sum">{e(p["summary"])}</p>
@@ -553,8 +557,52 @@ def build_product(p):
     pdesc = f'{p["name"]}：{p["summary"]}'
     if len(pdesc) < 70: pdesc += ' 台南安裝、規格與建議售價。'
     page(f'/products/{p["id"]}.html', f'{ptitle}｜{SITE["short"]}', pdesc,
-         body, active='/products/', crumbs=[('/products/', '品牌商品'), (f'/products/?cat={c["key"]}', c['short']), (None, p['model'])],
+         body, active='/products/', crumbs=[('/products/', '品牌商品'), (cat_url(c['key']), c['short']), (None, p['model'])],
          ld=ld, og_image=p['image'] or None, og_type='product', full_title=True)
+
+def build_category(c):
+    items = [p for p in PRODUCTS if p['cat'] == c['key']]
+    if not items: return
+    path = cat_url(c['key'])
+    brands = [b for b in SITE['brands'] if any(p['brand'] == b['key'] for p in items)]
+    prices = [p['price'] for p in items if p.get('price')]
+    rng = f'NT${min(prices):,}～NT${max(prices):,}' if prices else '請洽 LINE'
+    chips = '<button type="button" class="fchip on" data-f="brand" data-v="">全部品牌</button>' + ''.join(
+        f'<button type="button" class="fchip" data-f="brand" data-v="{b["key"]}">{e(b["name"])}</button>' for b in brands)
+    install = ''.join(f'<li>{e(x)}</li>' for x in c['install'])
+    arts = [x for x in ARTICLES if f'/products/?cat={c["key"]}' in x.get('related', [])]
+    if c['key'] == 'filter':
+        arts = [x for x in ARTICLES if '/filters/' in x.get('related', [])]
+    arts_html = ''.join(f'<li><a href="/knowledge/{x["slug"]}.html">{e(x["title"])}</a></li>' for x in arts[:5])
+    svc = next((s for s in SERVICES if s.get('category') == c['key']), None)
+    if c['key'] in ('whole', 'softener'): svc = next((s for s in SERVICES if s['slug'] == 'whole-house'), svc)
+    if c['key'] in ('drink', 'filter', 'combo'): svc = next((s for s in SERVICES if s['slug'] == ('ro-install' if c['key'] == 'combo' else 'maintenance')), svc)
+    fl_link = f'<a class="btn btn-ghost" href="/filters/#f-{c["key"]}">看{e(c["short"])}濾心</a>' if any(machine_filters(m) for m in items) else ''
+    if c['key'] == 'filter': fl_link = '<a class="btn btn-ghost" href="/filters/">依機型查濾心</a>'
+    others = ''.join(f'<a href="{cat_url(o["key"])}">{e(o["name"])}</a>' for o in SITE['categories'] if o['key'] != c['key'] and any(p['cat'] == o['key'] for p in PRODUCTS))
+    ask = f'您好，我想詢問{c["name"]}的機型與安裝。'
+    side = (f'<aside class="cat-side"><div class="pd-sec"><h2>{ic("house")}安裝前要確認</h2><ul class="install">{install}</ul>'
+            f'<p class="note">實際以現場勘查為準。</p></div>'
+            + (f'<div class="pd-sec"><h2>{ic("list")}延伸閱讀</h2><ul class="cat-arts">{arts_html}</ul></div>' if arts_html else '')
+            + (f'<div class="pd-sec"><h2>{ic("care")}相關服務</h2><p><a class="link" href="/services/{svc["slug"]}.html">{e(svc["name"])} {ic("arrow")}</a></p></div>' if svc else '')
+            + '</aside>')
+    body = (f'<section class="page-hero"><div class="wrap"><span class="eyebrow">品牌商品</span><h1>{e(c["name"])}</h1>'
+            f'<p>{e(c["desc"])}</p>'
+            f'<ul class="cat-facts"><li><b>{len(items)}</b><span>款機型</span></li><li><b>{len(brands)}</b><span>個品牌</span></li><li><b>{rng}</b><span>建議售價區間</span></li></ul>'
+            f'<div class="hero-cta"><a class="btn btn-line" href="{e(line_href())}" data-line data-line-text="{e(ask)}">{ic("line")}<span>LINE 預約現場實地勘查</span></a>{fl_link}</div>'
+            f'</div></section>'
+            f'<section class="sec sec-tight"><div class="wrap cat-layout"><div data-catalog>'
+            f'<div class="filters"><div class="frow" role="group" aria-label="依品牌篩選">{chips}</div></div>'
+            f'<p class="result-count" aria-live="polite"></p>'
+            f'<div class="p-grid">{"".join(product_card(p) for p in items)}</div>'
+            f'<div class="empty" hidden><p>這個品牌的產品整理中，歡迎加 LINE 詢問。</p></div></div>'
+            f'{side}</div></section>'
+            f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head"><h2>其他分類</h2></div><div class="brand-links">{others}</div></div></section>'
+            f'{cta_band()}')
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": c['name'], "description": c['seoDesc'], "url": DOMAIN + path,
+          "mainEntity": {"@type": "ItemList", "numberOfItems": len(items), "itemListElement": [
+              {"@type": "ListItem", "position": i + 1, "url": DOMAIN + f'/products/{p["id"]}.html', "name": p['name']} for i, p in enumerate(items)]}}
+    page(path, c['seoTitle'], c['seoDesc'], body, active='/products/', crumbs=[('/products/', '品牌商品'), (None, c['short'])], ld=ld)
 
 def build_services():
     body = f'''<section class="page-hero"><div class="wrap">
@@ -580,7 +628,7 @@ def build_service(s):
         if s['slug'] == 'whole-house':
             ps = [p for p in PRODUCTS if p['cat'] in ('whole', 'softener')][:4]
         if ps:
-            rel = f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head row"><h2>相關產品</h2><a class="link" href="/products/?cat={s["category"]}">看更多 {ic("arrow")}</a></div><div class="p-grid">' + ''.join(product_card(p) for p in ps) + '</div></div></section>'
+            rel = f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head row"><h2>相關產品</h2><a class="link" href="{cat_url(s["category"])}">看更多 {ic("arrow")}</a></div><div class="p-grid">' + ''.join(product_card(p) for p in ps) + '</div></div></section>'
     src = f'<p class="note">參考資料：<a href="{e(s["source"])}" target="_blank" rel="noopener">{e(s["sourceText"])}</a></p>' if s.get('source') else ''
     line_txt = f'您好，我想預約「{s["name"]}」的現場實地勘查。'
     body = f'''<section class="svc-hero"><div class="wrap svc-hero-grid">
@@ -700,7 +748,7 @@ def build_brands():
             g = [p for p in items if p['cat'] == c['key']]
             if not g: continue
             groups += (f'<section class="sec sec-tight"><div class="wrap"><div class="sec-head row"><div><h2>{e(c["name"])}</h2></div>'
-                       f'<a class="link" href="/products/?cat={c["key"]}&amp;brand={quote(b["key"])}">在型錄中篩選 {ic("arrow")}</a></div>'
+                       f'<a class="link" href="{cat_url(c["key"])}?brand={quote(b["key"])}">看全部{e(c["short"])} {ic("arrow")}</a></div>'
                        f'<div class="p-grid">{"".join(product_card(p) for p in g)}</div></div></section>')
         others = ''.join(f'<a href="/brands/{o["slug"]}.html">{e(o["name"])}</a>' for o in SITE['brands'] if o['key'] != b['key'] and brand_items(o))
         site_link = f'<a class="btn btn-ghost" href="{e(b["site"])}" target="_blank" rel="noopener">品牌官網</a>' if b.get('site') else ''
@@ -724,6 +772,9 @@ REL_LABEL = {
     '/products/?cat=ro': '直輸 RO 產品', '/products/?cat=combo': '淨熱一體機產品', '/products/?cat=whole': '全戶淨水產品',
     '/products/?cat=softener': '全戶軟水產品', '/products/?cat=drink': '廚下加熱器產品',
 }
+
+def rel_url(u):
+    return cat_url(u.split('=')[1]) if u.startswith('/products/?cat=') else u
 
 def art_card(x):
     return (f'<a class="art-card" href="/knowledge/{x["slug"]}.html"><span class="date">{e(x.get("cat", "水質知識"))}・{e(x["date"])}</span>'
@@ -750,7 +801,7 @@ def build_knowledge():
         src = f'<p class="note">參考資料：<a href="{e(x["source"])}" target="_blank" rel="noopener">{e(x["sourceText"])}</a></p>' if x.get('source') else ''
         sib = [o for o in ARTICLES if o['slug'] != x['slug'] and o.get('cat') == x.get('cat')] + [o for o in ARTICLES if o['slug'] != x['slug'] and o.get('cat') != x.get('cat')]
         others = ''.join(f'<li><a href="/knowledge/{o["slug"]}.html">{e(o["title"])}</a></li>' for o in sib[:5])
-        rel = ''.join(f'<a class="btn btn-ghost btn-sm" href="{u}">{e(REL_LABEL.get(u, u))}</a>' for u in x.get('related', []))
+        rel = ''.join(f'<a class="btn btn-ghost btn-sm" href="{rel_url(u)}">{e(REL_LABEL.get(u, u))}</a>' for u in x.get('related', []))
         rel = f'<div class="art-rel"><h2>相關服務與產品</h2><div>{rel}</div></div>' if rel else ''
         body = f'''<article class="article wrap narrow">
   <header><span class="eyebrow">{e(x.get("cat", "水質知識"))}</span><h1>{e(x["title"])}</h1><p class="date">{e(x["date"])}・{e(SITE["short"])}</p></header>
