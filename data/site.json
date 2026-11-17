@@ -22,43 +22,73 @@
   "brands": [
     {
       "key": "EVERPOLL",
-      "name": "愛科濾淨 EVERPOLL"
+      "name": "愛科濾淨 EVERPOLL",
+      "slug": "everpoll",
+      "site": "https://www.everpoll.com.tw/",
+      "desc": "台灣淨水品牌，產品涵蓋直輸 RO 淨水器、廚下加熱器與全戶軟水設備，濾芯規格齊全、耗材取得方便。"
     },
     {
       "key": "3M",
-      "name": "3M"
+      "name": "3M",
+      "slug": "3m",
+      "site": "https://shop.3m.com.tw/",
+      "desc": "3M 在台灣販售家用淨水系列，本站整理淨熱一體機與全戶式不鏽鋼淨水系統，以及對應濾心。"
     },
     {
       "key": "BRITA",
-      "name": "BRITA 碧然德"
+      "name": "BRITA 碧然德",
+      "slug": "brita",
+      "site": "https://store.brita.tw/",
+      "desc": "德國淨水品牌，mypure GR 系列為免儲水桶的直輸 RO 淨水器，濾芯採快拆設計。"
     },
     {
       "key": "CLACK",
-      "name": "克拉克 CLACK"
+      "name": "克拉克 CLACK",
+      "slug": "clack",
+      "site": "https://www.clack.com.tw/",
+      "desc": "以軟水控制閥聞名的品牌，本站整理 CLACK 全戶軟水機，適合想降低水垢、保護熱水器的家庭。"
     },
     {
       "key": "AQUACLiO",
-      "name": "克麗歐 AQUACLiO"
+      "name": "克麗歐 AQUACLiO",
+      "slug": "aquaclio",
+      "site": "https://www.aquaclio.com/tw/",
+      "desc": "台灣由東電研代理，產品以全戶軟水、全戶淨水與前置過濾器為主，型號選擇多，可依水量與房型搭配。"
     },
     {
       "key": "GUNDAI",
-      "name": "宮黛 GUNG DAI"
+      "name": "宮黛 GUNG DAI",
+      "slug": "gundai",
+      "site": "https://www.gungdai.com.tw/",
+      "desc": "宮黛的櫥下型飲水加熱器，搭配淨水設備使用，提供熱水與冰水。"
     },
     {
       "key": "SUPURIOR",
-      "name": "速沛優 SUPURIOR"
+      "name": "速沛優 SUPURIOR",
+      "slug": "supurior",
+      "site": "https://www.supurior.com.tw/",
+      "desc": "速沛優全戶軟水設備，適合重視降低水垢與保護熱水器的家庭。"
     },
     {
       "key": "REWATT",
-      "name": "綠瓦 Rewatt"
+      "name": "綠瓦 Rewatt",
+      "slug": "rewatt",
+      "site": "https://www.rewatt.com.tw/",
+      "desc": "綠瓦的櫥下型飲水加熱器，接在淨水設備後方使用。"
     },
     {
       "key": "AQUAS",
-      "name": "淨工坊 AQUAS"
+      "name": "淨工坊 AQUAS",
+      "slug": "aquas",
+      "site": "https://www.aquaspring.com.tw/",
+      "desc": "淨工坊 AQUAS 的 RO 淨熱一體機，淨水與加熱整合在一台主機，搭配觸控龍頭。"
     },
     {
       "key": "PHILIPS",
-      "name": "飛利浦 PHILIPS"
+      "name": "飛利浦 PHILIPS",
+      "slug": "philips",
+      "site": "https://www.philips.com.tw/",
+      "desc": "飛利浦的櫥下型 RO 瞬熱系統，結合 RO 過濾與瞬熱出水。"
     }
   ],
   "categories": [

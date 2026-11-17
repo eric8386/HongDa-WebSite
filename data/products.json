@@ -77,7 +77,10 @@
     ],
     "price": 22250,
     "priceNote": "BRITA 官方商城原價",
-    "filters": [],
+    "filters": [
+      "brita-gr600-4-in-1",
+      "brita-gr1000-ro"
+    ],
     "fits": [],
     "source": "https://store.brita.tw/products/mypure-gr1000-dark-grey",
     "sourceText": "BRITA 官方商城"
@@ -161,7 +164,10 @@
     ],
     "price": 20800,
     "priceNote": "愛科官網售價",
-    "filters": [],
+    "filters": [
+      "everpoll-ro-900acf",
+      "everpoll-ro-900ro"
+    ],
     "fits": [],
     "source": "https://www.everpoll.com.tw/product_detail?id=479",
     "sourceText": "EVERPOLL 台灣原廠產品頁"
@@ -201,7 +207,10 @@
     ],
     "price": 23800,
     "priceNote": "愛科官網售價",
-    "filters": [],
+    "filters": [
+      "everpoll-ro-900acf",
+      "everpoll-ro-900ro"
+    ],
     "fits": [],
     "source": "https://www.everpoll.com.tw/product_detail?id=480",
     "sourceText": "EVERPOLL 台灣原廠產品頁"
@@ -275,18 +284,14 @@
     ],
     "price": 41900,
     "priceNote": "3M 官方旗艦店建議售價",
-    "filterInfo": [
-      {
-        "model": "HPURE-R600-CAR 複合濾心",
-        "interval": "約 18 個月（或出水變小、水質變差時）"
-      }
-    ],
     "source": "https://shop.3m.com.tw/SalePage/Index/11403424",
     "sourceText": "3M 官方旗艦店（原廠授權）",
     "image": "assets/catalog/official/3m-hpure-15g.jpg",
     "brandName": "3M",
     "cat": "combo",
-    "filters": [],
+    "filters": [
+      "3m-hpure-r600-car"
+    ],
     "fits": []
   },
   {
@@ -358,18 +363,14 @@
     ],
     "price": 40000,
     "priceNote": "3M 官方旗艦店建議售價",
-    "filterInfo": [
-      {
-        "model": "HPURE-R800-CAR 複合濾心",
-        "interval": "約 18 個月（或出水變小、水質變差時）"
-      }
-    ],
     "source": "https://shop.3m.com.tw/SalePage/Index/11750576",
     "sourceText": "3M 官方旗艦店（原廠授權）",
     "image": "assets/catalog/official/3m-hpure-18p.jpg",
     "brandName": "3M",
     "cat": "combo",
-    "filters": [],
+    "filters": [
+      "3m-hpure-r800-car"
+    ],
     "fits": []
   },
   {
@@ -437,26 +438,16 @@
     ],
     "price": null,
     "priceNote": "",
-    "filterInfo": [
-      {
-        "model": "3 合 1（PP＋GAC＋CB）",
-        "interval": "最長 24 個月"
-      },
-      {
-        "model": "AQP RO 濾芯",
-        "interval": "最長 60 個月"
-      },
-      {
-        "model": "ALK 礦化濾芯",
-        "interval": "最長 12 個月"
-      }
-    ],
     "source": "https://www.philips.com.tw/c-p/AUT7063R23_96/philips-under-the-sink-system",
     "sourceText": "飛利浦台灣官網",
     "image": "assets/catalog/official/philips-aut7063r23.jpg",
     "brandName": "飛利浦 PHILIPS",
     "cat": "combo",
-    "filters": [],
+    "filters": [
+      "philips-aut601cf",
+      "philips-aut601r23",
+      "philips-aut604cb"
+    ],
     "fits": []
   },
   {
@@ -523,26 +514,16 @@
     ],
     "price": null,
     "priceNote": "",
-    "filterInfo": [
-      {
-        "model": "AUT821/96（CP 濾芯）",
-        "interval": "最長 12 個月"
-      },
-      {
-        "model": "AUT822/96（AQP RO 濾芯）",
-        "interval": "最長 36 個月"
-      },
-      {
-        "model": "AUT823/96（GAC 濾芯）",
-        "interval": "最長 12 個月"
-      }
-    ],
     "source": "https://www.philips.com.tw/c-p/AUT7005_96/philips-under-the-sink-system",
     "sourceText": "飛利浦台灣官網",
     "image": "assets/catalog/official/philips-aut7005.jpg",
     "brandName": "飛利浦 PHILIPS",
     "cat": "combo",
-    "filters": [],
+    "filters": [
+      "philips-aut821",
+      "philips-aut822",
+      "philips-aut823"
+    ],
     "fits": []
   },
   {
@@ -629,14 +610,10 @@
     ],
     "price": 45000,
     "priceNote": "淨工坊官網與官方商城售價",
-    "filters": [],
-    "fits": [],
-    "filterInfo": [
-      {
-        "model": "MRO928 五合一 RO 複合濾芯",
-        "interval": "18 個月（總淨水量 6000 L）"
-      }
+    "filters": [
+      "jgf-mro928"
     ],
+    "fits": [],
     "source": "https://www.aquaspring.com.tw/products/info.php?id=127294",
     "sourceText": "淨工坊 Aquas 官網 AQ928 產品頁"
   },
@@ -724,14 +701,10 @@
     ],
     "price": 45000,
     "priceNote": "淨工坊官網與官方商城售價",
-    "filters": [],
-    "fits": [],
-    "filterInfo": [
-      {
-        "model": "MRO800 五合一 RO 複合濾芯",
-        "interval": "18 個月（總淨水量 6000 L）"
-      }
+    "filters": [
+      "jgf-mro800"
     ],
+    "fits": [],
     "source": "https://www.aquaspring.com.tw/products/info.php?id=65930",
     "sourceText": "淨工坊 Aquas 官網 S800 產品頁"
   },
@@ -1962,7 +1935,13 @@
     "filters": [],
     "fits": [],
     "source": "https://shop.3m.com.tw/SalePage/Index/10138728",
-    "sourceText": "3M 官方旗艦店（原廠授權）"
+    "sourceText": "3M 官方旗艦店（原廠授權）",
+    "filterInfo": [
+      {
+        "model": "40 μm 不鏽鋼濾網（渦流式反洗，免換濾芯）",
+        "interval": "依原廠指示定期反洗"
+      }
+    ]
   },
   {
     "id": "3m-ss801",
@@ -2341,7 +2320,13 @@
     "filters": [],
     "fits": [],
     "source": "https://www.aquaclio.com/tw/product-d.php?Key=16",
-    "sourceText": "AQUACLiO 克麗歐官網（東電研）"
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）",
+    "filterInfo": [
+      {
+        "model": "90 μm 不鏽鋼濾網（反沖＋刮洗，免換濾芯）",
+        "interval": "依原廠指示定期反沖洗"
+      }
+    ]
   },
   {
     "id": "aquaclio-pfk04-mu06m",
@@ -2406,7 +2391,13 @@
     "filters": [],
     "fits": [],
     "source": "https://www.aquaclio.com/tw/product-d.php?Key=17",
-    "sourceText": "AQUACLiO 克麗歐官網（東電研）"
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）",
+    "filterInfo": [
+      {
+        "model": "90 μm 不鏽鋼濾網（反沖＋刮洗，免換濾芯）",
+        "interval": "依原廠指示定期反沖洗"
+      }
+    ]
   },
   {
     "id": "aquaclio-pfk04-mu10a",
@@ -2471,301 +2462,13 @@
     "filters": [],
     "fits": [],
     "source": "https://www.aquaclio.com/tw/product-d.php?Key=18",
-    "sourceText": "AQUACLiO 克麗歐官網（東電研）"
-  },
-  {
-    "id": "everpoll-r-pp",
-    "brand": "EVERPOLL",
-    "brandName": "EVERPOLL 愛科濾淨",
-    "model": "R-PP",
-    "name": "EVERPOLL R-PP 全效複合濾芯",
-    "cat": "filter",
-    "label": "RO-600 耗材",
-    "image": "assets/catalog/official/ep-r-pp.jpg",
-    "summary": "RO-600 系列前置複合濾芯，請依機型核對相容性。",
-    "points": [
-      "RO-600 產品資料列為第一道濾芯。",
-      "更換間隔依原水水質與使用量調整。",
-      "非所有同外觀濾芯皆可通用。"
-    ],
-    "specs": [
-      [
-        "料號",
-        "R-PP"
-      ],
-      [
-        "適用系列",
-        "RO-600"
-      ],
-      [
-        "用途",
-        "前置複合過濾"
-      ],
-      [
-        "品牌",
-        "EVERPOLL"
-      ]
-    ],
-    "price": 1280,
-    "priceNote": "愛科官網售價",
-    "filters": [],
-    "fits": [
-      "everpoll-ro-600g"
-    ],
-    "source": "https://www.everpoll.com.tw/product_detail?id=288",
-    "sourceText": "愛科官網濾芯產品頁"
-  },
-  {
-    "id": "everpoll-r-ro",
-    "brand": "EVERPOLL",
-    "brandName": "EVERPOLL 愛科濾淨",
-    "model": "R-RO",
-    "name": "EVERPOLL R-RO 逆滲透膜濾芯",
-    "cat": "filter",
-    "label": "RO-600 耗材",
-    "image": "assets/catalog/official/ep-r-ro.jpg",
-    "summary": "RO-600 系列 RO 膜濾芯；型號與設備版本需對照。",
-    "points": [
-      "RO-600 產品資料列為第二道 RO 膜濾芯。",
-      "膜元件的更換時程受進水水質、壓力及使用量影響。",
-      "請以設備銘牌與原廠零件表核對。"
-    ],
-    "specs": [
-      [
-        "料號",
-        "R-RO"
-      ],
-      [
-        "適用系列",
-        "RO-600"
-      ],
-      [
-        "用途",
-        "逆滲透膜"
-      ],
-      [
-        "品牌",
-        "EVERPOLL"
-      ]
-    ],
-    "price": 3880,
-    "priceNote": "愛科官網售價",
-    "filters": [],
-    "fits": [
-      "everpoll-ro-600g"
-    ],
-    "source": "https://www.everpoll.com.tw/product_detail?id=291",
-    "sourceText": "愛科官網濾芯產品頁"
-  },
-  {
-    "id": "everpoll-r-ac",
-    "brand": "EVERPOLL",
-    "brandName": "EVERPOLL 愛科濾淨",
-    "model": "R-AC",
-    "name": "EVERPOLL R-AC 高效活性碳濾芯",
-    "cat": "filter",
-    "label": "RO-600 耗材",
-    "image": "assets/catalog/official/ep-r-ac.jpg",
-    "summary": "RO-600 系列末端活性碳濾芯，用於後段水質調整。",
-    "points": [
-      "RO-600 產品資料列為第三道後置濾芯。",
-      "濾芯規格及壽命請按機型說明書確認。",
-      "更換時建議使用對應原廠耗材。"
-    ],
-    "specs": [
-      [
-        "料號",
-        "R-AC"
-      ],
-      [
-        "適用系列",
-        "RO-600"
-      ],
-      [
-        "用途",
-        "後置活性碳"
-      ],
-      [
-        "品牌",
-        "EVERPOLL"
-      ]
-    ],
-    "price": 1200,
-    "priceNote": "愛科官網售價",
-    "filters": [],
-    "fits": [
-      "everpoll-ro-600g"
-    ],
-    "source": "https://www.everpoll.com.tw/product_detail?id=290",
-    "sourceText": "愛科官網濾芯產品頁"
-  },
-  {
-    "id": "brita-gr600-4-in-1",
-    "brand": "BRITA",
-    "brandName": "BRITA 碧然德",
-    "model": "GR600 4-in-1",
-    "name": "BRITA mypure GR PCF4in1 四重過濾濾芯",
-    "cat": "filter",
-    "label": "GR600 專用",
-    "image": "assets/catalog/official/brita-gr600-4in1.jpg",
-    "summary": "mypure GR600／GR1000 適用的 4 合 1 複合濾芯（PCF4in1）。",
-    "points": [
-      "BRITA GR600 原廠說明列有 4 合 1 複合濾芯。",
-      "建議依濾芯指示燈與原廠保養週期更換。",
-      "請確認包裝標示適用 GR600 型號。"
-    ],
-    "specs": [
-      [
-        "型號",
-        "PCF4in1"
-      ],
-      [
-        "適用機型",
-        "mypure GR600／GR1000"
-      ],
-      [
-        "形式",
-        "4 合 1 複合濾芯"
-      ],
-      [
-        "品牌",
-        "BRITA"
-      ]
-    ],
-    "price": 2750,
-    "priceNote": "BRITA 官方商城原價",
-    "filters": [],
-    "fits": [
-      "brita-mypure-gr-600"
-    ],
-    "source": "https://store.brita.tw/products/mypure-gr-4in1",
-    "sourceText": "BRITA 官方商城"
-  },
-  {
-    "id": "brita-gr600-ro",
-    "brand": "BRITA",
-    "brandName": "BRITA 碧然德",
-    "model": "GR600 RO",
-    "name": "BRITA mypure GR RO 膜濾芯 600G",
-    "cat": "filter",
-    "label": "GR600 專用",
-    "image": "assets/catalog/official/brita-gr600-ro.jpg",
-    "summary": "mypure GR600 專用 RO 膜濾芯，型號需按原廠相容表核對。",
-    "points": [
-      "依 BRITA GR600 原廠產品文件採雙濾芯系統。",
-      "RO 膜更換週期依用水量、TDS 與原廠提醒管理。",
-      "勿以外觀相似之通用膜替代專用濾芯。"
-    ],
-    "specs": [
-      [
-        "適用機型",
-        "mypure GR 600"
-      ],
-      [
-        "形式",
-        "RO 膜濾芯"
-      ],
-      [
-        "品牌",
-        "BRITA"
-      ],
-      [
-        "零件類別",
-        "RO 替換濾芯"
-      ]
-    ],
-    "price": 5600,
-    "priceNote": "BRITA 官方商城原價",
-    "filters": [],
-    "fits": [
-      "brita-mypure-gr-600"
-    ],
-    "source": "https://store.brita.tw/products/mypure-gr-ro-600g",
-    "sourceText": "BRITA 官方商城"
-  },
-  {
-    "id": "3m-ap817",
-    "brand": "3M",
-    "brandName": "3M",
-    "model": "AP817",
-    "name": "3M AP817 SS801 替換濾芯",
-    "cat": "filter",
-    "label": "全戶淨水",
-    "image": "assets/catalog/official/3m-ap817.jpg",
-    "summary": "3M SS801 全戶式不鏽鋼淨水系統對應濾芯。",
-    "points": [
-      "3M 全戶產品型錄將 AP817 列為 SS801 對應濾芯。",
-      "更換週期與處理量依進水條件及實際耗用為準。",
-      "採購時核對 SS801 機身與耗材料號。"
-    ],
-    "specs": [
-      [
-        "料號",
-        "AP817"
-      ],
-      [
-        "適用機型",
-        "SS801"
-      ],
-      [
-        "用途",
-        "全戶活性碳濾芯"
-      ],
-      [
-        "品牌",
-        "3M"
-      ]
-    ],
-    "price": 2990,
-    "priceNote": "3M 官方旗艦店建議售價",
-    "filters": [],
-    "fits": [
-      "3m-ss801"
-    ],
-    "source": "https://shop.3m.com.tw/SalePage/Index/4646586",
-    "sourceText": "3M 官方旗艦店（原廠授權）"
-  },
-  {
-    "id": "3m-ap817-2",
-    "brand": "3M",
-    "brandName": "3M",
-    "model": "AP817-2",
-    "name": "3M AP817-2 SS802 替換濾芯",
-    "cat": "filter",
-    "label": "全戶淨水",
-    "image": "assets/catalog/official/3m-ap817-2.jpg",
-    "summary": "3M SS802 全戶式不鏽鋼淨水系統對應替換濾芯。",
-    "points": [
-      "3M 全戶產品型錄將 AP817-2 列為 SS802 對應濾芯。",
-      "確認濾殼型號後選擇正確耗材。",
-      "更換週期依水質與用水量管理。"
-    ],
-    "specs": [
-      [
-        "料號",
-        "AP817-2"
-      ],
-      [
-        "適用機型",
-        "SS802"
-      ],
-      [
-        "用途",
-        "全戶活性碳濾芯"
-      ],
-      [
-        "品牌",
-        "3M"
-      ]
-    ],
-    "price": 5480,
-    "priceNote": "3M 官方旗艦店建議售價",
-    "filters": [],
-    "fits": [
-      "3m-ss802"
-    ],
-    "source": "https://shop.3m.com.tw/SalePage/Index/4646704",
-    "sourceText": "3M 官方旗艦店（原廠授權）"
+    "sourceText": "AQUACLiO 克麗歐官網（東電研）",
+    "filterInfo": [
+      {
+        "model": "90 μm 不鏽鋼濾網（反沖＋刮洗，免換濾芯）",
+        "interval": "依原廠指示定期反沖洗"
+      }
+    ]
   },
   {
     "id": "gundai-gd600",
@@ -3273,5 +2976,868 @@
     ],
     "source": "https://www.rewatt.com.tw/yo50/",
     "sourceText": "綠瓦 Rewatt 官網 YO50 產品頁"
+  },
+  {
+    "id": "everpoll-r-pp",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "R-PP",
+    "name": "EVERPOLL R-PP 全效複合式濾芯",
+    "cat": "filter",
+    "label": "RO-600 耗材",
+    "image": "assets/catalog/official/ep-r-pp.jpg",
+    "summary": "RO-600G 的第一道濾芯，結合 PP 纖維與塊狀活性碳的前置複合濾芯。",
+    "points": [
+      "PP 纖維過濾搭配塊狀活性碳。",
+      "過濾精度 0.5 µm（nominal）。",
+      "原廠僅標示適用 RO-600G 第一道。"
+    ],
+    "specs": [
+      [
+        "料號",
+        "R-PP"
+      ],
+      [
+        "主要成分",
+        "PP 纖維、塊狀活性碳"
+      ],
+      [
+        "過濾精度",
+        "0.5 µm"
+      ],
+      [
+        "過濾階段",
+        "第一道（前置）"
+      ]
+    ],
+    "price": 1280,
+    "priceNote": "愛科官網售價",
+    "filters": [],
+    "fits": [
+      "everpoll-ro-600g"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=288",
+    "sourceText": "愛科官網濾芯產品頁",
+    "interval": "約 6–12 個月"
+  },
+  {
+    "id": "everpoll-r-ro",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "R-RO",
+    "name": "EVERPOLL R-RO RO 逆滲透膜",
+    "cat": "filter",
+    "label": "RO-600 耗材",
+    "image": "assets/catalog/official/ep-r-ro.jpg",
+    "summary": "RO-600G 的第二道 RO 逆滲透膜濾芯，過濾精度 0.0001 微米。",
+    "points": [
+      "過濾精度 0.0001 微米。",
+      "進水壓力 4–8 kg/cm²，適用水溫 5–38°C。",
+      "原廠僅標示適用 RO-600G 第二道。"
+    ],
+    "specs": [
+      [
+        "料號",
+        "R-RO"
+      ],
+      [
+        "主要成分",
+        "RO 逆滲透膜"
+      ],
+      [
+        "過濾精度",
+        "0.0001 微米"
+      ],
+      [
+        "過濾階段",
+        "第二道 RO 膜"
+      ]
+    ],
+    "price": 3880,
+    "priceNote": "愛科官網售價",
+    "filters": [],
+    "fits": [
+      "everpoll-ro-600g"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=291",
+    "sourceText": "愛科官網濾芯產品頁",
+    "interval": "約 24–36 個月"
+  },
+  {
+    "id": "everpoll-r-ac",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "R-AC",
+    "name": "EVERPOLL R-AC 高效活性碳過濾",
+    "cat": "filter",
+    "label": "RO-600 耗材",
+    "image": "assets/catalog/official/ep-r-ac.jpg",
+    "summary": "RO-600G 的第三道後置塊狀活性碳濾芯，用於調整出水口感。",
+    "points": [
+      "主要成分為塊狀活性碳。",
+      "進水壓力 4–8 kg/cm²，適用水溫 5–38°C。",
+      "原廠僅標示適用 RO-600G 第三道。"
+    ],
+    "specs": [
+      [
+        "料號",
+        "R-AC"
+      ],
+      [
+        "主要成分",
+        "塊狀活性碳"
+      ],
+      [
+        "適用水溫",
+        "5–38°C"
+      ],
+      [
+        "過濾階段",
+        "第三道（後置）"
+      ]
+    ],
+    "price": 1200,
+    "priceNote": "愛科官網售價",
+    "filters": [],
+    "fits": [
+      "everpoll-ro-600g"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=290",
+    "sourceText": "愛科官網濾芯產品頁",
+    "interval": "約 6–12 個月"
+  },
+  {
+    "id": "everpoll-ro-900acf",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "RO-900ACF",
+    "name": "EVERPOLL RO-900ACF 複合式濾芯",
+    "cat": "filter",
+    "label": "RO-900 耗材",
+    "image": "assets/catalog/official/everpoll-ro-900acf.jpg",
+    "summary": "RO-900G／RO-900G PRO 的 1 號濾芯，結合 PP 纖維與活性碳的前置複合濾芯。",
+    "points": [
+      "一芯雙效，可去除鐵鏽、泥沙與大顆粒雜質。",
+      "活性碳段可減少餘氯、異味與部分重金屬。",
+      "側抽式設計，順轉安裝、逆轉取出。"
+    ],
+    "specs": [
+      [
+        "料號",
+        "RO-900ACF（濾芯標示 R-900ACF）"
+      ],
+      [
+        "主要成分",
+        "PP 纖維、活性碳"
+      ],
+      [
+        "尺寸",
+        "高 295 × φ75 mm"
+      ],
+      [
+        "過濾階段",
+        "1 號濾芯（前置）"
+      ]
+    ],
+    "price": 2500,
+    "priceNote": "愛科官網售價",
+    "interval": "約 6–12 個月",
+    "filters": [],
+    "fits": [
+      "everpoll-ro-900g",
+      "everpoll-ro-900g-pro"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=481",
+    "sourceText": "愛科官網濾芯產品頁"
+  },
+  {
+    "id": "everpoll-ro-900ro",
+    "brand": "EVERPOLL",
+    "brandName": "愛科濾淨 EVERPOLL",
+    "model": "RO-900RO",
+    "name": "EVERPOLL RO-900RO RO 濾膜濾芯（2 入組）",
+    "cat": "filter",
+    "label": "RO-900 耗材",
+    "image": "assets/catalog/official/everpoll-ro-900ro.jpg",
+    "summary": "RO-900G／RO-900G PRO 的 2 號與 3 號 RO 膜濾芯，一組 2 支，每支 450G。",
+    "points": [
+      "每組 2 支 450G RO 膜，合計 900G 造水量。",
+      "2 號與 3 號位置通用，一組即為一次完整更換量。",
+      "過濾精度 0.0001 微米。"
+    ],
+    "specs": [
+      [
+        "料號",
+        "RO-900RO（濾芯標示 R-900RO）"
+      ],
+      [
+        "處理水量",
+        "450G＋450G"
+      ],
+      [
+        "尺寸",
+        "高 295 × φ75 mm"
+      ],
+      [
+        "過濾階段",
+        "2 號／3 號 RO 膜"
+      ]
+    ],
+    "price": 3880,
+    "priceNote": "愛科官網售價（2 入組）",
+    "interval": "約 24–36 個月",
+    "filters": [],
+    "fits": [
+      "everpoll-ro-900g",
+      "everpoll-ro-900g-pro"
+    ],
+    "source": "https://www.everpoll.com.tw/product_detail?id=482",
+    "sourceText": "愛科官網濾芯產品頁"
+  },
+  {
+    "id": "3m-ap817",
+    "brand": "3M",
+    "brandName": "3M",
+    "model": "AP817",
+    "name": "3M 全戶式活性碳濾芯 AP817（SS801 適用）",
+    "cat": "filter",
+    "label": "全戶淨水",
+    "image": "assets/catalog/official/3m-ap817.jpg",
+    "summary": "3M SS801 全戶式不鏽鋼淨水系統專用替換濾芯，三重過濾去除泥沙、餘氯與異味。",
+    "points": [
+      "三重過濾：外層不織布／PE 薄膜擋泥沙，中層 3M 專利活性碳除氯除味，內層 PolyKlean 防漏碳",
+      "過濾孔徑 25 微米，最大流速每分鐘 38 公升（10gpm）",
+      "濾材採 FDA 認可材質，通過 NSF 標準 42 認證"
+    ],
+    "specs": [
+      [
+        "料號",
+        "AP817（3M 產品編號 7100006919）"
+      ],
+      [
+        "過濾孔徑",
+        "25 μm"
+      ],
+      [
+        "總處理量",
+        "220 噸 @2ppm 餘氯"
+      ],
+      [
+        "尺寸",
+        "直徑 11.7 × 高 25.1 cm"
+      ]
+    ],
+    "price": 2990,
+    "priceNote": "3M 官方旗艦店建議售價",
+    "filters": [],
+    "fits": [
+      "3m-ss801"
+    ],
+    "source": "https://shop.3m.com.tw/SalePage/Index/4646586",
+    "sourceText": "3M 官方旗艦店（原廠授權）",
+    "interval": "約 6 個月（或出水量變小、消毒水味出現時）"
+  },
+  {
+    "id": "3m-ap817-2",
+    "brand": "3M",
+    "brandName": "3M",
+    "model": "AP817-2",
+    "name": "3M 全戶式活性碳濾芯 AP817-2（SS802 適用）",
+    "cat": "filter",
+    "label": "全戶淨水",
+    "image": "assets/catalog/official/3m-ap817-2.jpg",
+    "summary": "3M SS802 全戶式不鏽鋼淨水系統專用加長型替換濾芯，處理量為 AP817 的兩倍。",
+    "points": [
+      "三重過濾：外層 PE 薄膜擋泥沙，中層 3M 專利活性碳除氯除味，內層 PolyKlean 防漏碳",
+      "過濾孔徑 25 微米，最大流速每分鐘 38 公升（10gpm）",
+      "濾材採 FDA 認可材質，通過 NSF 標準 42 認證"
+    ],
+    "specs": [
+      [
+        "料號",
+        "AP817-2（3M 產品編號 7100028218）"
+      ],
+      [
+        "過濾孔徑",
+        "25 μm"
+      ],
+      [
+        "總處理量",
+        "440 噸 @2ppm 餘氯"
+      ],
+      [
+        "尺寸",
+        "直徑 11.7 × 高 51.1 cm"
+      ]
+    ],
+    "price": 5480,
+    "priceNote": "3M 官方旗艦店建議售價",
+    "filters": [],
+    "fits": [
+      "3m-ss802"
+    ],
+    "source": "https://shop.3m.com.tw/SalePage/Index/4646704",
+    "sourceText": "3M 官方旗艦店（原廠授權）",
+    "interval": "約 12 個月（或出水量變小、消毒水味出現時）"
+  },
+  {
+    "id": "3m-hpure-r600-car",
+    "brand": "3M",
+    "brandName": "3M",
+    "model": "HPURE-R600-CAR",
+    "name": "3M AQUA-PURE HPURE-R600-CAR 活性碳棒逆滲透複合式替換濾心",
+    "cat": "filter",
+    "label": "600G 濾心",
+    "image": "assets/catalog/official/3m-hpure-r600-car.jpg",
+    "summary": "HPURE-15G 淨熱一體機專用五合一複合濾心，PP棉、活性碳纖維、600GPD RO 膜、活性碳棒整合為一支。",
+    "points": [
+      "五重過濾整合一支：PP棉／活性碳纖維／RO膜／活性碳棒／PP棉",
+      "RO 膜孔徑 0.0001 微米，原廠標示可濾除 TDS、重金屬、細菌、病毒等",
+      "旋鈕式設計，旋轉即可拉出更換；與 HPURE-18P 濾心不可共用"
+    ],
+    "specs": [
+      [
+        "料號",
+        "HPURE-R600-CAR"
+      ],
+      [
+        "RO膜規格",
+        "600 GPD"
+      ],
+      [
+        "尺寸",
+        "126×126×385 mm"
+      ],
+      [
+        "額定總淨水量",
+        "6000 L"
+      ]
+    ],
+    "price": 8200,
+    "priceNote": "3M 官方旗艦店建議售價",
+    "interval": "約 18 個月（或出水明顯變小、水質變差時）",
+    "filters": [],
+    "fits": [
+      "3m-hpure-15g"
+    ],
+    "source": "https://shop.3m.com.tw/SalePage/Index/11403433",
+    "sourceText": "3M 官方旗艦店（原廠授權）"
+  },
+  {
+    "id": "3m-hpure-r800-car",
+    "brand": "3M",
+    "brandName": "3M",
+    "model": "HPURE-R800-CAR",
+    "name": "3M AQUA-PURE HPURE-R800-CAR 活性碳棒逆滲透複合式替換濾心",
+    "cat": "filter",
+    "label": "800G 濾心",
+    "image": "assets/catalog/official/3m-hpure-r800-car.jpg",
+    "summary": "HPURE-18P 淨熱一體機專用五合一複合濾心，內含 800GPD RO 膜。",
+    "points": [
+      "五重過濾整合一支：PP棉／活性碳纖維／RO膜／活性碳棒／PP棉",
+      "RO 膜升級 800GPD，孔徑 0.0001 微米",
+      "原廠註明 HPURE-15G 與 HPURE-18P 濾心無法共用，請認明型號"
+    ],
+    "specs": [
+      [
+        "料號",
+        "HPURE-R800-CAR"
+      ],
+      [
+        "RO膜規格",
+        "800 GPD"
+      ],
+      [
+        "尺寸",
+        "126×126×385 mm"
+      ],
+      [
+        "額定總淨水量",
+        "6000 L"
+      ]
+    ],
+    "price": 9200,
+    "priceNote": "3M 官方旗艦店建議售價",
+    "interval": "約 18 個月（或出水明顯變小、水質變差時）",
+    "filters": [],
+    "fits": [
+      "3m-hpure-18p"
+    ],
+    "source": "https://shop.3m.com.tw/SalePage/Index/11750591",
+    "sourceText": "3M 官方旗艦店（原廠授權）"
+  },
+  {
+    "id": "brita-gr600-4-in-1",
+    "brand": "BRITA",
+    "brandName": "BRITA 碧然德",
+    "model": "GR 4in1",
+    "name": "BRITA mypure GR 4in1 四重過濾濾芯",
+    "cat": "filter",
+    "label": "GR 系列耗材",
+    "image": "assets/catalog/official/brita-gr600-4in1.jpg",
+    "summary": "整合前置與後置過濾的 4 合 1 複合濾芯，GR600 與 GR1000 共用。",
+    "points": [
+      "包含 PP、前置碳纖維、後置碳棒與不織布，一支抵兩支。",
+      "可濾除泥沙、鐵鏽與餘氯，並調節口感。",
+      "一旋一抽，約 10 秒即可換芯。"
+    ],
+    "specs": [
+      [
+        "商品編號",
+        "1054150"
+      ],
+      [
+        "過濾階段",
+        "第 1 道（前置＋後置）"
+      ],
+      [
+        "組成",
+        "PP／碳纖維／碳棒／不織布"
+      ],
+      [
+        "適用機型",
+        "mypure GR 600／GR 1000"
+      ]
+    ],
+    "price": 2750,
+    "priceNote": "BRITA 官方商城原價",
+    "filters": [],
+    "fits": [
+      "brita-mypure-gr-600",
+      "brita-mypure-gr-1000"
+    ],
+    "source": "https://store.brita.tw/products/mypure-gr-4in1",
+    "sourceText": "BRITA 官方商城",
+    "interval": "約 6–12 個月"
+  },
+  {
+    "id": "brita-gr600-ro",
+    "brand": "BRITA",
+    "brandName": "BRITA 碧然德",
+    "model": "GR RO 600G",
+    "name": "BRITA mypure GR RO 濾芯 600G",
+    "cat": "filter",
+    "label": "GR600 耗材",
+    "image": "assets/catalog/official/brita-gr600-ro.jpg",
+    "summary": "mypure GR 600 專用的 600G 杜邦 RO 膜濾芯，不適用 GR 1000。",
+    "points": [
+      "採美國杜邦 RO 膜，原廠標示可濾除 99.99% 病毒及 100% 大腸桿菌群。",
+      "600G 規格，原廠標示每分鐘出水 1.5L。",
+      "一旋一抽，約 10 秒即可換芯。"
+    ],
+    "specs": [
+      [
+        "商品編號",
+        "1054151"
+      ],
+      [
+        "過濾精度",
+        "0.0001 微米"
+      ],
+      [
+        "造水量",
+        "600G（每分鐘 1.5L）"
+      ],
+      [
+        "過濾階段",
+        "第 2 道 RO 膜"
+      ]
+    ],
+    "price": 5600,
+    "priceNote": "BRITA 官方商城原價",
+    "filters": [],
+    "fits": [
+      "brita-mypure-gr-600"
+    ],
+    "source": "https://store.brita.tw/products/mypure-gr-ro-600g",
+    "sourceText": "BRITA 官方商城",
+    "interval": "依原廠指示"
+  },
+  {
+    "id": "brita-gr1000-ro",
+    "brand": "BRITA",
+    "brandName": "BRITA 碧然德",
+    "model": "GR RO 1000G",
+    "name": "BRITA mypure GR RO 濾芯 1000G",
+    "cat": "filter",
+    "label": "GR1000 耗材",
+    "image": "assets/catalog/official/brita-gr1000-ro.jpg",
+    "summary": "mypure GR 1000 專用的 1000G 杜邦 RO 膜濾芯，屬第 2 道濾芯，與 GR600 的 600G RO 濾芯不同。",
+    "points": [
+      "採美國杜邦 RO 膜，原廠標示可濾除 99.99% 病毒及 100% 大腸桿菌群。",
+      "1000G 規格，原廠標示每分鐘出水 2.6L。",
+      "一旋一抽，約 10 秒即可換芯。"
+    ],
+    "specs": [
+      [
+        "商品編號",
+        "1054152"
+      ],
+      [
+        "過濾精度",
+        "0.0001 微米"
+      ],
+      [
+        "造水量",
+        "1000G（每分鐘 2.6L）"
+      ],
+      [
+        "過濾階段",
+        "第 2 道 RO 膜"
+      ]
+    ],
+    "price": 8100,
+    "priceNote": "BRITA 官方商城原價",
+    "interval": "約 18–24 個月",
+    "filters": [],
+    "fits": [
+      "brita-mypure-gr-1000"
+    ],
+    "source": "https://store.brita.tw/products/mypure-gr-ro-1000g",
+    "sourceText": "BRITA 官方商城"
+  },
+  {
+    "id": "jgf-mro928",
+    "brand": "AQUAS",
+    "brandName": "淨工坊 AQUAS",
+    "model": "MRO928",
+    "name": "淨工坊 AQUAS MRO928 五合一 RO 複合式濾芯",
+    "cat": "filter",
+    "label": "五合一RO",
+    "image": "assets/catalog/official/jgf-mro928.jpg",
+    "summary": "AQ928 專用五合一 RO 複合式濾芯，PP、活性碳、RO 膜、ACF 整合為單支，18 個月或 6,000 公升更換。",
+    "points": [
+      "一支整合 PP、活性碳、RO、ACF 多層過濾",
+      "官方標示 18 個月或 6,000 公升更換",
+      "日本 Toray RO 膜，精度 0.0001 微米"
+    ],
+    "specs": [
+      [
+        "料號",
+        "MRO928（800GPD）"
+      ],
+      [
+        "成分",
+        "活性碳、PP、RO、ACF"
+      ],
+      [
+        "精度",
+        "0.0001 微米"
+      ],
+      [
+        "尺寸",
+        "126×388 mm"
+      ]
+    ],
+    "price": 6800,
+    "priceNote": "淨工坊官網標價",
+    "interval": "18 個月或 6,000 公升",
+    "filters": [],
+    "fits": [
+      "jgf-aq928"
+    ],
+    "source": "https://www.aquaspring.com.tw/products/info.php?id=127704",
+    "sourceText": "淨工坊官網 MRO928 商品頁"
+  },
+  {
+    "id": "jgf-mro800",
+    "brand": "AQUAS",
+    "brandName": "淨工坊 AQUAS",
+    "model": "MRO800",
+    "name": "淨工坊 AQUAS MRO800 五合一 RO 複合式濾芯",
+    "cat": "filter",
+    "label": "五合一RO",
+    "image": "assets/catalog/official/jgf-mro800.jpg",
+    "summary": "S800 專用五合一 RO 複合式濾芯，PP、活性碳、RO 膜、ACF 整合為單支，18 個月或 6,000 公升更換。",
+    "points": [
+      "一支整合 PP、活性碳、RO、ACF 多層過濾",
+      "官方標示 18 個月或 6,000 公升更換",
+      "日本 Toray RO 膜，精度 0.0001 微米"
+    ],
+    "specs": [
+      [
+        "料號",
+        "MRO800（800GPD）"
+      ],
+      [
+        "成分",
+        "活性碳、PP、RO、ACF"
+      ],
+      [
+        "精度",
+        "0.0001 微米"
+      ],
+      [
+        "尺寸",
+        "126×388 mm"
+      ]
+    ],
+    "price": 7800,
+    "priceNote": "淨工坊官網標價",
+    "interval": "18 個月或 6,000 公升",
+    "filters": [],
+    "fits": [
+      "jgf-s800"
+    ],
+    "source": "https://www.aquaspring.com.tw/products/info.php?id=127713",
+    "sourceText": "淨工坊官網 MRO800 商品頁"
+  },
+  {
+    "id": "philips-aut601cf",
+    "brand": "PHILIPS",
+    "brandName": "飛利浦 PHILIPS",
+    "model": "AUT601CF",
+    "name": "PHILIPS 飛利浦 3 合 1 前置複合濾芯 AUT601CF",
+    "cat": "filter",
+    "label": "3合1前置",
+    "image": "assets/catalog/official/philips-aut601cf.jpg",
+    "summary": "AUT7063 小淨靈第一道濾芯，以 PP＋顆粒活性碳＋碳塊三合一結構，先攔截泥沙鐵鏽並吸附餘氯異味，保護後段 RO 膜。",
+    "points": [
+      "官方規格書標示 3 合 1（PP＋GAC＋CB）濾芯壽命最長 24 個月",
+      "經銷商標示過濾水量約 7,300 公升或 2 年",
+      "OnePress 一鍵更換，無須工具"
+    ],
+    "specs": [
+      [
+        "料號",
+        "AUT601CF"
+      ],
+      [
+        "結構",
+        "PP＋GAC＋CB 三合一"
+      ],
+      [
+        "過濾水量",
+        "約 7,300 公升"
+      ],
+      [
+        "位置",
+        "第一道前置"
+      ]
+    ],
+    "price": null,
+    "priceNote": "",
+    "interval": "最長 24 個月",
+    "filters": [],
+    "fits": [
+      "philips-aut7063r23"
+    ],
+    "source": "https://www.documents.philips.com/assets/20241203/967f4093c28e4e389d99b23b00ec6fea.pdf",
+    "sourceText": "飛利浦 AUT7063R23/96 官方規格書"
+  },
+  {
+    "id": "philips-aut601r23",
+    "brand": "PHILIPS",
+    "brandName": "飛利浦 PHILIPS",
+    "model": "AUT601R23/96",
+    "name": "PHILIPS 飛利浦 AQP 水通道蛋白 RO 濾芯 AUT601R23/96",
+    "cat": "filter",
+    "label": "AQP RO",
+    "image": "assets/catalog/official/philips-aut601r23.jpg",
+    "summary": "AUT7063 小淨靈第二道 900 GPD 水通道蛋白 RO 濾芯，精度達 0.0001 微米，官方壽命最長 60 個月。",
+    "points": [
+      "Aquaporin Inside 水通道蛋白 RO 膜，可濾除 110 種小至 0.0001 微米的物質",
+      "官方規格書標示 AQP RO 濾芯最長 60 個月（約 5 年）",
+      "momo 標示 18,250 公升或 5 年更換"
+    ],
+    "specs": [
+      [
+        "料號",
+        "AUT601R23/96"
+      ],
+      [
+        "RO 膜",
+        "900 GPD 水通道蛋白膜"
+      ],
+      [
+        "過濾精度",
+        "0.0001 微米"
+      ],
+      [
+        "過濾水量",
+        "約 18,250 公升"
+      ]
+    ],
+    "price": null,
+    "priceNote": "",
+    "interval": "最長 60 個月",
+    "filters": [],
+    "fits": [
+      "philips-aut7063r23"
+    ],
+    "source": "https://www.documents.philips.com/assets/20241203/967f4093c28e4e389d99b23b00ec6fea.pdf",
+    "sourceText": "飛利浦 AUT7063R23/96 官方規格書"
+  },
+  {
+    "id": "philips-aut604cb",
+    "brand": "PHILIPS",
+    "brandName": "飛利浦 PHILIPS",
+    "model": "AUT604CB/96",
+    "name": "PHILIPS 飛利浦 ALK 微鹼礦化濾芯 AUT604CB/96",
+    "cat": "filter",
+    "label": "ALK礦化",
+    "image": "assets/catalog/official/philips-aut604cb.jpg",
+    "summary": "AUT7063 小淨靈第三道礦化濾芯，於 RO 純水中補回鍶、鈣、鎂等礦物質並將酸鹼值平衡至微鹼。",
+    "points": [
+      "官方規格書標示 ALK 濾芯最長 12 個月",
+      "添加鍶、鈣、鎂等礦物質，改善 RO 水口感",
+      "經銷商標示 3,650 公升或 1 年更換"
+    ],
+    "specs": [
+      [
+        "料號",
+        "AUT604CB/96"
+      ],
+      [
+        "功能",
+        "再礦化、酸鹼平衡"
+      ],
+      [
+        "過濾水量",
+        "約 3,650 公升"
+      ],
+      [
+        "位置",
+        "第三道後置"
+      ]
+    ],
+    "price": null,
+    "priceNote": "",
+    "interval": "最長 12 個月",
+    "filters": [],
+    "fits": [
+      "philips-aut7063r23"
+    ],
+    "source": "https://www.documents.philips.com/assets/20241203/967f4093c28e4e389d99b23b00ec6fea.pdf",
+    "sourceText": "飛利浦 AUT7063R23/96 官方規格書"
+  },
+  {
+    "id": "philips-aut821",
+    "brand": "PHILIPS",
+    "brandName": "飛利浦 PHILIPS",
+    "model": "AUT821/96",
+    "name": "PHILIPS 飛利浦 CP 複合濾芯 AUT821/96",
+    "cat": "filter",
+    "label": "CP複合",
+    "image": "assets/catalog/official/philips-aut821.jpg",
+    "summary": "AUT7005 小瞬靜第一道碳塊＋PP 沉澱複合濾芯，攔截顆粒雜質並吸附餘氯、異味。",
+    "points": [
+      "官方規格書標示 CP 濾芯最長 12 個月",
+      "碳塊與沉澱濾材二合一",
+      "經銷商標示過濾水量 3,650 公升或一年"
+    ],
+    "specs": [
+      [
+        "料號",
+        "AUT821/96"
+      ],
+      [
+        "結構",
+        "碳塊＋PP 沉澱複合"
+      ],
+      [
+        "過濾水量",
+        "約 3,650 公升"
+      ],
+      [
+        "位置",
+        "第一道前置"
+      ]
+    ],
+    "price": null,
+    "priceNote": "",
+    "interval": "最長 12 個月",
+    "filters": [],
+    "fits": [
+      "philips-aut7005"
+    ],
+    "source": "https://www.documents.philips.com/assets/20250820/ac18a2e1c2bd4cf7b4e3b33f00e7a15d.pdf",
+    "sourceText": "飛利浦 AUT7005/96 官方規格書"
+  },
+  {
+    "id": "philips-aut822",
+    "brand": "PHILIPS",
+    "brandName": "飛利浦 PHILIPS",
+    "model": "AUT822/96",
+    "name": "PHILIPS 飛利浦 AQP RO 濾芯 AUT822/96",
+    "cat": "filter",
+    "label": "AQP RO",
+    "image": "assets/catalog/official/philips-aut822.jpg",
+    "summary": "AUT7005 小瞬靜第二道水通道蛋白 RO 濾芯，精度 0.0001 微米，官方壽命最長 36 個月。",
+    "points": [
+      "Aquaporin Inside 水通道蛋白 RO 膜，可濾除細菌、病毒、重金屬與 PFAS",
+      "官方規格書標示 RO 濾芯最長 36 個月",
+      "經銷商標示過濾水量 11,000 公升或三年"
+    ],
+    "specs": [
+      [
+        "料號",
+        "AUT822/96"
+      ],
+      [
+        "RO 膜",
+        "100 GPD 水通道蛋白膜"
+      ],
+      [
+        "過濾精度",
+        "0.0001 微米"
+      ],
+      [
+        "過濾水量",
+        "約 11,000 公升"
+      ]
+    ],
+    "price": null,
+    "priceNote": "",
+    "interval": "最長 36 個月",
+    "filters": [],
+    "fits": [
+      "philips-aut7005"
+    ],
+    "source": "https://www.documents.philips.com/assets/20250820/ac18a2e1c2bd4cf7b4e3b33f00e7a15d.pdf",
+    "sourceText": "飛利浦 AUT7005/96 官方規格書"
+  },
+  {
+    "id": "philips-aut823",
+    "brand": "PHILIPS",
+    "brandName": "飛利浦 PHILIPS",
+    "model": "AUT823/96",
+    "name": "PHILIPS 飛利浦 GAC 椰殼活性碳濾芯 AUT823/96",
+    "cat": "filter",
+    "label": "GAC活性碳",
+    "image": "assets/catalog/official/philips-aut823.jpg",
+    "summary": "AUT7005 小瞬靜第三道椰殼活性碳後置濾芯，改善 RO 水口感並進一步去除異味。",
+    "points": [
+      "官方規格書標示 GAC 濾芯最長 12 個月",
+      "椰殼活性碳碳塊濾材",
+      "經銷商標示過濾水量 3,650 公升或一年"
+    ],
+    "specs": [
+      [
+        "料號",
+        "AUT823/96"
+      ],
+      [
+        "濾材",
+        "椰殼活性碳"
+      ],
+      [
+        "過濾水量",
+        "約 3,650 公升"
+      ],
+      [
+        "位置",
+        "第三道後置"
+      ]
+    ],
+    "price": null,
+    "priceNote": "",
+    "interval": "最長 12 個月",
+    "filters": [],
+    "fits": [
+      "philips-aut7005"
+    ],
+    "source": "https://www.documents.philips.com/assets/20250820/ac18a2e1c2bd4cf7b4e3b33f00e7a15d.pdf",
+    "sourceText": "飛利浦 AUT7005/96 官方規格書"
   }
 ]
