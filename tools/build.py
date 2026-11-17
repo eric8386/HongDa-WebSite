@@ -267,8 +267,9 @@ def product_card(p):
     c = CATS[p['cat']]
     return f'''<article class="p-card" data-cat="{p["cat"]}" data-brand="{p["brand"]}">
   <a href="/products/{p["id"]}.html" class="p-link">
-    <div class="p-photo">{img_html(p["image"], p["name"] + " 產品照片")}<span class="chip">{e(cat_label(p))}</span></div>
+    <div class="p-photo">{img_html(p["image"], p["name"] + " 產品照片")}</div>
     <div class="p-body">
+      <span class="p-cat">{e(cat_label(p))}</span>
       <div class="p-meta"><span>{e(BRANDS[p["brand"]]["name"])}</span><span>{e(p["model"])}</span></div>
       <h3>{e(p["name"])}</h3>
       <p>{e(p["summary"])}</p>
