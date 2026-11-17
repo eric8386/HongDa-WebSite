@@ -86,7 +86,7 @@ LOGO = ('<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><li
 
 # ---------- layout ----------
 NAV = [
-    ('/products/', '產品'),
+    ('/products/', '品牌商品'),
     ('/services/', '服務項目'),
     ('/filters/', '濾心專區'),
     ('/knowledge/', '水質知識'),
@@ -386,7 +386,7 @@ def build_home():
 </div></section>
 
 <section class="sec"><div class="wrap">
-  <div class="sec-head row"><div><span class="eyebrow">產品分類</span><h2>依用途挑選淨水設備</h2></div><a class="link" href="/products/">看全部產品 {ic("arrow")}</a></div>
+  <div class="sec-head row"><div><span class="eyebrow">產品分類</span><h2>依用途挑選淨水設備</h2></div><a class="link" href="/products/">看全部品牌商品 {ic("arrow")}</a></div>
   <div class="cats">{cats}</div>
 </div></section>
 
@@ -432,7 +432,7 @@ def build_products():
     order = {c['key']: i for i, c in enumerate(SITE['categories'])}
     items = sorted(PRODUCTS, key=lambda p: order[p['cat']])
     body = f'''<section class="page-hero"><div class="wrap">
-  <span class="eyebrow">產品型錄</span><h1>淨水設備與濾心耗材</h1>
+  <span class="eyebrow">品牌商品</span><h1>淨水設備與濾心耗材</h1>
   <p>依用途或品牌篩選。產品頁有完整規格、安裝條件與對應濾心，詢價請加 LINE。</p>
 </div></section>
 <section class="sec sec-tight"><div class="wrap" data-catalog>
@@ -443,7 +443,7 @@ def build_products():
 </div></section>
 {cta_band()}'''
     page('/products/', '淨水設備型錄：直輸 RO、淨熱一體機、全戶淨水、全戶軟水、廚下加熱器', '台南淨水設備型錄：直輸 RO、淨熱一體機、廚下加熱器、全戶淨水、全戶軟水與濾心耗材，含規格、安裝條件與建議售價。',
-         body, active='/products/', crumbs=[(None, '產品')])
+         body, active='/products/', crumbs=[(None, '品牌商品')])
     for p in PRODUCTS:
         build_product(p)
 
@@ -521,7 +521,7 @@ def build_product(p):
     if p.get('price'):
         ld['offers'] = {"@type": "Offer", "priceCurrency": "TWD", "price": p['price'], "url": DOMAIN + f'/products/{p["id"]}.html'}
     page(f'/products/{p["id"]}.html', f'{p["name"]}（{p["model"]}）規格與安裝', f'{p["name"]}：{p["summary"]} 台南安裝、規格、對應濾心與建議售價。',
-         body, active='/products/', crumbs=[('/products/', '產品'), (f'/products/?cat={c["key"]}', c['short']), (None, p['model'])],
+         body, active='/products/', crumbs=[('/products/', '品牌商品'), (f'/products/?cat={c["key"]}', c['short']), (None, p['model'])],
          ld=ld, og_image=p['image'] or None)
 
 def build_services():
@@ -677,7 +677,7 @@ def build_static():
     page('/finder.html', '3 步驟找出適合你家的淨水方案', '回答住宅型態、用水需求與預算三個問題，找出適合的淨水、軟水或清洗方案。', body, crumbs=[(None, '3 步驟找方案')])
 
     body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">404</span><h1>找不到這個頁面</h1><p>頁面可能已移動或更新。</p>
-<div class="hero-cta"><a class="btn btn-primary" href="/">回到首頁</a><a class="btn btn-ghost" href="/products/">看產品</a></div></div></section>'''
+<div class="hero-cta"><a class="btn btn-primary" href="/">回到首頁</a><a class="btn btn-ghost" href="/products/">看品牌商品</a></div></div></section>'''
     page('/404.html', '找不到頁面', '找不到頁面', body)
 
 def build_meta():
