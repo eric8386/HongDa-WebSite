@@ -641,7 +641,7 @@ def build_service(s):
     pains = ''.join(f'<li>{ic("drop")}{e(x)}</li>' for x in s['pains'])
     hl = ''.join(f'<li>{ic("check")}{e(x)}</li>' for x in s['highlights'])
     steps = ''.join(f'<li><span class="no">{i+1:02d}</span><div><h3>{e(st["t"])}</h3><p>{e(st["d"])}</p></div></li>' for i, st in enumerate(s['steps']))
-    rows = ''.join(f'<tr><th>{e(r["type"])}</th><td>{("NT$" + format(r["price"], ",") + " 起") if r.get("price") else "現場勘查後報價"}</td><td>{e(r["note"])}</td></tr>' for r in s['pricing'])
+    rows = ''.join(f'<tr><th>{e(r["type"])}</th><td>{("NT$" + format(r["price"], ",") + " 起") if r.get("price") else e(r.get("quote") or "現場勘查後報價")}</td><td>{e(r["note"])}</td></tr>' for r in s['pricing'])
     faqs = [SITE['faqs'][i] for i in s.get('faqKeys', [])]
     rel = ''
     if s.get('category'):
@@ -652,9 +652,14 @@ def build_service(s):
             rel = f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head row"><h2>相關產品</h2><a class="link" href="{cat_url(s["category"])}">看更多 {ic("arrow")}</a></div><div class="p-grid">' + ''.join(product_card(p) for p in ps) + '</div></div></section>'
     src = f'<p class="note">參考資料：<a href="{e(s["source"])}" target="_blank" rel="noopener">{e(s["sourceText"])}</a></p>' if s.get('source') else ''
     line_txt = f'您好，我想預約「{s["name"]}」的現場實地勘查。'
+    line_btn = f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 預約現場實地勘查</span></a>'
+    if s.get('phoneQuote') and C.get('mobile'):
+        hero_cta = f'<a class="btn btn-primary btn-lg" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>電話報價 {e(C["mobile"])}</span></a>'
+    else:
+        hero_cta = line_btn
     body = f'''<section class="svc-hero"><div class="wrap svc-hero-grid">
-  <div><span class="eyebrow">台南在地服務</span><h1>{e(s["title"][2:].lstrip() if s["title"].startswith("台南") else s["title"])}</h1><p class="lead">{e(s["lead"])}</p>
-    <div class="hero-cta"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 預約現場實地勘查</span></a><a class="btn btn-ghost btn-lg" href="#steps">看施工流程</a></div></div>
+  <div><span class="eyebrow">台南在地服務</span><h1>{e(s["title"][2:].lstrip() if s["title"].startswith("台南") else s["title"])}</h1><p class="lead">{e(s["lead"])}</p>{f'<p class="svc-notice">{ic("check")}{e(s["notice"])}</p>' if s.get("notice") else ''}
+    <div class="hero-cta">{hero_cta}<a class="btn btn-ghost btn-lg" href="#steps">看施工流程</a></div></div>
   <div class="svc-badge">{ic(s["icon"], "ic huge")}</div>
 </div></section>
 <section class="sec"><div class="wrap two-col">
@@ -666,7 +671,7 @@ def build_service(s):
   <ol class="steps">{steps}</ol>
 </div></section>
 <section class="sec"><div class="wrap narrow">
-  <div class="sec-head"><span class="eyebrow">收費方式</span><h2>依房型與現場狀況報價</h2><p>加 LINE 預約現場實地勘查，依現場狀況報價，確認後再施工。</p></div>
+  <div class="sec-head"><span class="eyebrow">收費方式</span><h2>{e(s.get("priceHead") or "依房型與現場狀況報價")}</h2><p>{e(s.get("priceIntro") or "加 LINE 預約現場實地勘查，依現場狀況報價，確認後再施工。")}</p></div>
   <div class="table-wrap"><table class="tbl price-tbl"><thead><tr><th>類型</th><th>費用</th><th>計價依據</th></tr></thead><tbody>{rows}</tbody></table></div>
 </div></section>
 {rel}
