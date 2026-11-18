@@ -460,21 +460,22 @@ def build_home():
          ld=[faq_ld(SITE['faqs'][:5])], og_image=hero_p['image'], full_title=True)
 
 def build_products():
-    chips_c = '<button type="button" class="fchip on" data-f="cat" data-v="">全部</button>' + ''.join(
-        f'<button type="button" class="fchip" data-f="cat" data-v="{c["key"]}">{e(c["short"])}</button>' for c in SITE['categories'])
-    chips_b = '<button type="button" class="fchip on" data-f="brand" data-v="">全部品牌</button>' + ''.join(
-        f'<button type="button" class="fchip" data-f="brand" data-v="{b["key"]}">{e(b["name"])}</button>' for b in SITE['brands'])
+    tabs = '<button type="button" class="ctab on" data-f="cat" data-v="">全部<small></small></button>' + ''.join(
+        f'<button type="button" class="ctab" data-f="cat" data-v="{c["key"]}" data-name="{e(c["name"])}" data-desc="{e(c["desc"])}" data-url="{cat_url(c["key"])}">{e(c["short"])}<small></small></button>'
+        for c in SITE['categories'])
+    opts = '<option value="">全部品牌</option>' + ''.join(
+        f'<option value="{b["key"]}" data-name="{e(b["name"])}" data-url="/brands/{b["slug"]}.html">{e(b["name"])}</option>' for b in SITE['brands'] if brand_items(b))
     order = {c['key']: i for i, c in enumerate(SITE['categories'])}
     items = sorted(PRODUCTS, key=lambda p: order[p['cat']])
     body = f'''<section class="page-hero"><div class="wrap">
   <span class="eyebrow">品牌商品</span><h1>淨水設備與濾心耗材</h1>
   <p>依用途或品牌篩選。產品頁有完整規格、安裝條件與對應濾心，詢價請加 LINE。</p>
-  <div class="brand-links"><span>分類介紹：</span>{"".join(f'<a href="{cat_url(c["key"])}">{e(c["name"])}</a>' for c in SITE["categories"])}</div>
-  <div class="brand-links">{brand_links()}</div>
 </div></section>
 <section class="sec sec-tight"><div class="wrap" data-catalog>
-  <div class="filters"><div class="frow" role="group" aria-label="依用途篩選">{chips_c}</div><div class="frow" role="group" aria-label="依品牌篩選">{chips_b}</div></div>
-  <p class="result-count" aria-live="polite"></p>
+  <div class="cat-tabs" role="group" aria-label="依用途篩選">{tabs}</div>
+  <div class="toolbar"><p class="result-count" aria-live="polite"></p>
+    <label class="brand-sel"><span>品牌</span><select data-f="brand" aria-label="依品牌篩選">{opts}</select></label></div>
+  <div class="cat-info" hidden><div><b data-ci-title></b><p data-ci-desc></p></div><div class="ci-links"><a class="link" data-ci-cat hidden></a><a class="link" data-ci-brand hidden></a></div></div>
   <div class="p-grid">{"".join(product_card(p) for p in items)}</div>
   <div class="empty" hidden><p>這個分類的產品整理中，歡迎加 LINE 詢問。</p><a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 詢問</span></a></div>
 </div></section>

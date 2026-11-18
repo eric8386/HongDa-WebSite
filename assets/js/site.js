@@ -43,32 +43,69 @@
   document.querySelectorAll('[data-catalog]').forEach(function (root) {
     var params = new URLSearchParams(location.search);
     var state = { cat: params.get('cat') || '', brand: params.get('brand') || '' };
-    var cards = root.querySelectorAll('.p-card');
+    var cards = [].slice.call(root.querySelectorAll('.p-card'));
     var count = root.querySelector('.result-count');
     var empty = root.querySelector('.empty');
+    var btns = root.querySelectorAll('.fchip[data-f], .ctab[data-f]');
+    var sel = root.querySelector('select[data-f]');
+    var info = root.querySelector('.cat-info');
+    var arrow = ' <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    function n(cat, brand) {
+      return cards.filter(function (c) { return (!cat || c.dataset.cat === cat) && (!brand || c.dataset.brand === brand); }).length;
+    }
+    if (sel && state.brand && !sel.querySelector('option[value="' + state.brand + '"]')) state.brand = '';
     function apply() {
-      var n = 0;
+      var shown = 0;
       cards.forEach(function (c) {
         var ok = (!state.cat || c.dataset.cat === state.cat) && (!state.brand || c.dataset.brand === state.brand);
         c.hidden = !ok;
-        if (ok) n++;
+        if (ok) shown++;
       });
-      root.querySelectorAll('.fchip').forEach(function (b) {
-        b.classList.toggle('on', state[b.dataset.f] === b.dataset.v);
-        b.setAttribute('aria-pressed', state[b.dataset.f] === b.dataset.v ? 'true' : 'false');
+      btns.forEach(function (b) {
+        var on = state[b.dataset.f] === b.dataset.v;
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        var sm = b.querySelector('small');
+        if (sm && b.dataset.f === 'cat') { var k = n(b.dataset.v, state.brand); sm.textContent = k; b.classList.toggle('zero', !k); }
       });
-      count.textContent = '共 ' + n + ' 項產品';
-      empty.hidden = n > 0;
+      if (sel) {
+        sel.value = state.brand;
+        [].forEach.call(sel.options, function (o) {
+          if (!o.value) return;
+          var k = n(state.cat, o.value);
+          o.textContent = o.dataset.name + '（' + k + '）';
+          o.disabled = k === 0 && o.value !== state.brand;
+        });
+      }
+      if (info) {
+        var cb = state.cat && root.querySelector('.ctab[data-v="' + state.cat + '"]');
+        var bo = state.brand && sel && sel.querySelector('option[value="' + state.brand + '"]');
+        info.hidden = !cb && !bo;
+        info.querySelector('[data-ci-title]').textContent = cb ? cb.dataset.name + (bo ? '・' + bo.dataset.name : '') : (bo ? bo.dataset.name : '');
+        info.querySelector('[data-ci-desc]').textContent = cb ? cb.dataset.desc : '';
+        var lc = info.querySelector('[data-ci-cat]'), lb = info.querySelector('[data-ci-brand]');
+        lc.hidden = !cb; if (cb) { lc.href = cb.dataset.url; lc.innerHTML = '看分類介紹與安裝條件' + arrow; }
+        lb.hidden = !bo; if (bo) { lb.href = bo.dataset.url; lb.innerHTML = '看品牌介紹' + arrow; }
+      }
+      count.textContent = '共 ' + shown + ' 項產品';
+      empty.hidden = shown > 0;
       var q = new URLSearchParams();
       if (state.cat) q.set('cat', state.cat);
       if (state.brand) q.set('brand', state.brand);
       var qs = q.toString();
       history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
     }
-    root.querySelectorAll('.fchip').forEach(function (b) {
-      b.addEventListener('click', function () { state[b.dataset.f] = b.dataset.v; apply(); });
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        state[b.dataset.f] = b.dataset.v;
+        if (sel && b.dataset.f === 'cat' && state.brand && !n(state.cat, state.brand)) state.brand = '';
+        apply();
+      });
     });
+    if (sel) sel.addEventListener('change', function () { state.brand = sel.value; apply(); });
     apply();
+    var tabsEl = root.querySelector('.cat-tabs'), onTab = tabsEl && tabsEl.querySelector('.ctab.on');
+    if (onTab) tabsEl.scrollLeft = onTab.offsetLeft - (tabsEl.clientWidth - onTab.offsetWidth) / 2;
   });
 
   /* 3-step finder quiz */
