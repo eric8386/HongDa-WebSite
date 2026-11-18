@@ -653,7 +653,7 @@ def build_service(s):
     src = f'<p class="note">參考資料：<a href="{e(s["source"])}" target="_blank" rel="noopener">{e(s["sourceText"])}</a></p>' if s.get('source') else ''
     line_txt = f'您好，我想預約「{s["name"]}」的現場實地勘查。'
     body = f'''<section class="svc-hero"><div class="wrap svc-hero-grid">
-  <div><span class="eyebrow">{e("、".join(SITE["areas"]))}服務</span><h1>{e(s["title"])}</h1><p class="lead">{e(s["lead"])}</p>
+  <div><span class="eyebrow">台南在地服務</span><h1>{e(s["title"][2:].lstrip() if s["title"].startswith("台南") else s["title"])}</h1><p class="lead">{e(s["lead"])}</p>
     <div class="hero-cta"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 預約現場實地勘查</span></a><a class="btn btn-ghost btn-lg" href="#steps">看施工流程</a></div></div>
   <div class="svc-badge">{ic(s["icon"], "ic huge")}</div>
 </div></section>
