@@ -1092,87 +1092,6 @@
     "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
   },
   {
-    "id": "aquaclio-eva-350r",
-    "brand": "AQUACLiO",
-    "brandName": "AQUACLiO 克麗歐",
-    "model": "EVA-350R",
-    "name": "克麗歐 AQUACLiO 尊爵型軟水系統 EVA-350R",
-    "cat": "softener",
-    "label": "尊爵型",
-    "image": "assets/catalog/official/aquaclio-eva-350r.jpg",
-    "summary": "旋蓋式尊爵型軟水系統，搭配 IM 2.0 智慧控制閥，適用 5 人以下家庭。",
-    "points": [
-      "WET 節能反洗＋CCR 逆流再生，依用水動態調整耗水及耗鹽",
-      "乾式鹽箱設計，反洗再生前自動補水",
-      "IM 2.0 智慧控制閥，可查看當前用水數據",
-      "渡假模式與優先供水設計"
-    ],
-    "specs": [
-      [
-        "型號",
-        "EVA-350R"
-      ],
-      [
-        "控制閥",
-        "IM 2.0 智慧控制閥"
-      ],
-      [
-        "再生技術",
-        "WET 節能反洗＋CCR 逆流再生"
-      ],
-      [
-        "鹽桶",
-        "乾式鹽箱"
-      ],
-      [
-        "主要用途",
-        "過濾水中石灰質、鈣鎂離子"
-      ],
-      [
-        "電源",
-        "AC 110V / 220V"
-      ],
-      [
-        "適用水源",
-        "自來水／地下水"
-      ],
-      [
-        "適用水溫",
-        "4～40°C"
-      ],
-      [
-        "適用水壓",
-        "30～50 PSI"
-      ],
-      [
-        "最大流量",
-        "3.0 m³/h"
-      ],
-      [
-        "管徑",
-        "1 英吋"
-      ],
-      [
-        "外觀尺寸",
-        "深50×寬30×高120 cm"
-      ],
-      [
-        "濾料",
-        "食品級樹脂"
-      ],
-      [
-        "適用人數",
-        "5 人以下（原廠參考值）"
-      ]
-    ],
-    "price": 104000,
-    "priceNote": "克麗歐官網標示價格",
-    "filters": [],
-    "fits": [],
-    "source": "https://www.aquaclio.com/tw/product-d.php?Key=4",
-    "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
-  },
-  {
     "id": "aquaclio-eva-180r",
     "brand": "AQUACLiO",
     "brandName": "AQUACLiO 克麗歐",
@@ -1254,33 +1173,33 @@
     "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
   },
   {
-    "id": "aquaclio-dcs-350r",
+    "id": "aquaclio-eva-350r",
     "brand": "AQUACLiO",
     "brandName": "AQUACLiO 克麗歐",
-    "model": "DCS-350R",
-    "name": "克麗歐 AQUACLiO 晶鑽型軟水系統 DCS-350R",
+    "model": "EVA-350R",
+    "name": "克麗歐 AQUACLiO 尊爵型軟水系統 EVA-350R",
     "cat": "softener",
-    "label": "晶鑽型",
-    "image": "assets/catalog/official/aquaclio-dcs-350r.jpg",
-    "summary": "旋蓋式晶鑽型軟水系統，具 DCC 深度清洗技術，適用 5 人以下家庭。",
+    "label": "尊爵型",
+    "image": "assets/catalog/official/aquaclio-eva-350r.jpg",
+    "summary": "旋蓋式尊爵型軟水系統，搭配 IM 2.0 智慧控制閥，適用 5 人以下家庭。",
     "points": [
-      "DCC 深度清洗技術，原廠標示平時最多節省 40% 耗水耗鹽",
+      "WET 節能反洗＋CCR 逆流再生，依用水動態調整耗水及耗鹽",
       "乾式鹽箱設計，反洗再生前自動補水",
-      "WR 2.0 智慧控制閥，可查看當前用水數據",
+      "IM 2.0 智慧控制閥，可查看當前用水數據",
       "渡假模式與優先供水設計"
     ],
     "specs": [
       [
         "型號",
-        "DCS-350R"
+        "EVA-350R"
       ],
       [
         "控制閥",
-        "WR 2.0 智慧控制閥"
+        "IM 2.0 智慧控制閥"
       ],
       [
         "再生技術",
-        "DCC 深度清洗"
+        "WET 節能反洗＋CCR 逆流再生"
       ],
       [
         "鹽桶",
@@ -1331,7 +1250,7 @@
     "priceNote": "克麗歐官網標示價格",
     "filters": [],
     "fits": [],
-    "source": "https://www.aquaclio.com/tw/product-d.php?Key=51",
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=4",
     "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
   },
   {
@@ -1413,6 +1332,87 @@
     "filters": [],
     "fits": [],
     "source": "https://www.aquaclio.com/tw/product-d.php?Key=65",
+    "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
+  },
+  {
+    "id": "aquaclio-dcs-350r",
+    "brand": "AQUACLiO",
+    "brandName": "AQUACLiO 克麗歐",
+    "model": "DCS-350R",
+    "name": "克麗歐 AQUACLiO 晶鑽型軟水系統 DCS-350R",
+    "cat": "softener",
+    "label": "晶鑽型",
+    "image": "assets/catalog/official/aquaclio-dcs-350r.jpg",
+    "summary": "旋蓋式晶鑽型軟水系統，具 DCC 深度清洗技術，適用 5 人以下家庭。",
+    "points": [
+      "DCC 深度清洗技術，原廠標示平時最多節省 40% 耗水耗鹽",
+      "乾式鹽箱設計，反洗再生前自動補水",
+      "WR 2.0 智慧控制閥，可查看當前用水數據",
+      "渡假模式與優先供水設計"
+    ],
+    "specs": [
+      [
+        "型號",
+        "DCS-350R"
+      ],
+      [
+        "控制閥",
+        "WR 2.0 智慧控制閥"
+      ],
+      [
+        "再生技術",
+        "DCC 深度清洗"
+      ],
+      [
+        "鹽桶",
+        "乾式鹽箱"
+      ],
+      [
+        "主要用途",
+        "過濾水中石灰質、鈣鎂離子"
+      ],
+      [
+        "電源",
+        "AC 110V / 220V"
+      ],
+      [
+        "適用水源",
+        "自來水／地下水"
+      ],
+      [
+        "適用水溫",
+        "4～40°C"
+      ],
+      [
+        "適用水壓",
+        "30～50 PSI"
+      ],
+      [
+        "最大流量",
+        "3.0 m³/h"
+      ],
+      [
+        "管徑",
+        "1 英吋"
+      ],
+      [
+        "外觀尺寸",
+        "深50×寬30×高120 cm"
+      ],
+      [
+        "濾料",
+        "食品級樹脂"
+      ],
+      [
+        "適用人數",
+        "5 人以下（原廠參考值）"
+      ]
+    ],
+    "price": 104000,
+    "priceNote": "克麗歐官網標示價格",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=51",
     "sourceText": "克麗歐 AQUACLiO 官網（總代理 東電研工業）"
   },
   {
