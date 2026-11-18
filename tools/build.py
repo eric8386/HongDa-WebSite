@@ -121,11 +121,12 @@ def footer():
     cats = ''.join(f'<li><a href="{cat_url(c["key"])}">{e(c["name"])}</a></li>' for c in SITE['categories'])
     svcs = ''.join(f'<li><a href="/services/{s["slug"]}.html">{e(s["name"])}</a></li>' for s in SERVICES)
     rows = []
-    if C.get('mobile'): rows.append(f'<li>{ic("phone")}<span>手機：<a href="tel:{tel(C["mobile"])}">{e(C["mobile"])}</a>{"（" + e(C["person"]) + "）" if C.get("person") else ""}</span></li>')
+    if C.get('mobile'): rows.append(f'<li>{ic("phone")}<span>手機：<a href="tel:{tel(C["mobile"])}">{e(C["mobile"])}</a></span></li>')
     if C.get('phone'): rows.append(f'<li>{ic("phone")}<span>電話：<a href="tel:{tel(C["phone"])}">{e(C["phone"])}</a></span></li>')
     if C.get('lineId'): rows.append(f'<li>{ic("line")}LINE：{e(C["lineId"])}</li>')
     if C.get('address'): rows.append(f'<li>{ic("pin")}{e(C["address"])}</li>')
     if C.get('hours'): rows.append(f'<li>{ic("list")}{e(C["hours"])}</li>')
+    if C.get('taxId'): rows.append(f'<li>{ic("list")}統一編號：{e(C["taxId"])}</li>')
     year = datetime.date.today().year
     return f'''<footer class="site-footer">
   <div class="wrap footer-grid">
@@ -157,6 +158,7 @@ def business_ld():
     if C.get('address'):
         o['address'] = {"@type": "PostalAddress", "streetAddress": C['address'], "addressLocality": "台南市", "addressCountry": "TW"}
     if SITE.get('slogan'): o['slogan'] = SITE['slogan']
+    if C.get('taxId'): o['taxID'] = C['taxId']
     return o
 
 def crumbs_html(items):
@@ -386,7 +388,7 @@ def build_home():
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow">{e(SITE.get("tagline") or "台南在地淨水工程")}</span>
-      <h1>台南淨水・水塔清洗<br><span class="hl">全家用水一次顧好</span></h1>
+      <h1>從水塔到水龍頭，<br><span class="hl">全家用水一次顧好</span></h1>
       <p class="lead">台南在地淨水工程：直輸 RO、全戶淨水與軟水安裝，水塔清洗、自來水管路清洗、水質檢測與定期保養。先了解你家的水，再推薦真正需要的方案。</p>
       <div class="hero-cta">
         <a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
@@ -862,10 +864,11 @@ def build_static():
 
     rows = []
     if C.get('lineId') or C.get('lineUrl'): rows.append(f'<li>{ic("line")}<div><b>LINE</b><a href="{e(line_href())}" data-line>{e(C.get("lineId") or "加入 LINE 好友")}</a></div></li>')
-    if C.get('mobile'): rows.append(f'<li>{ic("phone")}<div><b>手機{"（" + e(C["person"]) + "）" if C.get("person") else ""}</b><a href="tel:{tel(C["mobile"])}">{e(C["mobile"])}</a></div></li>')
+    if C.get('mobile'): rows.append(f'<li>{ic("phone")}<div><b>手機</b><a href="tel:{tel(C["mobile"])}">{e(C["mobile"])}</a></div></li>')
     if C.get('phone'): rows.append(f'<li>{ic("phone")}<div><b>電話</b><a href="tel:{tel(C["phone"])}">{e(C["phone"])}</a></div></li>')
     if C.get('address'): rows.append(f'<li>{ic("pin")}<div><b>地址</b><a href="https://www.google.com/maps/search/?api=1&amp;query={quote(C["address"])}" target="_blank" rel="noopener">{e(C["address"])}</a></div></li>')
     if C.get('hours'): rows.append(f'<li>{ic("list")}<div><b>營業時間</b><span>{e(C["hours"])}</span></div></li>')
+    if C.get('taxId'): rows.append(f'<li>{ic("list")}<div><b>統一編號</b><span>{e(C["taxId"])}</span></div></li>')
     pending = '' if (C.get('lineId') or C.get('lineUrl')) else '<p class="notice">LINE 加好友連結準備中，現在請直接來電預約現場實地勘查。</p>'
     tips = ''.join(f'<li>{ic("check")}{e(t)}</li>' for t in ['您的區域（例如：台南市東區）與房型', '想詢問的設備或服務', '方便到府勘查的日期與時段'])
     body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">聯絡我們</span><h1>加 LINE，預約現場實地勘查</h1><p>師傅到府看過管路與環境，建議與報價最準確。</p></div></section>
