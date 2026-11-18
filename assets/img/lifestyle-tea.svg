@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+  <defs>
+    <linearGradient id="room" x1="58" y1="24" x2="760" y2="790" gradientUnits="userSpaceOnUse"><stop stop-color="#F4E8D7"/><stop offset="1" stop-color="#D4E9DD"/></linearGradient>
+    <linearGradient id="tea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8E613C"/><stop offset="1" stop-color="#543B30"/></linearGradient>
+    <linearGradient id="cloth" x1="319" y1="352" x2="424" y2="636" gradientUnits="userSpaceOnUse"><stop stop-color="#B87752"/><stop offset="1" stop-color="#8C5847"/></linearGradient>
+  </defs>
+  <path fill="url(#room)" d="M0 0h800v800H0z"/>
+  <circle cx="659" cy="114" r="100" fill="#F7D99D" opacity=".74"/>
+  <path d="M0 478c123-42 257-39 388 7 129 45 273 33 412-14v329H0V478Z" fill="#C9DED2"/>
+  <!-- sunlit window, garden -->
+  <rect x="55" y="78" width="300" height="325" rx="9" fill="#FFF9EF"/>
+  <rect x="68" y="92" width="273" height="298" rx="4" fill="#BFE5DA"/>
+  <path d="M69 279c56-64 107-82 149-29 43-76 77-71 123-28v168H69V279Z" fill="#6FAE91"/>
+  <path d="M68 327c57-43 93-38 140-5 41-50 83-57 133-17v85H68v-63Z" fill="#438773"/>
+  <path d="M204 95v294M69 247h272" stroke="#FFF9EF" stroke-width="12"/>
+  <path d="M377 150h168M392 145v112" stroke="#AC795B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M414 150c-4-48 23-72 56-81-5 38-24 65-56 81Zm45 0c16-53 54-57 84-47-20 32-49 48-84 47Z" fill="#4C936F"/>
+  <path d="M435 151V86" stroke="#32775F" stroke-width="4"/>
+  <!-- wall art -->
+  <rect x="596" y="187" width="144" height="177" rx="5" fill="#F8F5E9"/>
+  <rect x="608" y="199" width="120" height="153" rx="2" fill="#C6E4D5"/>
+  <path d="M609 300c26-56 55-55 69-10 18-54 33-61 50-48v110H609v-52Z" fill="#6A9D7D"/>
+  <path d="M619 311c28-29 50-27 63-3 14-25 28-27 42-20v63H619v-40Z" fill="#3A7B67"/>
+  <!-- table -->
+  <path d="M0 581h800v219H0z" fill="#AD805E"/><path d="M0 568h800v32H0z" fill="#E4C69E"/>
+  <path d="M83 600h634v9H83z" fill="#EBCFA7" opacity=".65"/>
+  <path d="M130 601v199M672 601v199" stroke="#805E4D" stroke-width="18"/>
+  <!-- seated parent left -->
+  <path d="M121 447c-3-46 26-76 68-74 41 2 60 37 49 79l-17 56-100-6v-55Z" fill="#3D3940"/>
+  <path d="M130 491c-21 33-35 69-39 117l113 5c1-47 3-86-13-126l-61 4Z" fill="#4E8C82"/>
+  <path d="M120 534c-31 28-45 47-67 77l48 28 67-65" fill="#D7A27E"/>
+  <path d="M119 453c1-44 25-69 60-67 34 2 54 31 48 67-6 37-27 57-58 55-31-1-51-22-50-55Z" fill="#DFAF8C"/>
+  <path d="M117 444c-1-44 22-74 57-76 42-3 62 24 57 62-20-6-39-18-54-40-6 25-26 43-60 54Z" fill="#403A43"/>
+  <path d="M166 472c7 4 16 4 23 0" stroke="#9B655A" stroke-width="4" stroke-linecap="round"/><circle cx="187" cy="455" r="3" fill="#443B3B"/>
+  <!-- child right, warm rust sweater -->
+  <path d="M539 458c4-40 31-66 69-61 37 5 52 34 45 75l-13 47-95-4-6-57Z" fill="#654940"/>
+  <path d="M528 516c-14 30-22 59-19 93l134 1c1-39-3-73-17-105l-98 11Z" fill="url(#cloth)"/>
+  <path d="M545 545c-20-18-37-36-57-62l-23 19c17 36 37 61 61 81" fill="#C89070"/>
+  <path d="M548 461c-2-38 18-64 49-66 35-2 54 22 52 58-2 37-19 58-49 59-31 1-50-18-52-51Z" fill="#E5B996"/>
+  <path d="M544 448c-2-39 17-69 53-73 40-5 62 21 56 59-22-7-38-19-53-39-6 23-25 42-56 53Z" fill="#4A4144"/>
+  <path d="M570 477c7 3 14 3 21 0" stroke="#9A6258" stroke-width="4" stroke-linecap="round"/><circle cx="589" cy="460" r="3" fill="#4B4040"/>
+  <!-- teapot, shared cup -->
+  <ellipse cx="399" cy="675" rx="126" ry="20" fill="#72513F" opacity=".18"/>
+  <path d="M319 642h151c-4 42-31 63-76 63-46 0-70-21-75-63Z" fill="#F1E9DA" stroke="#845E49" stroke-width="5"/>
+  <path d="M468 651c47-4 52 40 20 45" stroke="#845E49" stroke-width="7" stroke-linecap="round"/>
+  <path d="M331 644c11-39 107-49 126 0" fill="url(#tea)"/>
+  <path d="M329 641c17-51 111-56 131 0" stroke="#F7F1E5" stroke-width="5"/>
+  <path d="M291 722h200" stroke="#91684E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M354 601c-13-23 16-27 5-51m48 47c-12-23 16-27 5-51" stroke="#FFFDF5" stroke-opacity=".85" stroke-width="4" stroke-linecap="round"/>
+  <!-- leaves and light -->
+  <path d="M44 452c31-36 55-35 72-8-25 19-47 23-72 8Zm15 25c31-27 56-20 64 10-31 10-51 6-64-10Z" fill="#5E9A76"/><path d="M78 476v-41" stroke="#3E7D63" stroke-width="3"/>
+  <path d="m728 437 6 12 13 6-13 6-6 13-6-13-13-6 13-6 6-12Z" fill="#FFF8E8" opacity=".85"/>
+</svg>

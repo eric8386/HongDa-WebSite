@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="30" x2="930" y2="760" gradientUnits="userSpaceOnUse"><stop stop-color="#DFF4EF"/><stop offset="1" stop-color="#A8D9D1"/></linearGradient>
+    <linearGradient id="window" x1="245" y1="60" x2="540" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="#D4F4F4"/><stop offset="1" stop-color="#7CCAC3"/></linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#F9FCF8"/><stop offset="1" stop-color="#DBEAE2"/></linearGradient>
+    <linearGradient id="shirt" x1="580" y1="337" x2="744" y2="656" gradientUnits="userSpaceOnUse"><stop stop-color="#198B89"/><stop offset="1" stop-color="#0B5D6D"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="120%" height="150%"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1000v760H0z"/>
+  <circle cx="849" cy="126" r="116" fill="#F3DDAB" opacity=".6"/>
+  <path d="M0 482c145-33 248-29 379 3 136 34 215 25 355-8 98-23 181-15 266 4v279H0V482Z" fill="#9DCFC2" opacity=".58"/>
+  <path d="M0 563c189-32 303 27 477 14 165-12 333-71 523-35v218H0V563Z" fill="#D0E8D9"/>
+  <!-- sunlit kitchen window -->
+  <rect x="186" y="70" width="366" height="330" rx="8" fill="#F6FBF6"/>
+  <rect x="198" y="82" width="342" height="306" rx="4" fill="url(#window)"/>
+  <path d="M199 294c65-75 113-68 158-9 41-75 101-85 183 1v102H199V294Z" fill="#7BB69C" opacity=".85"/>
+  <path d="M199 324c76-61 117-35 158 13 58-65 109-59 183-10v61H199v-64Z" fill="#589D8A"/>
+  <path d="M366 84v304M200 235h339" stroke="#F7FBF7" stroke-width="12"/>
+  <path d="M174 400h392" stroke="#A9C7BE" stroke-width="18"/>
+  <!-- wall shelf and plants -->
+  <path d="M95 217h90M98 214v78" stroke="#A77858" stroke-width="9" stroke-linecap="round"/>
+  <path d="M111 217c-3-47 24-67 45-73-5 30-14 50-45 73ZM127 217c8-47 47-50 65-46-19 24-39 40-65 46Z" fill="#438F77"/>
+  <path d="M120 216v-51" stroke="#317961" stroke-width="4"/>
+  <rect x="755" y="165" width="147" height="17" rx="8.5" fill="#A77858"/>
+  <path d="M785 164c-4-41 22-68 48-77-5 35-21 63-48 77ZM820 163c12-49 53-55 80-49-19 31-45 47-80 49Z" fill="#3C8B75"/>
+  <path d="M802 166V96" stroke="#317961" stroke-width="4"/>
+  <!-- counter -->
+  <path d="M0 508h1000v63H0z" fill="#F4EEE1"/>
+  <path d="M0 571h1000v189H0z" fill="#B98764"/>
+  <path d="M30 601h176v137H30zM226 601h190v137H226zM451 601h193v137H451zM682 601h286v137H682z" fill="#A9785D"/>
+  <path d="M30 604h176M226 604h190M451 604h193M682 604h286" stroke="#D0A486" stroke-width="7"/>
+  <circle cx="119" cy="669" r="5" fill="#E7D2BC"/><circle cx="321" cy="669" r="5" fill="#E7D2BC"/><circle cx="548" cy="669" r="5" fill="#E7D2BC"/><circle cx="825" cy="669" r="5" fill="#E7D2BC"/>
+  <!-- sink and modern faucet -->
+  <path d="M532 508h268v46H532z" fill="#DDEAE4"/><path d="M548 509v49M784 509v49" stroke="#8AADA8" stroke-width="6"/>
+  <path d="M632 506v-48c0-30 21-48 49-48s49 19 49 48v49" stroke="#566E72" stroke-width="17" stroke-linecap="round"/>
+  <path d="M674 417v-42" stroke="#566E72" stroke-width="17" stroke-linecap="round"/><path d="M674 432v21" stroke="#81D9D2" stroke-width="5" stroke-linecap="round"/>
+  <path d="M616 558h101" stroke="#9BB7B0" stroke-width="8" stroke-linecap="round"/>
+  <!-- woman, relaxed home clothing -->
+  <ellipse cx="761" cy="708" rx="175" ry="30" fill="#264C4B" opacity=".15" filter="url(#shadow)"/>
+  <path d="M700 316c7-39 43-64 82-57 38 7 57 43 49 81l-16 60-105-16-10-68Z" fill="#312D36"/>
+  <path d="M714 361c-14 32-40 72-49 115l-14 76 193 5-17-94c-7-40-25-70-52-104l-61 2Z" fill="url(#shirt)"/>
+  <path d="M698 407c-34 25-53 44-82 79l-68 41 12 18 88-28c31-16 68-46 91-76" fill="#D89F7C"/>
+  <path d="M750 391c22 17 44 42 67 76l-33 29-64-57" fill="#D89F7C"/>
+  <path d="M713 346c-1-44 21-73 55-74 34-1 52 26 51 66-1 34-18 62-49 64-34 2-56-23-57-56Z" fill="#E7B391"/>
+  <path d="M709 340c-5-45 17-78 57-82 38-4 61 21 59 62-23-10-42-23-55-47-7 32-32 54-61 67Z" fill="#332F38"/>
+  <path d="M754 360c8 4 17 4 25 0" stroke="#9A6258" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="777" cy="344" r="3.5" fill="#483C3B"/>
+  <!-- glass and hand -->
+  <path d="M568 490h35l-4 53h-27l-4-53Z" fill="#D8F5EF" fill-opacity=".72" stroke="#F6FFFB" stroke-width="3"/>
+  <path d="M570 521h31" stroke="#55C6BB" stroke-width="15" opacity=".55"/>
+  <path d="M614 523c-8-11-15-16-25-17" stroke="#D89F7C" stroke-width="12" stroke-linecap="round"/>
+  <path d="M571 529c11-8 21-6 29 0" stroke="#D89F7C" stroke-width="9" stroke-linecap="round"/>
+  <!-- subtle light glints -->
+  <path d="m879 426 7 15 15 7-15 7-7 15-7-15-15-7 15-7 7-15Z" fill="#F9FFF5" opacity=".78"/>
+  <circle cx="99" cy="464" r="4" fill="#F8FFFA"/><circle cx="926" cy="306" r="3" fill="#F8FFFA"/>
+</svg>
