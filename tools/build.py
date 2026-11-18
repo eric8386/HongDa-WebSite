@@ -372,7 +372,7 @@ def build_home():
         ('tag', '建議售價公開', '產品頁直接標示建議售價或詢價方式，安裝與清洗依現場透明報價。'),
         ('list', '多品牌比較', '、'.join(b['name'].split(' ')[0] for b in SITE['brands']) + '，依需求挑選，不綁單一品牌。'),
         ('check', '施工流程公開', '每項服務都列出完整步驟，施工前先說清楚做什麼、要多久。'),
-        ('pin', '台南在地服務', '以台南為主要服務範圍，安裝、清洗、換濾心都能就近安排。'),
+        ('care', '到期主動提醒', '濾心更換、水塔清洗時間到了，用 LINE 提醒你，不用自己記。'),
     ]
     why_html = ''.join(f'<div class="why">{ic(i)}<h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, t, d in why)
     process = [('LINE 預約勘查', '告訴我們區域與需求，約好到府時間'), ('現場實地勘查', '到府確認管路、空間、電源與水質'),
@@ -625,8 +625,8 @@ def build_category(c):
 
 def build_services():
     body = f'''<section class="page-hero"><div class="wrap">
-  <span class="eyebrow">服務項目</span><h1>台南淨水安裝・水塔與管路清洗</h1>
-  <p>{e(SITE["areaNote"])}</p>
+  <span class="eyebrow">服務項目</span><h1>全戶淨軟水規劃安裝</h1>
+  <p>全戶淨水、軟水與廚下設備規劃安裝，水塔與管路清洗、水質檢測及定期保養，施工前先說明流程與報價。</p>
 </div></section>
 <section class="sec sec-tight"><div class="wrap"><div class="s-grid">{"".join(service_card(s) for s in SERVICES)}</div></div></section>
 {cta_band()}'''
@@ -852,8 +852,7 @@ def build_static():
     <h2>我們的原則</h2>
     <ul><li>產品標示建議售價，服務依現場透明報價</li><li>施工前說明流程與內容</li><li>多品牌比較，依需求挑選</li><li>完工後說明使用與保養方式</li></ul>
   </div>
-  <div class="hl-box"><h2 class="h-sm">銷售品牌</h2><ul class="brand-list">{brands}</ul>
-    <h2 class="h-sm">服務地區</h2><p>{e(SITE["areaNote"])}</p></div>
+  <div class="hl-box"><h2 class="h-sm">銷售品牌</h2><ul class="brand-list">{brands}</ul></div>
 </div></section>{cta_band()}'''
     page('/about.html', '關於我們', f'{SITE["name"]}：{SITE["description"]}', body, active='/about.html', crumbs=[(None, '關於我們')])
 
