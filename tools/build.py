@@ -873,7 +873,7 @@ def build_static():
     body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">聯絡我們</span><h1>加 LINE，預約現場實地勘查</h1><p>師傅到府看過管路與環境，建議與報價最準確。</p></div></section>
 <section class="sec sec-tight"><div class="wrap two-col">
   <div class="contact-box">{pending}<ul class="contact-rows">{"".join(rows)}</ul>
-    {f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>' if (C.get('lineId') or C.get('lineUrl')) else f'<a class="btn btn-primary btn-lg" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>撥打 {e(C["mobile"])}</span></a>'}</div>
+    {f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a><div class="line-qr"><img src="/assets/img/line-qr.jpg" width="160" height="160" alt="鴻達淨水 LINE 好友 QR Code"><p>電腦版請用手機 LINE 掃描加好友</p></div>' if (C.get('lineId') or C.get('lineUrl')) else f'<a class="btn btn-primary btn-lg" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>撥打 {e(C["mobile"])}</span></a>'}</div>
   <div class="hl-box"><h2 class="h-sm">詢問時請提供</h2><ul class="hl-list">{tips}</ul></div>
 </div></section>'''
     page('/contact.html', '聯絡我們', f'聯絡{SITE["name"]}：加 LINE 預約淨水設備與清洗服務的現場實地勘查。', body, crumbs=[(None, '聯絡我們')])
