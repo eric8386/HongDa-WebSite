@@ -41,7 +41,7 @@
     "pricing": [
       {
         "type": "透天／獨棟水塔",
-        "price": null,
+        "price": 1000,
         "note": "依水塔數量、容量與位置"
       },
       {

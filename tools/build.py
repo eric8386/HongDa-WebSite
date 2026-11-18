@@ -159,6 +159,7 @@ def business_ld():
         o['address'] = {"@type": "PostalAddress", "streetAddress": C['address'], "addressLocality": "台南市", "addressCountry": "TW"}
     if SITE.get('slogan'): o['slogan'] = SITE['slogan']
     if C.get('taxId'): o['taxID'] = C['taxId']
+    if C.get('openingHours'): o['openingHours'] = C['openingHours']
     return o
 
 def crumbs_html(items):
@@ -674,6 +675,8 @@ def build_service(s):
     ld = {"@context": "https://schema.org", "@type": "Service", "name": s['title'], "serviceType": s['name'], "description": s['lead'],
           "provider": {"@type": "LocalBusiness", "name": SITE['name'], "url": DOMAIN + '/'},
           "areaServed": [{"@type": "City", "name": x} for x in SITE['areas']]}
+    sp = [r['price'] for r in s['pricing'] if r.get('price')]
+    if sp: ld['offers'] = {"@type": "AggregateOffer", "priceCurrency": "TWD", "lowPrice": min(sp)}
     lds = [ld] + ([faq_ld(faqs)] if faqs else [])
     page(f'/services/{s["slug"]}.html', s['title'], s['lead'], body, active='/services/',
          crumbs=[('/services/', '服務項目'), (None, s['name'])], ld=lds)
