@@ -128,6 +128,7 @@ def footer():
     if C.get('hours'): rows.append(f'<li>{ic("list")}{e(C["hours"])}</li>')
     if C.get('taxId'): rows.append(f'<li>{ic("list")}統一編號：{e(C["taxId"])}</li>')
     year = datetime.date.today().year
+    qr = ('<div class="footer-qr"><img src="/assets/img/line-qr.jpg" width="96" height="96" loading="lazy" alt="LINE 好友 QR Code"><span>手機 LINE 掃描<br>加好友諮詢</span></div>') if (C.get('lineUrl') or C.get('lineId')) else ''
     return f'''<footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
@@ -135,9 +136,9 @@ def footer():
       <p class="slogan">{e(SITE.get("slogan",""))}</p><p>{e(SITE["description"])}</p>
       <a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
     </div>
-    <div><h3>產品分類</h3><ul>{cats}</ul></div>
-    <div><h3>服務項目</h3><ul>{svcs}</ul></div>
-    <div><h3>聯絡資訊</h3><ul class="contact-list">{"".join(rows)}</ul></div>
+    <div><h2>產品分類</h2><ul>{cats}</ul></div>
+    <div><h2>服務項目</h2><ul>{svcs}</ul></div>
+    <div><h2>聯絡資訊</h2><ul class="contact-list">{"".join(rows)}</ul>{qr}</div>
   </div>
   <div class="wrap footer-bottom"><span>© {year} {e(SITE["name"])}</span><span>產品規格依各品牌公開資料整理，實際以原廠為準。</span></div>
 </footer>
@@ -159,6 +160,7 @@ def business_ld():
         o['address'] = {"@type": "PostalAddress", "streetAddress": C['address'], "addressLocality": "台南市", "addressCountry": "TW"}
     if SITE.get('slogan'): o['slogan'] = SITE['slogan']
     if C.get('taxId'): o['taxID'] = C['taxId']
+    o['logo'] = DOMAIN + '/assets/img/logo.png'; o['image'] = DOMAIN + '/assets/img/logo.png'
     if C.get('openingHours'): o['openingHours'] = C['openingHours']
     return o
 
@@ -174,6 +176,7 @@ def crumbs_ld(items):
 
 def page(path, title, desc, body, active='', crumbs=None, ld=None, og_image=None, full_title=False, noindex=False, og_type='website'):
     t = title if full_title else f'{title}｜{SITE["short"]}・台南淨水工程'
+    if len(desc) < 60 and not noindex: desc = desc.rstrip() + f' {SITE["short"]}・台南在地淨水工程，加 LINE 預約現場實地勘查。'
     og_image = og_image or DEFAULT_OG
     lds = [business_ld()] if path == '/' else []
     if crumbs: lds.append(crumbs_ld([('/', '首頁')] + crumbs))
@@ -205,7 +208,8 @@ def page(path, title, desc, body, active='', crumbs=None, ld=None, og_image=None
   <link rel="icon" href="{a("assets/img/favicon.svg")}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="{a("assets/css/site.css")}">
   <script>window.SITE={site_js};
   (function(){{var cur=window.SITE.version;fetch('/version.json?t='+Date.now(),{{cache:'no-store'}}).then(function(r){{return r.ok?r.json():null}}).then(function(d){{if(!d||!d.version||d.version===cur)return;var k='hd-reload-'+d.version;try{{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}}catch(x){{}}var u=new URL(location.href);u.searchParams.set('v',d.version);location.replace(u.toString())}}).catch(function(){{}})}})();</script>
@@ -477,7 +481,7 @@ def build_products():
   <div class="toolbar"><p class="result-count" aria-live="polite"></p>
     <label class="brand-sel"><span>品牌</span><select data-f="brand" aria-label="依品牌篩選">{opts}</select></label></div>
   <div class="cat-info" hidden><div><b data-ci-title></b><p data-ci-desc></p></div><div class="ci-links"><a class="link" data-ci-cat hidden></a><a class="link" data-ci-brand hidden></a></div></div>
-  <div class="p-grid">{"".join(product_card(p) for p in items)}</div>
+  <h2 class="sr-only">商品列表</h2><div class="p-grid">{"".join(product_card(p) for p in items)}</div>
   <div class="empty" hidden><p>這個分類的產品整理中，歡迎加 LINE 詢問。</p><a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 詢問</span></a></div>
 </div></section>
 {cta_band()}'''
@@ -530,6 +534,15 @@ def build_product(p):
         rel_block = f'''<section class="pd-sec"><h2>{ic("ro")}適用機型</h2><ul class="fit-list">''' + ''.join(
             f'<li><a href="/products/{m["id"]}.html">{e(m["name"])}</a></li>' for m in ml) + '</ul>' + iv + '</section>'
     same = [x for x in PRODUCTS if x['cat'] == p['cat'] and x['id'] != p['id']][:4]
+    series_block = ''
+    if p.get('series'):
+        sib = [x for x in PRODUCTS if x.get('series') == p['series']]
+        def spec(x, k): return next((v for kk, v in x['specs'] if kk == k), '—').replace('（依品名）', '')
+        srows = ''.join(f'<tr{" class=cur" if x["id"] == p["id"] else ""}><td>' + (e(x["model"]) if x["id"] == p["id"] else f'<a href="/products/{x["id"]}.html">{e(x["model"])}</a>')
+                        + f'</td><td>{e(spec(x, "樹脂量"))}</td><td>{("NT$" + format(x["price"], ",")) if x.get("price") else "洽詢"}</td></tr>' for x in sib)
+        series_block = (f'<section class="pd-sec"><h2>{ic("list")}同系列比較</h2><p>{e(p.get("seriesNote", ""))}</p>'
+                        f'<div class="table-wrap"><table class="tbl series-tbl"><thead><tr><th>型號</th><th>樹脂量</th><th>建議售價</th></tr></thead><tbody>{srows}</tbody></table></div></section>')
+        same = [x for x in same if x.get('series') != p['series']] or same
     src = f'<p class="note">資料來源：<a href="{e(p["source"])}" target="_blank" rel="noopener">{e(p["sourceText"])}</a>。規格依公開資料整理，實際以原廠與現場評估為準。</p>' if p.get('source') else ''
     svc = next((s for s in SERVICES if s.get('category') == p['cat']), None)
     if p['cat'] == 'whole': svc = next(s for s in SERVICES if s['slug'] == 'whole-house')
@@ -553,6 +566,7 @@ def build_product(p):
 <div class="wrap pd-body">
   <section class="pd-sec"><h2>{ic("list")}產品規格</h2><div class="table-wrap"><table class="tbl spec"><tbody>{specs}</tbody></table></div>{src}</section>
   <section class="pd-sec"><h2>{ic("house")}安裝前要確認</h2><ul class="install">{install}</ul><p class="note">以上為{e(c["short"])}的一般安裝條件，實際以現場評估為準。</p></section>
+  {series_block}
   {rel_block}
 </div>
 {f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head"><h2>同類型產品比較</h2></div><div class="p-grid">' + "".join(product_card(x) for x in same) + '</div></div></section>' if same else ''}
@@ -589,7 +603,7 @@ def build_category(c):
                          f'<div class="p-grid">{"".join(product_card(p) for p in g)}</div></section>')
         sub_jump = '<div class="frow sub-jump">' + ''.join(f'<a class="fchip" href="#sub-{sb["key"]}">{e(sb["name"])}</a>' for sb in c['subs']) + '</div>'
     else:
-        grid = f'<div class="p-grid">{"".join(product_card(p) for p in items)}</div>'
+        grid = f'<h2 class="sr-only">{e(c["name"])}商品列表</h2><div class="p-grid">{"".join(product_card(p) for p in items)}</div>'
         sub_jump = ''
     arts = [x for x in ARTICLES if f'/products/?cat={c["key"]}' in x.get('related', [])]
     if c['key'] == 'filter':
@@ -630,7 +644,7 @@ def build_services():
   <span class="eyebrow">服務項目</span><h1>全戶淨軟水規劃安裝</h1>
   <p>全戶淨水、軟水與廚下設備規劃安裝，水塔與管路清洗、水質檢測及定期保養，施工前先說明流程與報價。</p>
 </div></section>
-<section class="sec sec-tight"><div class="wrap"><div class="s-grid">{"".join(service_card(s) for s in SERVICES)}</div></div></section>
+<section class="sec sec-tight"><div class="wrap"><h2 class="sr-only">服務列表</h2><div class="s-grid">{"".join(service_card(s) for s in SERVICES)}</div></div></section>
 {cta_band()}'''
     page('/services/', '服務項目：水塔清洗、水管清洗、淨水安裝、水質檢測', '台南水塔清洗、自來水管路清洗、直輸 RO 安裝、全戶淨水與軟水安裝、水質檢測與換濾心保養服務。',
          body, active='/services/', crumbs=[(None, '服務項目')])

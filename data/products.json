@@ -1674,7 +1674,7 @@
     "cat": "softener",
     "label": "18L 全戶軟水",
     "image": "assets/catalog/official/ep-jhr2000.jpg",
-    "summary": "304 不鏽鋼奈米塗裝外殼，流量／時間雙控逆流再生，樹脂量 18L。",
+    "summary": "304 不鏽鋼奈米塗裝外殼，流量／時間雙控逆流再生，樹脂量 18L；需要更大處理量可選 28L 的 JH-R3000。",
     "points": [
       "工作流量 2000 L/小時，建議流量 1.0–2.0 m³/h。",
       "流量／時間雙控再生並具逆流再生；再生週期淨水量 6 m³。",
@@ -1739,7 +1739,9 @@
     "filters": [],
     "fits": [],
     "source": "https://gowater.cc/EVERPOLL-Co/EVERPOLL-JH-R2000",
-    "sourceText": "經銷商規格頁（官方未列規格表）"
+    "sourceText": "經銷商規格頁（官方未列規格表）",
+    "series": "everpoll-jh-r",
+    "seriesNote": "JH-R2000 與 JH-R3000 的差別在樹脂量：JH-R2000 系列為 18L，JH-R3000 系列為 28L。樹脂量越大，每次再生之間可處理的水量越多、工作流量也較高，適合用水量較大的家庭。PLUS 為黑色機身版本，樹脂量與同型號標準版相同。"
   },
   {
     "id": "everpoll-jh-r3000",
@@ -1750,7 +1752,7 @@
     "cat": "softener",
     "label": "28L 全戶軟水",
     "image": "assets/catalog/official/ep-jhr3000.jpg",
-    "summary": "304 不鏽鋼奈米塗裝外殼，流量／時間雙控逆流再生，樹脂量 28L。",
+    "summary": "304 不鏽鋼奈米塗裝外殼，流量／時間雙控逆流再生，樹脂量 28L；比 18L 的 JH-R2000 處理量更大、流量更高。",
     "points": [
       "工作流量 3000 L/小時，建議流量 1.8–3.0 m³/h。",
       "流量／時間雙控再生並具逆流再生；再生週期淨水量 8 m³。",
@@ -1815,7 +1817,9 @@
     "filters": [],
     "fits": [],
     "source": "https://gowater.cc/EVERPOLL-Co/EVERPOLL-JH-R3000",
-    "sourceText": "經銷商規格頁（官方未列規格表）"
+    "sourceText": "經銷商規格頁（官方未列規格表）",
+    "series": "everpoll-jh-r",
+    "seriesNote": "JH-R2000 與 JH-R3000 的差別在樹脂量：JH-R2000 系列為 18L，JH-R3000 系列為 28L。樹脂量越大，每次再生之間可處理的水量越多、工作流量也較高，適合用水量較大的家庭。PLUS 為黑色機身版本，樹脂量與同型號標準版相同。"
   },
   {
     "id": "everpoll-jh-r2000-plus",
@@ -1826,7 +1830,7 @@
     "cat": "softener",
     "label": "18L 全戶軟水",
     "image": "assets/catalog/official/ep-jhr2000plus.jpg",
-    "summary": "JH-R2000 的 PLUS 版本，黑色機身；列於愛科官網全戶軟水機系列。",
+    "summary": "JH-R2000 的 PLUS 黑色機身版本，樹脂量 18L；與 JH-R3000 PLUS（28L）的差別在樹脂量。",
     "points": [
       "官網品名標示樹脂量 18L。",
       "原廠官網未公開 PLUS 與標準版的規格差異。",
@@ -1855,7 +1859,9 @@
     "filters": [],
     "fits": [],
     "source": "https://www.everpoll.com.tw/product_detail?id=886",
-    "sourceText": "EVERPOLL 官方產品頁"
+    "sourceText": "EVERPOLL 官方產品頁",
+    "series": "everpoll-jh-r",
+    "seriesNote": "JH-R2000 與 JH-R3000 的差別在樹脂量：JH-R2000 系列為 18L，JH-R3000 系列為 28L。樹脂量越大，每次再生之間可處理的水量越多、工作流量也較高，適合用水量較大的家庭。PLUS 為黑色機身版本，樹脂量與同型號標準版相同。"
   },
   {
     "id": "everpoll-jh-r3000-plus",
@@ -1866,7 +1872,7 @@
     "cat": "softener",
     "label": "28L 全戶軟水",
     "image": "assets/catalog/official/ep-jhr3000plus.jpg",
-    "summary": "JH-R3000 的 PLUS 版本，黑色機身；列於愛科官網全戶軟水機系列。",
+    "summary": "JH-R3000 的 PLUS 黑色機身版本，樹脂量 28L；與 JH-R2000 PLUS（18L）相比樹脂量較大，適合用水量較大的家庭。",
     "points": [
       "官網品名標示樹脂量 28L。",
       "原廠官網未公開 PLUS 與標準版的規格差異。",
@@ -1895,7 +1901,9 @@
     "filters": [],
     "fits": [],
     "source": "https://www.everpoll.com.tw/product_detail?id=888",
-    "sourceText": "EVERPOLL 官方產品頁"
+    "sourceText": "EVERPOLL 官方產品頁",
+    "series": "everpoll-jh-r",
+    "seriesNote": "JH-R2000 與 JH-R3000 的差別在樹脂量：JH-R2000 系列為 18L，JH-R3000 系列為 28L。樹脂量越大，每次再生之間可處理的水量越多、工作流量也較高，適合用水量較大的家庭。PLUS 為黑色機身版本，樹脂量與同型號標準版相同。"
   },
   {
     "id": "3m-bfs3-40bk",
@@ -2262,7 +2270,83 @@
         "interval": "總處理量約 300 噸"
       }
     ],
-    "sub": "pre"
+    "sub": "full"
+  },
+  {
+    "id": "aquaclio-bcp-1fg",
+    "brand": "AQUACLiO",
+    "brandName": "AQUACLiO 克麗歐",
+    "model": "BCP-1FG",
+    "name": "克麗歐 AQUACLiO BCP-1FG 全戶除氯除雜質過濾器",
+    "cat": "whole",
+    "sub": "full",
+    "label": "除氯＋雜質",
+    "image": "assets/catalog/official/aquaclio-bcp-1f.jpg",
+    "summary": "BCP 系列的除氯＋除雜質款，複合式濾心同時處理餘氯與泥沙雜質，免電源；與 BCP-1F、BCP-1G 同尺寸機殼。",
+    "points": [
+      "一支複合式濾心同時降低餘氯與泥沙、顆粒雜質",
+      "免電源，自來水與地下水皆適用",
+      "機殼尺寸與 BCP-1F／BCP-1G 相同（D20×W18×H71 cm）",
+      "複合式濾心總處理量約 150 噸，比單功能款短，需較常更換"
+    ],
+    "specs": [
+      [
+        "型號",
+        "BCP-1FG"
+      ],
+      [
+        "主要用途",
+        "除氯＋雜質"
+      ],
+      [
+        "電源",
+        "免電源"
+      ],
+      [
+        "適用水源",
+        "自來水／地下水"
+      ],
+      [
+        "適用水溫",
+        "4～40°C"
+      ],
+      [
+        "適用水壓",
+        "30～50 psi"
+      ],
+      [
+        "最大流量",
+        "1.5 m³/h"
+      ],
+      [
+        "管徑",
+        "1 英吋"
+      ],
+      [
+        "尺寸",
+        "D20×W18×H71 cm"
+      ],
+      [
+        "濾料",
+        "複合式濾心"
+      ],
+      [
+        "總處理量",
+        "150 噸"
+      ]
+    ],
+    "price": null,
+    "priceNote": "官網未列售價",
+    "filters": [],
+    "fits": [],
+    "source": "https://www.aquaclio.com/tw/product-d.php?Key=13",
+    "sourceText": "AQUACLiO 克麗歐官網 BCP 系列規格表",
+    "filterInfo": [
+      {
+        "model": "複合式濾心",
+        "interval": "總處理量約 150 噸"
+      }
+    ]
   },
   {
     "id": "aquaclio-pfk04-xu06m",
