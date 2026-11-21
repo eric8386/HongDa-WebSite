@@ -338,19 +338,24 @@ QUIZ = '''<div class="quiz" data-quiz>
 </div>'''
 
 # ---------- pages ----------
-HERO_TILES = [('ro', 'brita-mypure-gr-1000', 'big'), ('softener', 'clack-cws35-2e10r', ''), ('drink', 'everpoll-evb-398', '')]
+HERO_TILES = [
+    ('ro', 'brita-mypure-gr-1000', '喝的水', '廚房生飲，過濾精度最高'),
+    ('softener', 'clack-cws35-2e10r', '防水垢', '降低硬度，減少熱水器與衛浴水垢', 'assets/img/hero-softener.jpg'),
+    ('whole', '3m-ss801', '全屋過濾', '總進水端攔截泥沙、鐵鏽與餘氯'),
+]
 
 def hero_tiles():
     out = ''
-    for cat, pid, cls in HERO_TILES:
+    for cat, pid, tag, desc, *img in HERO_TILES:
         p = PBY.get(pid) or next((x for x in PRODUCTS if x['cat'] == cat), None)
         if not p:
             continue
         c = CATS[cat]
         n = sum(1 for x in PRODUCTS if x['cat'] == cat)
-        out += f'''<a class="ht {cls}" href="{cat_url(cat)}">
-        <span class="ht-img">{img_html(p["image"], c["name"], lazy=False)}</span>
-        <span class="ht-txt"><b>{e(c["short"])}</b><small>{n} 款 {ic("arrow")}</small></span></a>'''
+        out += f'''<a class="ht ht-{cat}" href="{cat_url(cat)}">
+        <span class="ht-tag">{e(tag)}</span>
+        <span class="ht-img">{img_html(img[0] if img else p["image"], c["name"], lazy=False)}</span>
+        <span class="ht-txt"><b>{e(c["short"])}</b><span class="ht-desc">{e(desc)}</span><span class="ht-more">看 {n} 款 {ic("arrow")}</span></span></a>'''
     return out
 
 def build_home():
