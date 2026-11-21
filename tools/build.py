@@ -426,18 +426,18 @@ def build_home():
 </div></section>
 
 <section class="sec"><div class="wrap">
+  <div class="sec-head row"><div><span class="eyebrow">服務項目</span><h2>安裝、清洗、檢測、保養一次到位</h2></div><a class="link" href="/services/">所有服務 {ic("arrow")}</a></div>
+  <div class="s-grid">{"".join(service_card(s) for s in SERVICES)}</div>
+</div></section>
+
+<section class="sec sec-soft"><div class="wrap">
   <div class="sec-head row"><div><span class="eyebrow">產品分類</span><h2>依用途挑選淨水設備</h2></div><a class="link" href="/products/">看全部品牌商品 {ic("arrow")}</a></div>
   <div class="cats">{cats}</div>
 </div></section>
 
-<section class="sec sec-soft"><div class="wrap">
+<section class="sec"><div class="wrap">
   <div class="sec-head row"><div><span class="eyebrow">熱門機型</span><h2>常被詢問的推薦機型</h2></div><a class="link" href="/products/">更多機型 {ic("arrow")}</a></div>
   <div class="p-grid feat">{"".join(product_card(p) for p in feat)}</div>
-</div></section>
-
-<section class="sec"><div class="wrap">
-  <div class="sec-head row"><div><span class="eyebrow">服務項目</span><h2>安裝、清洗、檢測、保養一次到位</h2></div><a class="link" href="/services/">所有服務 {ic("arrow")}</a></div>
-  <div class="s-grid">{"".join(service_card(s) for s in SERVICES)}</div>
 </div></section>
 
 <section class="sec sec-dark"><div class="wrap">
