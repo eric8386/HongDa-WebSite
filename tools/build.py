@@ -93,8 +93,8 @@ LOGO = ('<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><li
 
 # ---------- layout ----------
 NAV = [
-    ('/products/', '品牌商品'),
     ('/services/', '服務項目'),
+    ('/products/', '品牌商品'),
     ('/filters/', '濾心專區'),
     ('/knowledge/', '水質知識'),
     ('/about.html', '關於我們'),
@@ -136,8 +136,8 @@ def footer():
       <p class="slogan">{e(SITE.get("slogan",""))}</p><p>{e(SITE["description"])}</p>
       <a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
     </div>
-    <div><h2>產品分類</h2><ul>{cats}</ul></div>
     <div><h2>服務項目</h2><ul>{svcs}</ul></div>
+    <div><h2>產品分類</h2><ul>{cats}</ul></div>
     <div><h2>聯絡資訊</h2><ul class="contact-list">{"".join(rows)}</ul>{qr}</div>
   </div>
   <div class="wrap footer-bottom"><span>© {year} {e(SITE["name"])}</span><span>產品規格依各品牌公開資料整理，實際以原廠為準。</span></div>
