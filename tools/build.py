@@ -394,7 +394,7 @@ def build_home():
     <div class="hero-copy">
       <span class="eyebrow">{e(SITE.get("tagline") or "台南在地淨水工程")}</span>
       <h1>從水塔到水龍頭，<br><span class="hl">全家用水一次顧好</span></h1>
-      <p class="lead">台南在地淨水工程：直輸 RO、全戶淨水與軟水安裝，水塔清洗、自來水管路清洗、水質檢測與定期保養。先了解你家的水，再推薦真正需要的方案。</p>
+      <p class="lead">台南在地淨水工程：直輸 RO、全戶淨水與軟水安裝，水塔清洗、自來水管路清洗與定期保養。先了解你家的水，再推薦真正需要的方案。</p>
       <div class="hero-cta">
         <a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
         <a class="btn btn-primary btn-lg" href="#finder">3 步驟找出適合方案 {ic("arrow")}</a>
@@ -403,10 +403,10 @@ def build_home():
     </div>
     <div class="hero-tiles">
       {hero_tiles()}
-      <div class="ht-svc"><span class="ht-svc-title">清洗與檢測服務</span>
+      <div class="ht-svc"><span class="ht-svc-title">清洗服務</span>
         <a href="/services/tank-cleaning.html">{ic("tank")}水塔清洗</a>
         <a href="/services/pipe-cleaning.html">{ic("pipe")}管路清洗</a>
-        <a href="/services/water-test.html">{ic("test")}水質檢測</a>
+        <a href="/services/solar-heater-cleaning.html">{ic("sun")}太陽能清洗</a>
       </div>
     </div>
   </div>
@@ -426,7 +426,7 @@ def build_home():
 </div></section>
 
 <section class="sec"><div class="wrap">
-  <div class="sec-head row"><div><span class="eyebrow">服務項目</span><h2>安裝、清洗、檢測、保養一次到位</h2></div><a class="link" href="/services/">所有服務 {ic("arrow")}</a></div>
+  <div class="sec-head row"><div><span class="eyebrow">服務項目</span><h2>安裝、清洗、保養一次到位</h2></div><a class="link" href="/services/">所有服務 {ic("arrow")}</a></div>
   <div class="s-grid">{"".join(service_card(s) for s in SERVICES)}</div>
 </div></section>
 
@@ -648,11 +648,11 @@ def build_category(c):
 def build_services():
     body = f'''<section class="page-hero"><div class="wrap">
   <span class="eyebrow">服務項目</span><h1>全戶淨軟水規劃安裝</h1>
-  <p>全戶淨水、軟水與廚下設備規劃安裝，水塔與管路清洗、水質檢測及定期保養，施工前先說明流程與報價。</p>
+  <p>全戶淨水、軟水與廚下設備規劃安裝，水塔與管路清洗及定期保養，施工前先說明流程與報價。</p>
 </div></section>
 <section class="sec sec-tight"><div class="wrap"><h2 class="sr-only">服務列表</h2><div class="s-grid">{"".join(service_card(s) for s in SERVICES)}</div></div></section>
 {cta_band()}'''
-    page('/services/', '服務項目：水塔清洗、水管清洗、淨水安裝、水質檢測', '台南水塔清洗、自來水管路清洗、直輸 RO 安裝、全戶淨水與軟水安裝、水質檢測與換濾心保養服務。',
+    page('/services/', '服務項目：水塔清洗、水管清洗、淨水軟水安裝', '台南水塔清洗、自來水管路清洗、太陽能熱水器清洗、直輸 RO 安裝、全戶淨水與軟水安裝，以及換濾心定期保養服務。',
          body, active='/services/', crumbs=[(None, '服務項目')])
     for s in SERVICES:
         build_service(s)
@@ -820,7 +820,7 @@ def build_brands():
 ART_CATS = ['選購指南', '濾心與保養', '安裝與空間規劃', '故障排查', '水質知識', '台南在地']
 REL_LABEL = {
     '/services/tank-cleaning.html': '水塔清洗', '/services/pipe-cleaning.html': '自來水管路清洗',
-    '/services/solar-heater-cleaning.html': '太陽能熱水器清洗', '/services/water-test.html': '水質檢測',
+    '/services/solar-heater-cleaning.html': '太陽能熱水器清洗',
     '/services/ro-install.html': '直輸 RO 安裝', '/services/whole-house.html': '全戶淨水／軟水安裝',
     '/services/maintenance.html': '安裝與定期保養', '/filters/': '濾心專區',
     '/products/?cat=ro': '直輸 RO 產品', '/products/?cat=combo': '淨熱一體機產品', '/products/?cat=whole': '全戶淨水產品',
@@ -883,7 +883,7 @@ def build_static():
 <section class="sec sec-tight"><div class="wrap two-col">
   <div class="prose"><h2>我們做什麼</h2>
     <p>{e(SITE["short"])}專注在居家用水的完整解決方案：從水塔、自來水管路的清洗，到全戶淨水、全戶軟水，再到廚房的直輸 RO 與廚下加熱器，以及後續的濾心更換與保養。</p>
-    <p>每個家庭的水質、房型與預算都不一樣。我們的做法是先了解你家的狀況，必要時先做水質檢測，再建議真正需要的設備，避免花冤枉錢。</p>
+    <p>每個家庭的水質、房型與預算都不一樣。我們的做法是先了解你家的狀況，必要時先到府實地勘查，再建議真正需要的設備，避免花冤枉錢。</p>
     <h2>我們的原則</h2>
     <ul><li>產品標示建議售價，服務依現場透明報價</li><li>施工前說明流程與內容</li><li>多品牌比較，依需求挑選</li><li>完工後說明使用與保養方式</li></ul>
   </div>
