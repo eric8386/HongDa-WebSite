@@ -264,7 +264,9 @@
     "category": "ro",
     "faqKeys": [
       1,
-      4
+      4,
+      7,
+      10
     ],
     "source": "",
     "sourceText": ""
@@ -328,7 +330,9 @@
     "category": "softener",
     "faqKeys": [
       2,
-      3
+      3,
+      11,
+      12
     ],
     "source": "",
     "sourceText": ""
@@ -382,7 +386,8 @@
     ],
     "category": "filter",
     "faqKeys": [
-      4
+      4,
+      9
     ],
     "source": "",
     "sourceText": ""

@@ -15,11 +15,12 @@
 - `products.json`：所有商品，包含濾心。主要欄位：`id`（同時是頁面檔名 `/products/<id>.html`）、`brand`（對應 brands 的 key）、`cat`（`ro`/`combo`/`whole`/`softener`/`drink`/`filter`）、`sub`（例如全戶淨水的 `pre` 前置過濾、`full` 全戶濾淨）、`image`、`summary`、`points`、`specs`、`price`（沒有就顯示「洽詢」）、`priceNote`、`source`/`sourceText`（價格與規格出處）。
   - 機器與濾心互相連結：機器的 `filters` 列出濾心 id，濾心的 `fits` 列出適用機器 id。沒有對應濾心商品時，可以用 `filterInfo`（model/interval）只顯示文字。濾心的 `interval` 是建議更換週期。
 - `services.json`：服務項目（slug、lead、pains、steps、pricing、faqKeys…）。
-- `articles.json`：知識文章（slug、title、desc、date、cat、blocks、related），分類固定為 build.py 裡的 `ART_CATS`。
+- `articles.json`：知識文章（slug、title、desc、date、cat、blocks、related，可有 updated、sources），分類固定為 build.py 裡的 `ART_CATS`。blocks 支援 `p`、`h2`、`ul`、`table`（["table", 表頭, 列, 說明]）。
 
 ### 圖片
 - 商品主圖：`assets/catalog/`（官方圖放在 `official/`）。
 - 縮圖：`assets/catalog/thumb/` 底下用相同路徑；有縮圖就用縮圖，沒有就用原圖。縮圖需要另外產生，build 不會自動做。
+- 手機用介紹圖：`assets/catalog/m/detail/`（寬 828px），由 `python3 tools/make_mobile.py` 產生；新增或更換介紹圖後要先執行它，build 才會加上 srcset。
 - 商品詳情圖：`assets/catalog/detail/<商品 id>/01.jpg…`，build 會自動做成圖庫。
 
 ## 每次修改的固定流程

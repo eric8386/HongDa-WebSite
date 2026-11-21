@@ -556,3 +556,7 @@ button{font:inherit;cursor:pointer}
 .footer-qr img{width:84px;height:84px;border-radius:10px;background:#fff;padding:4px}
 @media (max-width:640px){.footer-qr{display:none}}
 .series-tbl tr.cur td{background:var(--soft-2);font-weight:700;color:var(--brand)}
+
+/* article tables */
+.prose .table-wrap{margin:18px 0}
+.tbl caption{caption-side:bottom;text-align:left;font-size:13px;color:var(--ink-2);padding-top:8px}

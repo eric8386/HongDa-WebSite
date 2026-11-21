@@ -502,7 +502,13 @@ def gallery_html(p):
     p['_gallery'] = g
     if not g:
         return ''
-    imgs = ''.join(f'<img src="{a(x["src"])}" alt="{e(x.get("alt") or p["name"])}"' + (f' width="{img_size(x["src"])[0]}" height="{img_size(x["src"])[1]}"' if img_size(x["src"]) else '') + ' loading="lazy" decoding="async">' for x in g)
+    def srcset(src):
+        m = os.path.splitext(src.replace('assets/catalog/detail/', 'assets/catalog/m/detail/', 1))[0] + '.jpg'
+        sz = img_size(src)
+        if m == src or not sz or not os.path.exists(os.path.join(ROOT, m)):
+            return ''
+        return f' srcset="{a(m)} 828w, {a(src)} {sz[0]}w" sizes="(max-width: 900px) calc(100vw - 32px), 860px"'
+    imgs = ''.join(f'<img src="{a(x["src"])}"{srcset(x["src"])} alt="{e(x.get("alt") or p["name"])}"' + (f' width="{img_size(x["src"])[0]}" height="{img_size(x["src"])[1]}"' if img_size(x["src"]) else '') + ' loading="lazy" decoding="async">' for x in g)
     return f'''<section class="pd-gallery" id="intro"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">產品介紹</span><h2>{e(p["name"])}</h2></div>
   <div class="gallery-stack">{imgs}</div>
@@ -846,7 +852,13 @@ def build_knowledge():
             if blk[0] == 'p': parts.append(f'<p>{e(blk[1])}</p>')
             elif blk[0] == 'h2': parts.append(f'<h2>{e(blk[1])}</h2>')
             elif blk[0] == 'ul': parts.append('<ul>' + ''.join(f'<li>{e(i)}</li>' for i in blk[1]) + '</ul>')
-        src = f'<p class="note">參考資料：<a href="{e(x["source"])}" target="_blank" rel="noopener">{e(x["sourceText"])}</a></p>' if x.get('source') else ''
+            elif blk[0] == 'table':
+                head = ''.join(f'<th>{e(h)}</th>' for h in blk[1])
+                rows = ''.join('<tr>' + ''.join(f'<td>{e(c)}</td>' for c in r) + '</tr>' for r in blk[2])
+                cap = f'<caption>{e(blk[3])}</caption>' if len(blk) > 3 else ''
+                parts.append(f'<div class="table-wrap"><table class="tbl">{cap}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>')
+        srcs = x.get('sources') or ([[x['source'], x['sourceText']]] if x.get('source') else [])
+        src = ('<p class="note">參考資料：' + '；'.join(f'<a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for u, t in srcs) + '</p>') if srcs else ''
         sib = [o for o in ARTICLES if o['slug'] != x['slug'] and o.get('cat') == x.get('cat')] + [o for o in ARTICLES if o['slug'] != x['slug'] and o.get('cat') != x.get('cat')]
         others = ''.join(f'<li><a href="/knowledge/{o["slug"]}.html">{e(o["title"])}</a></li>' for o in sib[:5])
         rel = ''.join(f'<a class="btn btn-ghost btn-sm" href="{rel_url(u)}">{e(REL_LABEL.get(u, u))}</a>' for u in x.get('related', []))
