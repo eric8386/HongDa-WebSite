@@ -353,7 +353,6 @@ def hero_tiles():
         c = CATS[cat]
         n = sum(1 for x in PRODUCTS if x['cat'] == cat)
         out += f'''<a class="ht ht-{cat}" href="{cat_url(cat)}">
-        <span class="ht-tag">{e(tag)}</span>
         <span class="ht-img">{img_html(img[0] if img else p["image"], c["name"], lazy=False)}</span>
         <span class="ht-txt"><b>{e(c["short"])}</b><span class="ht-desc">{e(desc)}</span><span class="ht-more">看 {n} 款 {ic("arrow")}</span></span></a>'''
     return out
