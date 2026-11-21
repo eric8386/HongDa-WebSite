@@ -340,8 +340,8 @@ QUIZ = '''<div class="quiz" data-quiz>
 # ---------- pages ----------
 HERO_TILES = [
     ('ro', 'brita-mypure-gr-1000', '喝的水', '廚房生飲，過濾精度最高'),
-    ('softener', 'clack-cws35-2e10r', '防水垢', '降低硬度，減少熱水器與衛浴水垢', 'assets/img/hero-softener.jpg'),
-    ('whole', '3m-ss801', '全屋過濾', '總進水端攔截泥沙、鐵鏽與餘氯'),
+    ('softener', 'aquaclio-eva-350r', '防水垢', '降低硬度，減少熱水器與衛浴水垢', 'assets/img/hero-softener.jpg'),
+    ('whole', 'everpoll-fh-301', '全屋過濾', '總進水端攔截泥沙、鐵鏽與餘氯', 'assets/img/hero-whole.jpg'),
 ]
 
 def hero_tiles():
