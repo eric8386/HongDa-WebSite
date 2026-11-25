@@ -28,6 +28,6 @@
 - 保持 noindex：`data/site.json` 的 `indexable` 維持 `false`。
 - 每個頁面都要保留 Cache-Control／Pragma／Expires 三個 no-cache meta（寫在 build.py 的 `page()`，新頁面也要走 `page()`）。
 - 聯絡資訊不顯示傳真、不顯示服務地區、不顯示負責人姓名；大標題（H1）不要強調「台南」。
-- 主要行動呼籲文字是「LINE 預約現場實地勘查」。不要加回「水質檢測」服務。
+- 按鈕行動呼籲文字統一為「LINE 預約諮詢」（內文可寫「預約現場實地勘查」）。不要加回「水質檢測」服務。
 - 這個資料夾的檔案都會公開發布，不要放任何敏感資料。
 - `.codex-attachments/` 不要加進 git。

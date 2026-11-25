@@ -121,7 +121,7 @@
     soft: { t: '全戶軟水機', d: '降低硬度，減少熱水器與衛浴水垢', h: '/products/water-softener/' },
     tank: { t: '水塔清洗', d: '建議至少每半年清洗一次', h: '/services/tank-cleaning.html' },
     pipe: { t: '自來水管路清洗', d: '清除管內鏽垢與沉積物', h: '/services/pipe-cleaning.html' },
-    test: { t: 'LINE 預約現場實地勘查', d: '到府看過用水與管路狀況，再建議適合的設備', h: '/contact.html' }
+    test: { t: 'LINE 預約諮詢', d: '到府看過用水與管路狀況，再建議適合的設備', h: '/contact.html' }
   };
   function recommend(a) {
     var out = [];

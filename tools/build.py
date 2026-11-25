@@ -85,9 +85,10 @@ def ic(name, cls='ic'):
     fill = 'currentColor' if filled else 'none'
     return f'<svg class="{cls}" viewBox="0 0 24 24" fill="{fill}" aria-hidden="true">{ICONS[name]}</svg>'
 
-LOGO = ('<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="hdg" x1="0" y1="0" x2="0" y2="1">'
+def logo(gid):
+    return ('<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="'+gid+'" x1="0" y1="0" x2="0" y2="1">'
         '<stop offset="0" stop-color="#2a9df4"/><stop offset="1" stop-color="#0a3f94"/></linearGradient></defs>'
-        '<path d="M32 2.5C32 2.5 8 29.5 8 43.5a24 19.5 0 0 0 48 0C56 29.5 32 2.5 32 2.5z" fill="url(#hdg)"/>'
+        '<path d="M32 2.5C32 2.5 8 29.5 8 43.5a24 19.5 0 0 0 48 0C56 29.5 32 2.5 32 2.5z" fill="url(#'+gid+')"/>'
         '<path d="M21 22h7v31h-7zM36 22h7v31h-7z" fill="#fff"/>'
         '<path d="M14 42c6-6 12-6 18-1s12 5 18-1" fill="none" stroke="#9fdcff" stroke-width="4.5" stroke-linecap="round"/></svg>')
 
@@ -107,11 +108,11 @@ def header(active):
         f'<a href="{h}"{cur if active == h else ""}>{t}</a>' for h, t in NAV)
     return f'''<header class="site-header">
   <div class="wrap header-inner">
-    <a class="logo" href="/" aria-label="{e(SITE["short"])} 首頁">{LOGO}<span><b>{e(SITE["short"])}</b><small>{e(SITE["en"])}</small></span></a>
+    <a class="logo" href="/" aria-label="{e(SITE["short"])} 首頁">{logo("hdg")}<span><b>{e(SITE["short"])}</b><small>{e(SITE["en"])}</small></span></a>
     <nav class="main-nav" id="main-nav" aria-label="主選單">{links}<a class="nav-finder" href="/finder.html">3 步驟找方案</a></nav>
     <div class="header-actions">
       {f'<a class="header-tel" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>{e(C["mobile"])}</span></a>' if C.get('mobile') else ''}
-      <a class="btn btn-line btn-sm" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 諮詢</span></a>
+      <a class="btn btn-line btn-sm" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 預約諮詢</span></a>
       <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="開啟選單">{ic("menu")}</button>
     </div>
   </div>
@@ -132,9 +133,9 @@ def footer():
     return f'''<footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <a class="logo logo-light" href="/">{LOGO}<span><b>{e(SITE["name"])}</b><small>{e(SITE["en"])}</small></span></a>
+      <a class="logo logo-light" href="/">{logo("hdg-f")}<span><b>{e(SITE["name"])}</b><small>{e(SITE["en"])}</small></span></a>
       <p class="slogan">{e(SITE.get("slogan",""))}</p><p>{e(SITE["description"])}</p>
-      <a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
+      <a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 預約諮詢</span></a>
     </div>
     <div><h2>服務項目</h2><ul>{svcs}</ul></div>
     <div><h2>產品分類</h2><ul>{cats}</ul></div>
@@ -143,7 +144,7 @@ def footer():
   <div class="wrap footer-bottom"><span>© {year} {e(SITE["name"])}</span><span>產品規格依各品牌公開資料整理，實際以原廠為準。</span></div>
 </footer>
 <nav class="mobile-bar" aria-label="快速聯絡">
-  <a class="mb-line" href="{e(line_href())}" data-line>{ic("line")}LINE 諮詢</a>
+  <a class="mb-line" href="{e(line_href())}" data-line>{ic("line")}LINE 預約諮詢</a>
   <a href="/finder.html">{ic("list")}找方案</a>
   {f'<a href="tel:{tel(C.get("mobile") or C["phone"])}">{ic("phone")}撥打電話</a>' if (C.get('mobile') or C.get('phone')) else f'<a href="/services/">{ic("care")}服務項目</a>'}
 </nav>'''
@@ -296,7 +297,7 @@ def service_card(s):
 def cta_band(title='不確定該選哪一種？先加 LINE 問問看', text='加 LINE 預約現場實地勘查，師傅到府確認管路、空間與水質後，再給你合適的方案與報價。'):
     return f'''<section class="cta-band"><div class="wrap cta-inner">
   <div><h2>{e(title)}</h2><p>{e(text)}</p></div>
-  <div class="cta-actions"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
+  <div class="cta-actions"><a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 預約諮詢</span></a>
   <a class="btn btn-ghost-light btn-lg" href="/finder.html">3 步驟找方案</a></div>
 </div></section>'''
 
@@ -400,7 +401,7 @@ def build_home():
       <h1>從水塔到水龍頭，<br><span class="hl">全家用水一次顧好</span></h1>
       <p class="lead">台南在地淨水工程：直輸 RO、全戶淨水與軟水安裝，水塔清洗、自來水管路清洗與定期保養。先了解你家的水，再推薦真正需要的方案。</p>
       <div class="hero-cta">
-        <a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a>
+        <a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 預約諮詢</span></a>
         <a class="btn btn-primary btn-lg" href="#finder">3 步驟找出適合方案 {ic("arrow")}</a>
       </div>
       <ul class="hero-points"><li>{ic("check")}建議售價公開</li><li>{ic("check")}{len(SITE["brands"])} 大品牌比較</li><li>{ic("check")}台南到府服務</li></ul>
@@ -634,7 +635,7 @@ def build_category(c):
     body = (f'<section class="page-hero"><div class="wrap"><span class="eyebrow">品牌商品</span><h1>{e(c["name"])}</h1>'
             f'<p>{e(c["desc"])}</p>'
             f'<ul class="cat-facts"><li><b>{len(items)}</b><span>款機型</span></li><li><b>{len(brands)}</b><span>個品牌</span></li><li><b>{rng}</b><span>建議售價區間</span></li></ul>'
-            f'<div class="hero-cta"><a class="btn btn-line" href="{e(line_href())}" data-line data-line-text="{e(ask)}">{ic("line")}<span>LINE 預約現場實地勘查</span></a>{fl_link}</div>'
+            f'<div class="hero-cta"><a class="btn btn-line" href="{e(line_href())}" data-line data-line-text="{e(ask)}">{ic("line")}<span>LINE 預約諮詢</span></a>{fl_link}</div>'
             f'{sub_jump}</div></section>'
             f'<section class="sec sec-tight"><div class="wrap cat-layout"><div data-catalog>'
             f'<div class="filters"><div class="frow" role="group" aria-label="依品牌篩選">{chips}</div></div>'
@@ -676,7 +677,7 @@ def build_service(s):
             rel = f'<section class="sec sec-soft"><div class="wrap"><div class="sec-head row"><h2>相關產品</h2><a class="link" href="{cat_url(s["category"])}">看更多 {ic("arrow")}</a></div><div class="p-grid">' + ''.join(product_card(p) for p in ps) + '</div></div></section>'
     src = f'<p class="note">參考資料：<a href="{e(s["source"])}" target="_blank" rel="noopener">{e(s["sourceText"])}</a></p>' if s.get('source') else ''
     line_txt = f'您好，我想預約「{s["name"]}」的現場實地勘查。'
-    line_btn = f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 預約現場實地勘查</span></a>'
+    line_btn = f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line data-line-text="{e(line_txt)}">{ic("line")}<span>LINE 預約諮詢</span></a>'
     if s.get('phoneQuote') and C.get('mobile'):
         hero_cta = f'<a class="btn btn-primary btn-lg" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>電話報價 {e(C["mobile"])}</span></a>'
     else:
@@ -871,7 +872,7 @@ def build_knowledge():
   <header><span class="eyebrow">{e(x.get("cat", "水質知識"))}</span><h1>{e(x["title"])}</h1><p class="date">{e(x["date"])}・{e(SITE["short"])}</p></header>
   <div class="prose">{"".join(parts)}{src}</div>
   {rel}
-  <aside class="art-cta"><h2>想直接問我們？</h2><p>加 LINE 預約現場實地勘查，到府看過再給你具體建議。</p><a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 諮詢</span></a></aside>
+  <aside class="art-cta"><h2>想直接問我們？</h2><p>加 LINE 預約現場實地勘查，到府看過再給你具體建議。</p><a class="btn btn-line" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 預約諮詢</span></a></aside>
   <nav class="more-arts"><h2>延伸閱讀</h2><ul>{others}</ul></nav>
 </article>'''
         url = DOMAIN + f'/knowledge/{x["slug"]}.html'
@@ -912,7 +913,7 @@ def build_static():
     body = f'''<section class="page-hero"><div class="wrap"><span class="eyebrow">聯絡我們</span><h1>加 LINE，預約現場實地勘查</h1><p>師傅到府看過管路與環境，建議與報價最準確。</p></div></section>
 <section class="sec sec-tight"><div class="wrap two-col">
   <div class="contact-box">{pending}<ul class="contact-rows">{"".join(rows)}</ul>
-    {f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>加 LINE 免費諮詢</span></a><div class="line-qr"><img src="/assets/img/line-qr.jpg" width="160" height="160" alt="鴻達淨水 LINE 好友 QR Code"><p>電腦版請用手機 LINE 掃描加好友</p></div>' if (C.get('lineId') or C.get('lineUrl')) else f'<a class="btn btn-primary btn-lg" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>撥打 {e(C["mobile"])}</span></a>'}</div>
+    {f'<a class="btn btn-line btn-lg" href="{e(line_href())}" data-line>{ic("line")}<span>LINE 預約諮詢</span></a><div class="line-qr"><img src="/assets/img/line-qr.jpg" width="160" height="160" alt="鴻達淨水 LINE 好友 QR Code"><p>電腦版請用手機 LINE 掃描加好友</p></div>' if (C.get('lineId') or C.get('lineUrl')) else f'<a class="btn btn-primary btn-lg" href="tel:{tel(C["mobile"])}">{ic("phone")}<span>撥打 {e(C["mobile"])}</span></a>'}</div>
   <div class="hl-box"><h2 class="h-sm">詢問時請提供</h2><ul class="hl-list">{tips}</ul></div>
 </div></section>'''
     page('/contact.html', '聯絡我們', f'聯絡{SITE["name"]}：加 LINE 預約淨水設備與清洗服務的現場實地勘查。', body, crumbs=[(None, '聯絡我們')])
