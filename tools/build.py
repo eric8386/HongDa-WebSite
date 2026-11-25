@@ -666,7 +666,7 @@ def build_service(s):
     pains = ''.join(f'<li>{ic("drop")}{e(x)}</li>' for x in s['pains'])
     hl = ''.join(f'<li>{ic("check")}{e(x)}</li>' for x in s['highlights'])
     steps = ''.join(f'<li><span class="no">{i+1:02d}</span><div><h3>{e(st["t"])}</h3><p>{e(st["d"])}</p></div></li>' for i, st in enumerate(s['steps']))
-    rows = ''.join(f'<tr><th>{e(r["type"])}</th><td>{("NT$" + format(r["price"], ",") + " 起") if r.get("price") else e(r.get("quote") or "現場勘查後報價")}</td><td>{e(r["note"])}</td></tr>' for r in s['pricing'])
+    rows = ''.join(f'<tr><th>{e(r["type"])}</th><td>{("NT$" + format(r["price"], ",") + " 起") if r.get("price") else e(r.get("quote") or "LINE 諮詢報價")}</td><td>{e(r["note"])}</td></tr>' for r in s['pricing'])
     faqs = [SITE['faqs'][i] for i in s.get('faqKeys', [])]
     rel = ''
     if s.get('category'):
