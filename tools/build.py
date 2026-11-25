@@ -385,7 +385,7 @@ def build_home():
         ('care', '到期主動提醒', '濾心更換、水塔清洗時間到了，用 LINE 提醒你，不用自己記。'),
     ]
     why_html = ''.join(f'<div class="why">{ic(i)}<h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, t, d in why)
-    process = [('LINE 預約勘查', '告訴我們區域與需求，約好到府時間'), ('現場實地勘查', '到府確認管路、空間、電源與水質'),
+    process = [('LINE 預約諮詢', '告訴我們區域與需求，約好到府時間'), ('現場實地勘查', '到府確認管路、空間、電源與水質'),
                ('方案與報價', '依現場狀況建議方案，報價後再施工'), ('完工說明', '說明使用與保養方式'), ('到期提醒', 'LINE 提醒濾心更換與水塔清洗')]
     proc_html = ''.join(f'<li><span class="no">{i+1:02d}</span><h3>{e(t)}</h3><p>{e(d)}</p></li>' for i, (t, d) in enumerate(process))
     hero_p = PBY.get('brita-mypure-gr-600') or PRODUCTS[0]
